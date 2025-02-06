@@ -1,0 +1,77 @@
+[
+    {
+        "title": "HUNAN SQUARE",
+        "year": "2024",
+        "tags": [
+            "#Horeca",
+            "#Pan-asian Restaurant"
+        ],
+        "image": {
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/mobile/hunan.png"
+        },
+        "bg_color": "#C73834",
+        "text_color": "#FFFFFF",
+        "description": "Authentic Pan-Asian dining"
+    },
+    {
+        "title": "GOA CARS",
+        "year": "2021",
+        "tags": [
+            "#Carrentals",
+            "#Goa"
+        ],
+        "image": {
+            "desktop": "/images/home/goacars.png",
+            "mobile": "/images/home/mobile/goacars.png"
+        },
+        "bg_color": "#F4F4F4",
+        "text_color": "#151515",
+        "description": "Reliable car rentals in Goa"
+    },
+    {
+        "title": "ACME DESIGNERS",
+        "year": "2024",
+        "tags": [
+            "#Architecture",
+            "#Interiordesign"
+        ],
+        "image": {
+            "desktop": "/images/home/acme.png",
+            "mobile": "/images/home/mobile/acme.png"
+        },
+        "bg_color": "#F4F4F4",
+        "text_color": "#151515",
+        "description": "Innovative architecture solutions"
+    },
+    {
+        "title": "VOC AUTOMOTIVE",
+        "year": "2024",
+        "tags": [
+            "#Bikeservicing",
+            "#Bikehealth"
+        ],
+        "image": {
+            "desktop": "/images/home/voc.png",
+            "mobile": "/images/home/mobile/voc.png"
+        },
+        "bg_color": "#E3343C",
+        "text_color": "#FFFFFF",
+        "description": "Premium bike servicing"
+    },
+    {
+        "title": "AZURE",
+        "year": "2024",
+        "tags": [
+            "#Apartments",
+            "#Realestate"
+        ],
+        "image": {
+            "desktop": "/images/home/azure.png",
+            "mobile": "/images/home/mobile/azure.png"
+        },
+        "bg_color": "#F4F4F4",
+        "text_color": "#151515",
+        "description": "Luxury apartments for sale"
+    }
+]

@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply leading-[1];
+    }
+
+    input,
+    textarea {
+        @apply !outline-none ring-0 border-none;
+    }
+}
+
+@layer utilities {
+    .text12px-desktop {
+        @apply md:!text-[.75vw];
+    }
+    .text14px-desktop {
+        @apply md:!text-[.875vw];
+    }
+
+    .text15px-desktop {
+        @apply md:!text-[.9375vw];
+    }
+
+    .text16px-desktop {
+        @apply md:!text-[.975vw];
+    }
+
+    .text17px-desktop {
+        @apply md:!text-[1.05vw];
+    }
+
+    .text18px-desktop {
+        @apply md:!text-[1.1vw];
+    }
+
+    .text40px-desktop {
+        @apply md:!text-[2.4vw];
+    }
+
+    .text44px-desktop {
+        @apply md:!text-[2.7vw];
+    }
+
+    .text48px-desktop {
+        @apply md:!text-[2.8vw];
+    }
+
+    .text64px-desktop {
+        @apply md:!text-[3.8vw];
+    }
+
+    .text105px-desktop {
+        @apply md:!text-[5.25vw];
+    }
+
+    /* ======================================================= */
+    /* ================ Mobile font sizes ==================== */
+    /* ======================================================= */
+
+    .text9px-mobile {
+        @apply text-[2.5vw];
+    }
+
+    .text10px-mobile {
+        @apply text-[2.75vw];
+    }
+    
+    .text12px-mobile {
+        @apply text-[3vw];
+    }
+
+    .text14px-mobile {
+        @apply text-[3.25vw];
+    }
+
+    .text18px-mobile {
+        @apply text-[4.15vw];
+    }
+
+    .text36px-mobile {
+        @apply text-[9.25vw];
+    }
+
+    .text38px-mobile {
+        @apply text-[10vw];
+    }
+
+    .text56px-mobile {
+        @apply text-[13.25vw];
+    }
+}

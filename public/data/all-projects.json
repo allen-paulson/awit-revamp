@@ -1,0 +1,224 @@
+[
+    {
+        "title": "HUNAN SQUARE",
+        "year": "2024",
+        "tags": [
+            "#Horeca",
+            "#Pan-asian Restaurant"
+        ],
+        "image": {
+            "desktop": "/images/work/hunan.png",
+            "mobile": "/images/work/mobile/hunan.png"
+        }
+    },
+    {
+        "title": "FEDERATE ONE",
+        "year": "2023",
+        "tags": [
+            "#Cybersecurity",
+            "#Iot",
+            "#pki"
+        ],
+        "image": {
+            "desktop": "/images/work/federate.png",
+            "mobile": "/images/work/mobile/federate.png"
+        }
+    },
+    {
+        "title": "AZURE",
+        "year": "2024",
+        "tags": [
+            "#Apartments",
+            "#Realestate"
+        ],
+        "image": {
+            "desktop": "/images/work/azure.png",
+            "mobile": "/images/work/mobile/azure.png"
+        }
+    },
+    {
+        "title": "VAILANKANNI",
+        "year": "2021",
+        "tags": [
+            "#Carrentals",
+            "#Goa"
+        ],
+        "image": {
+            "desktop": "/images/work/goacars.png",
+            "mobile": "/images/work/mobile/goacars.png"
+        }
+    },
+    {
+        "title": "ACME DESIGNERS",
+        "year": "2024",
+        "tags": [
+            "#Architecture",
+            "#Interiordesign"
+        ],
+        "image": {
+            "desktop": "/images/work/acme.png",
+            "mobile": "/images/work/mobile/acme.png"
+        }
+    },
+    {
+        "title": "VOC AUTOMOTIVE",
+        "year": "2024",
+        "tags": [
+            "#Bikeservicing",
+            "#Bikehealth"
+        ],
+        "image": {
+            "desktop": "/images/work/voc.png",
+            "mobile": "/images/work/mobile/voc.png"
+        }
+    },
+    {
+        "title": "VRIEVES",
+        "year": "2023",
+        "tags": [
+            "#e-commerce",
+            "#Nutrition",
+            "#Teaflavours"
+        ],
+        "image": {
+            "desktop": "/images/work/vrieves.png",
+            "mobile": "/images/work/mobile/vrieves.png"
+        }
+    },
+    {
+        "title": "MUMBAI POST HOUSE",
+        "year": "2034",
+        "tags": [
+            "#fimproduction",
+            "#visualeffects",
+            "#visualeffects",
+            "#soundeffects"
+        ],
+        "image": {
+            "desktop": "/images/work/mumbai.png",
+            "mobile": "/images/work/mobile/mumbai.png"
+        }
+    },
+    {
+        "title": "ROTTEN GRAPES",
+        "year": "2023",
+        "tags": [
+            "#Geospace",
+            "#saas"
+        ],
+        "image": {
+            "desktop": "/images/work/rotten.png",
+            "mobile": "/images/work/mobile/rotten.png"
+        }
+    },
+    {
+        "title": "BANANI VISTA",
+        "year": "2034",
+        "tags": [
+            "#Spiritualhealing",
+            "#well-being"
+        ],
+        "image": {
+            "desktop": "/images/work/banani.png",
+            "mobile": "/images/work/mobile/banani.png"
+        }
+    },
+    {
+        "title": "OPENSTREET PHOTOGRAPHY",
+        "year": "2022",
+        "tags": [
+            "#weddingphotography",
+            "#capturemoments"
+        ],
+        "image": {
+            "desktop": "/images/work/open.png",
+            "mobile": "/images/work/mobile/open.png"
+        }
+    },
+    {
+        "title": "RYZE CHEMIE",
+        "year": "2024",
+        "tags": [
+            "#Chemicalsforindustries"
+        ],
+        "image": {
+            "desktop": "/images/work/ryze.png",
+            "mobile": "/images/work/mobile/ryze.png"
+        }
+    },
+    {
+        "title": "STRAND LIFE SCIENCES",
+        "year": "2023",
+        "tags": [
+            "#Genimics",
+            "#bioinformatics",
+            "#science"
+        ],
+        "image": {
+            "desktop": "/images/work/strands.png",
+            "mobile": "/images/work/mobile/strands.png"
+        }
+    },
+    {
+        "title": "AAIWINI",
+        "year": "2023",
+        "tags": [
+            "#Argriculture",
+            "#harvest"
+        ],
+        "image": {
+            "desktop": "/images/work/aaiwinin.png",
+            "mobile": "/images/work/mobile/aaiwinin.png"
+        }
+    },
+    {
+        "title": "ANGKOR TRI ACADEMY",
+        "year": "2021",
+        "tags": [
+            "#Genimics",
+            "#bioinformatics",
+            "#science"
+        ],
+        "image": {
+            "desktop": "/images/work/angkor.png",
+            "mobile": "/images/work/mobile/angkor.png"
+        }
+    },
+    {
+        "title": "INTENTIONAL COACHING",
+        "year": "2023",
+        "tags": [
+            "#Argriculture",
+            "#harvest"
+        ],
+        "image": {
+            "desktop": "/images/work/voc.png",
+            "mobile": "/images/work/mobile/voc.png"
+        }
+    },
+    {
+        "title": "INTELLITHINK",
+        "year": "2023",
+        "tags": [
+            "#Genimics",
+            "#bioinformatics",
+            "#science"
+        ],
+        "image": {
+            "desktop": "/images/work/vrieves.png",
+            "mobile": "/images/work/mobile/vrieves.png"
+        }
+    },
+    {
+        "title": "INTENTIONAL COACHING",
+        "year": "2023",
+        "tags": [
+            "#Argriculture",
+            "#harvest"
+        ],
+        "image": {
+            "desktop": "/images/work/voc.png",
+            "mobile": "/images/work/mobile/voc.png"
+        }
+    }
+]
