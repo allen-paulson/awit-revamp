@@ -1,5 +1,5 @@
 <template>
-    <header class="text16px-desktop relative z-[1]">
+    <header class="text16px-desktop sticky top-0 left-0 z-[1]">
         <div class="flex items-start md:items-center justify-between px-[5vw] md:px-[4vw] py-[5vw] md:py-[2.5vw]">
             <NuxtLink to="/">
                 <svg xmlns=" http://www.w3.org/2000/svg" width="244" height="52" class="w-[30vw] h-auto md:w-[14vw]" viewBox="0 0 244 52">
@@ -70,7 +70,7 @@
             <nav class="">
                 <ul class="flex flex-col md:gap-[.75vw] gap-[3vw] font-medium text17px-desktop text10px-mobile uppercase text-[#F1F1F1]">
                     <li>
-                        <NuxtLink to="/" aria-label="Let's Talk Link" class="relative overflow-hidden group flex">
+                        <NuxtLink to="/contact" aria-label="Let's Talk Link" class="relative overflow-hidden group flex">
                             <span class="group-hover:-translate-y-full duration-500 leading-[1]">Let"s Talk</span>
                             <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">Let"s Talk</span>
                         </NuxtLink>
@@ -82,7 +82,7 @@
                         </NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/" aria-label="Team Link" class="relative overflow-hidden group flex">
+                        <NuxtLink to="/team" aria-label="Team Link" class="relative overflow-hidden group flex">
                             <span class="group-hover:-translate-y-full duration-500 leading-[1]">Team</span>
                             <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">Team</span>
                         </NuxtLink>

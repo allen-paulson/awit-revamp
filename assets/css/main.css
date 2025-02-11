@@ -17,6 +17,7 @@
     .text12px-desktop {
         @apply md:!text-[.75vw];
     }
+
     .text14px-desktop {
         @apply md:!text-[.875vw];
     }
@@ -37,6 +38,14 @@
         @apply md:!text-[1.1vw];
     }
 
+    .text30px-desktop {
+        @apply md:!text-[1.8vw];
+    }
+
+    .text36px-desktop {
+        @apply md:!text-[2.2vw];
+    }
+
     .text40px-desktop {
         @apply md:!text-[2.4vw];
     }
@@ -47,6 +56,10 @@
 
     .text48px-desktop {
         @apply md:!text-[2.8vw];
+    }
+
+    .text58px-desktop {
+        @apply md:!text-[3.5vw];
     }
 
     .text64px-desktop {
@@ -68,7 +81,7 @@
     .text10px-mobile {
         @apply text-[2.75vw];
     }
-    
+
     .text12px-mobile {
         @apply text-[3vw];
     }
@@ -81,12 +94,28 @@
         @apply text-[4.15vw];
     }
 
+    .text28px-mobile {
+        @apply text-[6.75vw];
+    }
+
+    .text34px-mobile {
+        @apply text-[8.25vw];
+    }
+
     .text36px-mobile {
         @apply text-[9.25vw];
     }
 
     .text38px-mobile {
         @apply text-[10vw];
+    }
+
+    .text40px-mobile {
+        @apply text-[10.5vw];
+    }
+
+    .text48px-mobile {
+        @apply text-[11vw];
     }
 
     .text56px-mobile {

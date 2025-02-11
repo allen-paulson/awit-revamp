@@ -6,10 +6,19 @@
             "#Horeca",
             "#Pan-asian Restaurant"
         ],
+        "description": "Authentic Asian dining experience",
+        "bg_color": "#C73834",
+        "text_color": "#FFFFFF",
         "image": {
-            "desktop": "/images/work/hunan.png",
-            "mobile": "/images/work/mobile/hunan.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/hunan-square",
+        "filters": [
+            "restaurant",
+            "dining",
+            "asian-cuisine"
+        ]
     },
     {
         "title": "FEDERATE ONE",
@@ -19,10 +28,19 @@
             "#Iot",
             "#pki"
         ],
+        "description": "Advanced IoT security solutions",
+        "bg_color": "#F5BD5F",
+        "text_color": "#151515",
         "image": {
             "desktop": "/images/work/federate.png",
-            "mobile": "/images/work/mobile/federate.png"
-        }
+            "mobile": "/images/work/federate.png"
+        },
+        "link": "/federate-one",
+        "filters": [
+            "technology",
+            "security",
+            "iot"
+        ]
     },
     {
         "title": "AZURE",
@@ -31,10 +49,19 @@
             "#Apartments",
             "#Realestate"
         ],
+        "description": "Luxury urban living spaces",
+        "bg_color": "#F4F4F4",
+        "text_color": "#151515",
         "image": {
             "desktop": "/images/work/azure.png",
-            "mobile": "/images/work/mobile/azure.png"
-        }
+            "mobile": "/images/work/azure.png"
+        },
+        "link": "/azure",
+        "filters": [
+            "real-estate",
+            "luxury",
+            "residential"
+        ]
     },
     {
         "title": "VAILANKANNI",
@@ -43,10 +70,19 @@
             "#Carrentals",
             "#Goa"
         ],
+        "description": "Premium car rental service",
+        "bg_color": "#FFE8D8",
+        "text_color": "#663300",
         "image": {
-            "desktop": "/images/work/goacars.png",
-            "mobile": "/images/work/mobile/goacars.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/vailankanni",
+        "filters": [
+            "automotive",
+            "rental",
+            "transportation"
+        ]
     },
     {
         "title": "ACME DESIGNERS",
@@ -55,10 +91,19 @@
             "#Architecture",
             "#Interiordesign"
         ],
+        "description": "Innovative architectural solutions",
+        "bg_color": "#F0F0F0",
+        "text_color": "#333333",
         "image": {
-            "desktop": "/images/work/acme.png",
-            "mobile": "/images/work/mobile/acme.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/acme-designers",
+        "filters": [
+            "design",
+            "architecture",
+            "interior"
+        ]
     },
     {
         "title": "VOC AUTOMOTIVE",
@@ -67,10 +112,19 @@
             "#Bikeservicing",
             "#Bikehealth"
         ],
+        "description": "Expert motorcycle maintenance",
+        "bg_color": "#FFE6E6",
+        "text_color": "#660000",
         "image": {
-            "desktop": "/images/work/voc.png",
-            "mobile": "/images/work/mobile/voc.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/voc-automotive",
+        "filters": [
+            "automotive",
+            "maintenance",
+            "motorcycle"
+        ]
     },
     {
         "title": "VRIEVES",
@@ -80,10 +134,19 @@
             "#Nutrition",
             "#Teaflavours"
         ],
+        "description": "Premium tea blend collection",
+        "bg_color": "#E6FFE6",
+        "text_color": "#006600",
         "image": {
-            "desktop": "/images/work/vrieves.png",
-            "mobile": "/images/work/mobile/vrieves.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/vrieves",
+        "filters": [
+            "beverages",
+            "nutrition",
+            "retail"
+        ]
     },
     {
         "title": "MUMBAI POST HOUSE",
@@ -94,10 +157,19 @@
             "#visualeffects",
             "#soundeffects"
         ],
+        "description": "Creative post-production studio",
+        "bg_color": "#F8E6FF",
+        "text_color": "#330066",
         "image": {
-            "desktop": "/images/work/mumbai.png",
-            "mobile": "/images/work/mobile/mumbai.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/mumbai-post-house",
+        "filters": [
+            "media",
+            "post-production",
+            "entertainment"
+        ]
     },
     {
         "title": "ROTTEN GRAPES",
@@ -106,10 +178,19 @@
             "#Geospace",
             "#saas"
         ],
+        "description": "Geospatial analytics platform",
+        "bg_color": "#FFE6F0",
+        "text_color": "#660033",
         "image": {
-            "desktop": "/images/work/rotten.png",
-            "mobile": "/images/work/mobile/rotten.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/rotten-grapes",
+        "filters": [
+            "technology",
+            "analytics",
+            "saas"
+        ]
     },
     {
         "title": "BANANI VISTA",
@@ -118,10 +199,19 @@
             "#Spiritualhealing",
             "#well-being"
         ],
+        "description": "Holistic wellness center",
+        "bg_color": "#F0E6FF",
+        "text_color": "#330066",
         "image": {
-            "desktop": "/images/work/banani.png",
-            "mobile": "/images/work/mobile/banani.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/banani-vista",
+        "filters": [
+            "wellness",
+            "health",
+            "spiritual"
+        ]
     },
     {
         "title": "OPENSTREET PHOTOGRAPHY",
@@ -130,10 +220,19 @@
             "#weddingphotography",
             "#capturemoments"
         ],
+        "description": "Capturing timeless memories",
+        "bg_color": "#F5F5F5",
+        "text_color": "#1A1A1A",
         "image": {
-            "desktop": "/images/work/open.png",
-            "mobile": "/images/work/mobile/open.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/openstreet-photography",
+        "filters": [
+            "photography",
+            "events",
+            "creative"
+        ]
     },
     {
         "title": "RYZE CHEMIE",
@@ -141,10 +240,19 @@
         "tags": [
             "#Chemicalsforindustries"
         ],
+        "description": "Industrial chemical solutions",
+        "bg_color": "#E6F0FF",
+        "text_color": "#003366",
         "image": {
-            "desktop": "/images/work/ryze.png",
-            "mobile": "/images/work/mobile/ryze.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/ryze-chemie",
+        "filters": [
+            "industrial",
+            "chemical",
+            "manufacturing"
+        ]
     },
     {
         "title": "STRAND LIFE SCIENCES",
@@ -154,10 +262,19 @@
             "#bioinformatics",
             "#science"
         ],
+        "description": "Advanced genomics research",
+        "bg_color": "#E6FFE6",
+        "text_color": "#006600",
         "image": {
-            "desktop": "/images/work/strands.png",
-            "mobile": "/images/work/mobile/strands.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/strand-life-sciences",
+        "filters": [
+            "science",
+            "research",
+            "biotech"
+        ]
     },
     {
         "title": "AAIWINI",
@@ -166,10 +283,19 @@
             "#Argriculture",
             "#harvest"
         ],
+        "description": "Sustainable farming solutions",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
         "image": {
-            "desktop": "/images/work/aaiwinin.png",
-            "mobile": "/images/work/mobile/aaiwinin.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/aaiwini",
+        "filters": [
+            "agriculture",
+            "sustainability",
+            "farming"
+        ]
     },
     {
         "title": "ANGKOR TRI ACADEMY",
@@ -179,10 +305,19 @@
             "#bioinformatics",
             "#science"
         ],
+        "description": "Advanced research institute",
+        "bg_color": "#FFE6E6",
+        "text_color": "#660000",
         "image": {
-            "desktop": "/images/work/angkor.png",
-            "mobile": "/images/work/mobile/angkor.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/angkor-tri-academy",
+        "filters": [
+            "education",
+            "research",
+            "science"
+        ]
     },
     {
         "title": "INTENTIONAL COACHING",
@@ -191,10 +326,19 @@
             "#Argriculture",
             "#harvest"
         ],
+        "description": "Professional growth mentoring",
+        "bg_color": "#E6F3FF",
+        "text_color": "#003366",
         "image": {
-            "desktop": "/images/work/voc.png",
-            "mobile": "/images/work/mobile/voc.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/intentional-coaching",
+        "filters": [
+            "coaching",
+            "professional-development",
+            "mentoring"
+        ]
     },
     {
         "title": "INTELLITHINK",
@@ -204,21 +348,18 @@
             "#bioinformatics",
             "#science"
         ],
+        "description": "AI-powered research solutions",
+        "bg_color": "#F0F0F0",
+        "text_color": "#333333",
         "image": {
-            "desktop": "/images/work/vrieves.png",
-            "mobile": "/images/work/mobile/vrieves.png"
-        }
-    },
-    {
-        "title": "INTENTIONAL COACHING",
-        "year": "2023",
-        "tags": [
-            "#Argriculture",
-            "#harvest"
-        ],
-        "image": {
-            "desktop": "/images/work/voc.png",
-            "mobile": "/images/work/mobile/voc.png"
-        }
+            "desktop": "/images/home/hunan-square.png",
+            "mobile": "/images/home/hunan-square.png"
+        },
+        "link": "/intellithink",
+        "filters": [
+            "technology",
+            "ai",
+            "research"
+        ]
     }
 ]

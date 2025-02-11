@@ -52,7 +52,7 @@
                     <!-- Mobile View -->
                     <div class="grid gap-[15vw] md:hidden px-[12vw]">
                         <div v-for="(project, index) in projects" :key="index">
-                            <ProjectCardMobile :project="project" :index="index" />
+                            <ProjectCardPenta :project="project" :index="index" />
                         </div>
                     </div>
                 </div>
@@ -62,8 +62,6 @@
 </template>
 
 <script setup>
-    import ProjectCard from "./ProjectCard.vue";
-
     const emit = defineEmits(["projects-loaded"]);
     const projects = ref([]);
 
