@@ -1,8 +1,8 @@
 <template>
-    <div class="antialiased font-inter bg-[#1c1c1c] relative text-[#F1F1F1] selection:text-background-black selection:bg-white-color min-h-screen">
+    <div class="antialiased font-inter bg-[#1c1c1c] relative text-[#F1F1F1] selection:text-background-black selection:bg-white-color min-h-screen overflow-hidden">
         <the-header />
 
-        <NuxtLink to="/" target="_blank" class="fixed bottom-[2vw] right-[2vw] z-[4] flex group overflow-hidden" aria-label="Whatsapp Link">
+        <NuxtLink to="/" target="_blank" class="fixed bottom-[5vw] right-[5vw] md:bottom-[2vw] md:right-[2vw] z-[4] flex group overflow-hidden" aria-label="Whatsapp Link">
             <svg xmlns="http://www.w3.org/2000/svg" width="34.716" height="34.924" class="w-[7vw]" viewBox="0 0 34.716 34.924">
                 <g id="_2634e73b7621f1cbc45a568c3479d270" data-name="2634e73b7621f1cbc45a568c3479d270" transform="translate(0 0)">
                     <path id="Path_57294" data-name="Path 57294" d="M2508.711,2476.11h19.155a7.8,7.8,0,0,1,7.78,7.781v19.354a7.805,7.805,0,0,1-7.78,7.789h-19.155a7.8,7.8,0,0,1-7.781-7.789v-19.354a7.8,7.8,0,0,1,7.781-7.781Z" transform="translate(-2500.93 -2476.11)" fill="#3c3" fill-rule="evenodd" />

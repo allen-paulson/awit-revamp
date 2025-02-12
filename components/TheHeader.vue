@@ -1,5 +1,5 @@
 <template>
-    <header class="text16px-desktop sticky top-0 left-0 z-[1]">
+    <header class="text16px-desktop fixed w-full top-0 left-0 z-[1]">
         <div class="flex items-start md:items-center justify-between px-[5vw] md:px-[4vw] py-[5vw] md:py-[2.5vw]">
             <NuxtLink to="/">
                 <svg xmlns=" http://www.w3.org/2000/svg" width="244" height="52" class="w-[30vw] h-auto md:w-[14vw]" viewBox="0 0 244 52">

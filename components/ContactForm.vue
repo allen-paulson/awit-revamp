@@ -3,15 +3,17 @@
     <section class="section relative">
         <div class="px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[10vw] md:pb-[5vw]">
             <div class="flex flex-col md:flex-row gap-[15vw] md:gap-[10vw]">
-                <div class="md:w-[50%]">
-                    <div class="pl-[8vw] md:pl-0">
-                        <the-breadcrumbs number="05" title="LET’S TALK" />
-                    </div>
-                    <div class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative">
-                        <h2 class="font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">HAVE A PROJECT IN MIND?</h2>
-                    </div>
-                    <div class="md:pl-[4.75vw] mt-[4vw] md:mt-[2vw] relative">
-                        <p class="font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">DROP US A LINE.</p>
+                <div class="section-heading md:w-[50%]">
+                    <div>
+                        <div class="pl-[8vw] md:pl-0">
+                            <the-breadcrumbs number="05" title="LET’S TALK" />
+                        </div>
+                        <div class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative">
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">HAVE A PROJECT IN MIND?</h2>
+                        </div>
+                        <div class="md:pl-[4.75vw] mt-[4vw] md:mt-[2vw] relative">
+                            <p v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">DROP US A LINE.</p>
+                        </div>
                     </div>
 
                     <div class="md:pl-[4.75vw] mt-[6vw] md:mt-[3vw]">

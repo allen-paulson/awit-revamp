@@ -1,10 +1,13 @@
 <template>
     <div :class="{ 'flex-row-reverse': index % 2 === 1 }" class="flex items-end gap-[4vw] md:px-[2vw]">
         <div class="w-[75%]">
-            <div class="border-[1.5px] border-[#3d3d3d] rounded-[1.25vw] overflow-hidden">
-                <div ref="containerRef" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" class="w-full aspect-video overflow-hidden">
-                    <div ref="imageRef" class="w-full">
-                        <NuxtImg class="w-full" :src="project.image.desktop" :alt="project.title" />
+            <div class="rounded-[3.25vw] overflow-hidden relative">
+                <NuxtImg width="4759" height="3421" class="z-[2] relative pointer-events-none" src="/images/home/ipadd.png" alt="iPad Image" />
+                <div class="">
+                    <div ref="containerRef" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" class="w-full md:py-[2.5vw] md:px-[2vw] overflow-hidden absolute inset-0 z-[1]">
+                        <div ref="imageRef" class="w-full">
+                            <NuxtImg class="w-full" :src="project.image.desktop" :alt="project.title" />
+                        </div>
                     </div>
                 </div>
             </div>

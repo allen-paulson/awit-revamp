@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-[27vw] md:mt-[10vw]">
         <hover-grid />
 
         <div class="relative z-[1]">

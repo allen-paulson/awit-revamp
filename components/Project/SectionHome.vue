@@ -1,16 +1,16 @@
 <template>
     <section class="section relative overflow-hidden md:pb-[6vw]">
         <div class="relative z-[2]">
-            <div class="px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
+            <div class="section-heading px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
                 <div class="hidden md:block">
                     <the-breadcrumbs number="03" title="WHY YOU NEED US" />
                     <div class="flex items-end gap-[3vw]">
                         <div class="pl-[4.75vw] pt-[2vw] relative w-max">
-                            <NuxtImg width="309" height="315" class="absolute bottom-0 w-[6.5vw] left-1/4 translate-x-[70%] translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
-                            <h2 class="font-anton text105px-desktop -tracking-[.1vw] leading-[1.12]">
-                                HERE’S OUR <br />
-                                TOP 5 &nbsp;&nbsp;&nbsp;&nbsp; BEST WORKS
+                            <NuxtImg width="309" height="315" class="heading-img absolute bottom-0 w-[6.5vw] left-1/4 translate-x-[70%] translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton flex flex-col text105px-desktop -tracking-[.1vw] leading-[1.12]">
+                                <span class="overflow-hidden">HERE’S OUR</span>
+                                <span class="overflow-hidden">TOP 5 <span class="inline-block w-[5vw]"></span> BEST WORKS</span>
                             </h2>
                         </div>
                         <div class="pb-[1vw]">
