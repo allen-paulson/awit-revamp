@@ -4,7 +4,7 @@
 
         <div class="z-[1]">
             <!-- Landing Section Start -->
-            <section class="section relative">
+            <section class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end">
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[9.5vw] pt-[7vw]">
                     <div class="relative">
