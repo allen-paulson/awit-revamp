@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: true },
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type","@nuxthub/core"],
     css: ["~/assets/css/main.css"],
     postcss: {
         plugins: {
