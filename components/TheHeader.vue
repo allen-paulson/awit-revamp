@@ -71,20 +71,20 @@
                 <ul class="flex flex-col md:gap-[.75vw] gap-[3vw] font-medium text17px-desktop text10px-mobile uppercase text-[#F1F1F1]">
                     <li>
                         <NuxtLink to="/contact" aria-label="Let's Talk Link" class="relative overflow-hidden group flex">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1]">Let"s Talk</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">Let"s Talk</span>
+                            <span class="group-hover:-translate-y-full duration-500 leading-[1]">Let's Talk</span>
+                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Let's Talk</span>
                         </NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="/work" aria-label="Work Link" class="relative overflow-hidden group flex">
                             <span class="group-hover:-translate-y-full duration-500 leading-[1]">Work</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">Work</span>
+                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Work</span>
                         </NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="/team" aria-label="Team Link" class="relative overflow-hidden group flex">
                             <span class="group-hover:-translate-y-full duration-500 leading-[1]">Team</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">Team</span>
+                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Team</span>
                         </NuxtLink>
                     </li>
                 </ul>
