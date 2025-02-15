@@ -63,11 +63,6 @@
         nextTick(() => {
             updateGridCount();
             const observer = observeContentChanges();
-
-            // Clean up observer on component unmount
-            onUnmounted(() => {
-                observer.disconnect();
-            });
         });
 
         window.addEventListener("resize", updateGridCount);
