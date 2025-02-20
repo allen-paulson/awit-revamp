@@ -152,7 +152,8 @@
             gsap.to(el.querySelector(".clip-target"), {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 duration: 0.8,
-                ease: "cubic-bezier(0.8, 0, 0.2, 1)",
+                ease: "sine.inOut",
+                // ease: "cubic-bezier(0.8, 0, 0.2, 1)",
             });
 
             // Increase z-index for hovered item and reduce for others
@@ -164,8 +165,9 @@
         const handleLeave = (el, index) => {
             gsap.to(el.querySelector(".clip-target"), {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                duration: 0.8,
-                ease: "cubic-bezier(0.8, 0, 0.2, 1)",
+                duration: 0.5,
+                ease: "sine.inOut",
+                // ease: "cubic-bezier(0.8, 0, 0.2, 1)",
             });
 
             // Reset z-index after hover
