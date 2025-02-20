@@ -38,6 +38,14 @@
         @apply md:!text-[1.1vw];
     }
 
+    .text24px-desktop {
+        @apply md:!text-[1.2vw];
+    }
+
+    .text26px-desktop {
+        @apply md:!text-[1.3vw];
+    }
+
     .text30px-desktop {
         @apply md:!text-[1.8vw];
     }
@@ -68,6 +76,10 @@
 
     .text105px-desktop {
         @apply md:!text-[5.25vw];
+    }
+
+    .text178px-desktop {
+        @apply md:!text-[10vw];
     }
 
     /* ======================================================= */

@@ -8,8 +8,8 @@
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[9.5vw] pt-[7vw]">
                     <div class="relative">
-                        <NuxtImg id="pencil" width="218" height="200" src="/images/home/pencil.png" class="absolute left-0 bottom-0 w-[6vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
-                        <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
+                        <NuxtImg id="pencil" width="218" height="200" src="/images/home/pencil.png" class="pencil absolute left-0 bottom-0 w-[6vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
+                        <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
                         <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0">
                             <span class="overflow-hidden">WE ARE A TEAM OF WEB</span>
                             <span class="overflow-hidden">DESIGNERS AND DEVELOPERS</span>
@@ -26,26 +26,26 @@
                 <div class="md:hidden px-[7vw] pt-[26vw] pb-[38vw]">
                     <div class="relative flex flex-col gap-[5vw]">
                         <div class="relative">
-                            <NuxtImg width="218" height="200" src="/images/home/pencil.png" class="absolute right-[5%] top-[6%] translate-y-full w-[16vw] z-[1]" alt="Pencil Image" />
-                            <NuxtImg width="362" height="275" src="/images/home/laptop.png" class="absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-[1]" alt="Laptop Image" />
-                            <h1 class="flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
-                                <span>WE ARE A</span>
-                                <span>TEAM OF</span>
-                                <span>WEB DESIGNERS</span>
-                                <span>AND DEVELOPERS</span>
-                                <span>WHO BUILD</span>
-                                <span class="pl-[15vw]">WEBSITES</span>
+                            <NuxtImg width="218" height="200" src="/images/home/pencil.png" class="pencil-mobile absolute right-[5%] top-[6%] translate-y-full w-[16vw] z-[1]" alt="Pencil Image" />
+                            <NuxtImg width="362" height="275" src="/images/home/laptop.png" class="laptop-mobile absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-[1]" alt="Laptop Image" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
+                                <span class="overflow-hidden">WE ARE A</span>
+                                <span class="overflow-hidden">TEAM OF</span>
+                                <span class="overflow-hidden">WEB DESIGNERS</span>
+                                <span class="overflow-hidden">AND DEVELOPERS</span>
+                                <span class="overflow-hidden">WHO BUILD</span>
+                                <span class="pl-[15vw] overflow-hidden">WEBSITES</span>
                             </h1>
                         </div>
 
-                        <div class="flex justify-end">
+                        <div class="button-mobile flex justify-end">
                             <the-button text="LET'S TALK" to="/" />
                         </div>
                     </div>
                 </div>
 
                 <div class="px-[5vw] md:px-[4vw]">
-                    <div class="pv-[5vw] md:pb-[3vw] pt-[6vw] md:pt-[2vw] border-t border-[#F1F1F1]">
+                    <div class="pv-[5vw] md:pb-[3vw] pt-[6vw] md:pt-[2vw] will-change-auto border-t border-[#F1F1F1]">
                         <div class="flex justify-between items-center text15px-desktop text12px-mobile font-medium leading-[2]">
                             <div class="flex gap-[4vw] md:gap-[3vw]">
                                 <NuxtLink to="/" target="_blank" class="flex relative group overflow-hidden" aria-label="Linkedin Link">
@@ -91,10 +91,10 @@
                             <the-breadcrumbs number="01" title="TECHNOLOGIES" />
                         </div>
                         <div class="pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative w-max">
-                            <NuxtImg width="276" height="188" class="absolute w-[16vw] bottom-0 translate-y-[20%] right-[15%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-                                <span>TOOLS OF </span>
-                                <span>OUR <span class="w-[7vw] inline-block"></span> TRADE</span>
+                            <NuxtImg width="276" height="188" class="heading-img-mobile absolute w-[16vw] bottom-0 translate-y-[20%] right-[15%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
+                                <span class="overflow-hidden">TOOLS OF </span>
+                                <span class="overflow-hidden">OUR <span class="w-[7vw] inline-block"></span> TRADE</span>
                             </h2>
                         </div>
                     </div>
@@ -196,8 +196,8 @@
                         <div>
                             <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                             <div class="pl-[4.75vw] pt-[2vw] relative w-max">
-                                <NuxtImg width="309" height="315" class="heading-img absolute bottom-0 w-[8.5vw] left-1/4 translate-x-[40%] translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
-                                <h2 v-split-text="{ splitBy: 'words, char' }" class="heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12]">
+                                <NuxtImg width="309" height="315" class="heading-img absolute z-[1] bottom-0 w-[8.5vw] left-1/4 translate-x-[40%] translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
+                                <h2 v-split-text="{ splitBy: 'words, char' }" class="heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] relative z-0 leading-[1.12]">
                                     <span class="overflow-hidden"> HOW A WEBSITE CAN</span>
                                     <span class="overflow-hidden">BOOST <span class="inline-block w-[3.5vw]"></span> YOUR BUSINESS</span>
                                 </h2>
@@ -215,11 +215,11 @@
                                 <the-breadcrumbs number="02" title=" WHY YOU NEED US" />
                             </div>
                             <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                                <NuxtImg width="309" height="315" class="absolute bottom-0 w-[24vw] md:w-[8.5vw] left-1/2 md:left-1/4 translate-x-[60%] md:translate-x-[40%] -translate-y-[45%] md:translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
-                                <h2 class="font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-                                    <span>HOW A WEBSITE</span>
-                                    <span>CAN BOOST</span>
-                                    <span>YOUR BUSINESS?</span>
+                                <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[24vw] md:w-[8.5vw] left-1/2 md:left-1/4 translate-x-[60%] md:translate-x-[40%] -translate-y-[45%] md:translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
+                                <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
+                                    <span class="overflow-hidden">HOW A WEBSITE</span>
+                                    <span class="overflow-hidden">CAN BOOST</span>
+                                    <span class="overflow-hidden">YOUR BUSINESS?</span>
                                 </h2>
                             </div>
                         </div>
@@ -267,6 +267,8 @@
     const animations = () => {
         gsap.registerPlugin(ScrollTrigger);
 
+        const isMobile = window.innerWidth < 768;
+
         gsap.utils.toArray(".section").forEach((section) => {
             gsap.set(section, { filter: "blur(0px)" });
 
@@ -288,49 +290,84 @@
             const breadcrumbs = section.querySelector(".breadcrumbs");
             const headings = section.querySelectorAll(".heading");
             const images = section.querySelectorAll(".heading-img");
+            const headingsMobile = section.querySelectorAll(".heading-mobile");
+            const imagesMobile = section.querySelectorAll(".heading-img-mobile");
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%", // Start animation when 80% of section is in view
-                    end: "top 50%", // Stop animation around 50%
-                    scrub: false,
-                    toggleActions: "play none none reverse",
-                },
-            });
+            // Common ScrollTrigger start values
+            const startPosition = "top 90%"; // Trigger earlier so animation starts sooner
 
-            // Animate Breadcrumbs
-            if (breadcrumbs) {
-                tl.from(breadcrumbs, { y: "100%", opacity: 0, duration: 0.6, ease: "power2.out" });
+            // Desktop Animation
+            if (!isMobile) {
+                const tlDesktop = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: startPosition,
+                        end: "top 70%",
+                        scrub: false,
+                        toggleActions: "play none none reverse",
+                    },
+                });
+
+                if (breadcrumbs) {
+                    tlDesktop.from(breadcrumbs, { y: "100%", opacity: 0, duration: 0.6, ease: "power2.out" });
+                }
+
+                headings.forEach((heading) => {
+                    const chars = heading.querySelectorAll(".char");
+                    if (chars.length) {
+                        tlDesktop.from(
+                            chars,
+                            {
+                                y: "100%",
+                                opacity: 0,
+                                stagger: 0.05,
+                                duration: 0.3,
+                                ease: "power2.inout",
+                            },
+                            "-=0.3"
+                        );
+                    }
+                });
+
+                images.forEach((image) => {
+                    tlDesktop.from(image, { scale: 0, opacity: 0, duration: 0.6, ease: "power2.out" }, "-=0.4");
+                });
             }
 
-            // Animate Each Heading and Its Characters Sequentially
-            headings.forEach((heading) => {
-                const chars = heading.querySelectorAll(".char");
-                if (chars.length) {
-                    tl.from(
-                        chars,
-                        {
+            // Mobile Animation (Independent from Desktop)
+            if (isMobile) {
+                const tlMobile = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: startPosition,
+                        end: "top 80%",
+                        scrub: false,
+                        toggleActions: "play none none reverse",
+                    },
+                });
+
+                headingsMobile.forEach((heading) => {
+                    const chars = heading.querySelectorAll(".char");
+                    if (chars.length) {
+                        tlMobile.from(chars, {
                             y: "100%",
                             opacity: 0,
                             stagger: 0.05,
                             duration: 0.3,
                             ease: "power2.inout",
-                        },
-                        "-=0.3"
-                    ); // Slight overlap with breadcrumbs animation
-                }
-            });
+                        });
+                    }
+                });
 
-            // Animate Each Image
-            images.forEach((image) => {
-                tl.from(image, { scale: 0, opacity: 0, duration: 0.6, ease: "power2.out" }, "-=0.4"); // Start slightly before text animation ends
-            });
+                imagesMobile.forEach((image) => {
+                    tlMobile.from(image, { scale: 0, opacity: 0, duration: 0.6, ease: "power2.out" }, "-=0.4");
+                });
+            }
         });
 
         const tl = gsap.timeline();
 
-        tl.from(".main-heading .char", {
+        tl.from([".main-heading .char", ".main-heading-mobile .char"], {
             opacity: 0,
             y: "100%",
             scale: 0.8,
@@ -342,7 +379,7 @@
             },
         })
             .from(
-                "#pencil",
+                [".pencil", ".pencil-mobile"],
                 {
                     scale: 0,
                     duration: 1.2,
@@ -351,7 +388,7 @@
                 "-=0.4"
             )
             .from(
-                "#laptop",
+                [".laptop", ".laptop-mobile"],
                 {
                     scale: 0,
                     duration: 1.2,
@@ -360,7 +397,7 @@
                 "-=0.8"
             )
             .from(
-                ".button",
+                [".button", ".button-mobile"],
                 {
                     opacity: 0,
                     duration: 0.3,

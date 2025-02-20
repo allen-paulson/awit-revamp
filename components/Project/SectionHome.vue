@@ -26,11 +26,11 @@
                             <the-breadcrumbs number="02" title=" WHY YOU NEED US" />
                         </div>
                         <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                            <NuxtImg width="309" height="315" class="absolute bottom-0 w-[18vw] md:w-[6.5vw] left-1/4 translate-x-[60%] md:translate-x-[70%] -translate-y-[70%] md:translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-                                <span>HERE’S OUR </span>
-                                <span>TOP 5 <span class="w-[13vw] inline-block"></span> BEST </span>
-                                <span>WORKS</span>
+                            <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[18vw] md:w-[6.5vw] left-1/4 translate-x-[60%] md:translate-x-[70%] -translate-y-[70%] md:translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
+                                <span class="overflow-hidden">HERE’S OUR </span>
+                                <span class="overflow-hidden">TOP 5 <span class="w-[13vw] inline-block"></span> BEST </span>
+                                <span class="overflow-hidden">WORKS</span>
                             </h2>
                         </div>
                     </div>

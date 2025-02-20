@@ -9,10 +9,10 @@
                             <the-breadcrumbs number="05" title="LET’S TALK" />
                         </div>
                         <div class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative">
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">HAVE A PROJECT IN MIND?</h2>
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">HAVE A PROJECT IN MIND?</h2>
                         </div>
                         <div class="md:pl-[4.75vw] mt-[4vw] md:mt-[2vw] relative">
-                            <p v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">DROP US A LINE.</p>
+                            <p v-split-text="{ splitBy: 'words, char' }" class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">DROP US A LINE.</p>
                         </div>
                     </div>
 
