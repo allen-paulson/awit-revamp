@@ -10,7 +10,7 @@
         "bg_color": "#C73834",
         "text_color": "#FFFFFF",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
+            "desktop": "/images/projects/hunan.png",
             "mobile": "/images/home/hunan-square.png"
         },
         "link": "/hunan-square",
@@ -32,7 +32,7 @@
         "bg_color": "#F5BD5F",
         "text_color": "#151515",
         "image": {
-            "desktop": "/images/work/federate.png",
+            "desktop": "/images/projects/federate.png",
             "mobile": "/images/work/federate.png"
         },
         "link": "/federate-one",
@@ -53,7 +53,7 @@
         "bg_color": "#F4F4F4",
         "text_color": "#151515",
         "image": {
-            "desktop": "/images/work/azure.png",
+            "desktop": "/images/projects/azure.png",
             "mobile": "/images/work/azure.png"
         },
         "link": "/azure",
@@ -74,7 +74,7 @@
         "bg_color": "#FFE8D8",
         "text_color": "#663300",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
+            "desktop": "/images/projects/goa.png",
             "mobile": "/images/home/hunan-square.png"
         },
         "link": "/vailankanni",
@@ -95,7 +95,7 @@
         "bg_color": "#F0F0F0",
         "text_color": "#333333",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
+            "desktop": "/images/projects/goa.png",
             "mobile": "/images/home/hunan-square.png"
         },
         "link": "/acme-designers",

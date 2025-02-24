@@ -1,20 +1,17 @@
 <template>
-    <section class="section relative overflow-hidden md:pb-[6vw]">
+    <section class="relative overflow-hidden md:pb-[6vw]">
         <div class="relative z-[2]">
             <div class="section-heading px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
                 <div class="hidden md:block">
                     <the-breadcrumbs number="03" title="WHY YOU NEED US" />
                     <div class="flex items-end gap-[3vw]">
-                        <div class="pl-[4.75vw] pt-[2vw] relative w-max">
+                        <div class="pt-[2vw] relative w-max">
                             <NuxtImg width="309" height="315" class="heading-img absolute bottom-0 w-[6.5vw] left-1/4 translate-x-[70%] translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton flex flex-col text105px-desktop -tracking-[.1vw] leading-[1.12]">
-                                <span class="overflow-hidden">HERE’S OUR</span>
-                                <span class="overflow-hidden">TOP 5 <span class="inline-block w-[5vw]"></span> BEST WORKS</span>
-                            </h2>
-                        </div>
-                        <div class="pb-[1vw]">
-                            <the-button text="SEE ALL OF THEM" to="/" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
+                                <span class="overflow-hidden">IT'S STORY </span><span id="heading-space" class="inline-block w-[7vw]"></span>
+                                <span class="overflow-hidden">TIME </span>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -40,12 +37,57 @@
                 </div>
             </div>
 
-            <div class="relative mt-[16vw] md:mt-[3vw]">
+            <div class="relative mt-[16vw] md:mt-[3vw] px-[5vw] md:px-[4vw]">
                 <div v-if="!projects">No projects...</div>
                 <div v-else>
+                    <!-- Desktop View -->
                     <div class="hidden md:grid gap-[10vw]">
-                        <div v-for="(project, index) in projects" :key="index">
-                            <ProjectCard :project="project" :index="index" />
+                        <div ref="containerRef" class="desktop-project relative">
+                            <div v-for="(project, index) in projects" :key="index" class="desktop-project__item">
+                                <div class="relative border-t border-[#FFFFFF] pb-[10vw] bg-[#151515]">
+                                    <div class="flex justify-between px-[1vw] pt-[1vw] gap-[16vw]">
+                                        <div class="card-inner flex gap-[16vw]">
+                                            <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
+                                            <div class="flex flex-col gap-[3vw]">
+                                                <p class="font-anton text60px-desktop">{{ project.title }}</p>
+                                                <div class="flex flex-col gap-[.75vw]">
+                                                    <div class="flex gap-[1vw]">
+                                                        <div class="flex flex-col">
+                                                            <div class="rounded-full w-[3vw] aspect-square bg-slate-400"></div>
+                                                            <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
+                                                        </div>
+                                                        <div class="mt-[.5vw] pb-[2vw]">
+                                                            <div class="flex gap-[.75vw] items-center">
+                                                                <p class="font-inter text18px-desktop font-bold">Client</p>
+                                                                <span class="w-[.25vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
+                                                                <p class="font-inter text18px-desktop font-light opacity-80">12 h</p>
+                                                            </div>
+                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex gap-[1vw]">
+                                                        <div class="flex flex-col">
+                                                            <div class="rounded-full w-[3vw] aspect-square bg-slate-400"></div>
+                                                            <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
+                                                        </div>
+                                                        <div class="mt-[.5vw] pb-[2vw]">
+                                                            <div class="flex gap-[.75vw] items-center">
+                                                                <p class="font-inter text18px-desktop font-bold">User</p>
+                                                                <span class="w-[.25vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
+                                                                <p class="font-inter text18px-desktop font-light opacity-80">12 h</p>
+                                                            </div>
+                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">Let's do it!!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-[45%]">
+                                            <NuxtImg class="w-full" :src="project.image.desktop" alt="Arrow Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -64,10 +106,83 @@
 <script setup>
     const emit = defineEmits(["projects-loaded"]);
     const projects = ref([]);
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+    const containerRef = ref(null);
+
+    const animation = () => {
+        gsap.registerPlugin(ScrollTrigger);
+        const cards = gsap.utils.toArray(".desktop-project__item");
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.value,
+                pin: true,
+                start: "top 17.5%",
+                end: `+=${cards.length * 50}%`,
+                scrub: 1,
+                anticipatePin: 1,
+            },
+        });
+
+        gsap.set(cards, {
+            position: "absolute",
+            width: "100%",
+            top: 0,
+        });
+
+        // Sequential animation for each card
+        cards.forEach((card, i) => {
+            if (i !== 0) {
+                tl.from(
+                    card,
+                    {
+                        yPercent: 100,
+                        duration: 1,
+                        ease: "none",
+                    },
+                    `>`
+                ); // Using ">" ensures sequential animation
+
+                gsap.set(card, {
+                    top: `${i * 6}vw`,
+                });
+            }
+
+            tl.to(card, {
+                filter: "grayscale(100%)",
+                duration: 0.5,
+                ease: "none",
+            }).to(
+                card.querySelector(".card-inner"),
+                {
+                    opacity: 0.75,
+                    duration: 0.5,
+                    ease: "none",
+                },
+                `>`
+            );
+        });
+        gsap.set(cards[0], { filter: "grayscale(0%)" });
+        gsap.set(cards[0], { opacity: 1 });
+    };
 
     onMounted(async () => {
         projects.value = await $fetch("/data/projects.json");
         await nextTick();
         emit("projects-loaded");
+        animation();
     });
 </script>
+
+<style scoped>
+    .desktop-project {
+        height: 100vh;
+    }
+
+    .desktop-project__item {
+        position: absolute;
+        width: 100%;
+        will-change: transform;
+    }
+</style>

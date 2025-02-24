@@ -1,5 +1,9 @@
 <template>
-    <div class="antialiased font-inter bg-[#1c1c1c] relative text-[#F1F1F1] selection:text-background-black selection:bg-white-color min-h-screen overflow-hidden">
+    <div class="antialiased font-inter bg-[#151515] relative text-[#F1F1F1] selection:text-background-black selection:bg-white-color min-h-screen overflow-hidden">
+        <!-- Loader Start -->
+        <Loader v-if="isLoading" @animation-end="onLoadFinished" />>
+        <!-- Loader End -->
+
         <the-header />
 
         <NuxtLink to="/" target="_blank" class="fixed bottom-[5vw] right-[5vw] md:bottom-[2vw] md:right-[2vw] z-[4] flex group overflow-hidden" aria-label="Whatsapp Link">
@@ -30,6 +34,16 @@
             <slot />
         </main>
 
+        <div class="fixed bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-background-black to-transparent z-[5] pointer-events-none"></div>
+
         <the-footer />
     </div>
 </template>
+
+<script setup>
+    const isLoading = useState("isLoading", () => true);
+
+    const onLoadFinished = () => {
+        isLoading.value = false;
+    };
+</script>

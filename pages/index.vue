@@ -6,7 +6,7 @@
             <!-- Landing Section Start -->
             <section class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end">
                 <!-- Desktop View -->
-                <div class="hidden md:flex items-center justify-center pb-[9.5vw] pt-[7vw]">
+                <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
                         <NuxtImg id="pencil" width="218" height="200" src="/images/home/pencil.png" class="pencil absolute left-0 bottom-0 w-[6vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
                         <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
@@ -264,12 +264,14 @@
         ScrollTrigger.refresh();
     };
 
+    const loading = useState("isLoading");
+
     const animations = () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const isMobile = window.innerWidth < 768;
 
-        gsap.utils.toArray(".section").forEach((section) => {
+        gsap.utils.toArray(".sectio").forEach((section) => {
             gsap.set(section, { filter: "blur(0px)" });
 
             gsap.to(section, {
@@ -367,41 +369,62 @@
 
         const tl = gsap.timeline();
 
-        tl.from([".main-heading .char", ".main-heading-mobile .char"], {
+        // **Set initial states**
+        tl.set([".main-heading .char", ".main-heading-mobile .char"], {
             opacity: 0,
             y: "100%",
             scale: 0.8,
+            visibility: "visible",
+        })
+            .set([".pencil", ".pencil-mobile"], {
+                scale: 0,
+                visibility: "visible",
+            })
+            .set([".laptop", ".laptop-mobile"], {
+                scale: 0,
+                visibility: "visible",
+            })
+            .set([".button", ".button-mobile"], {
+                opacity: 0,
+                visibility: "visible",
+            });
+
+        // **Animate elements sequentially**
+        tl.to([".main-heading .char", ".main-heading-mobile .char"], {
+            opacity: 1,
+            y: "0%",
+            scale: 1,
             duration: 0.3,
-            ease: "power1.inout",
+            ease: "power1.inOut",
             stagger: {
                 amount: 1,
                 from: "start",
             },
         })
-            .from(
+            .to(
                 [".pencil", ".pencil-mobile"],
                 {
-                    scale: 0,
+                    scale: 1,
                     duration: 1.2,
                     ease: "elastic.out(1, 0.6)", // Elastic pop effect
                 },
                 "-=0.4"
             )
-            .from(
+            .to(
                 [".laptop", ".laptop-mobile"],
                 {
-                    scale: 0,
+                    scale: 1,
                     duration: 1.2,
                     ease: "elastic.out(1, 0.6)",
                 },
                 "-=0.8"
             )
-            .from(
+            .to(
                 [".button", ".button-mobile"],
                 {
-                    opacity: 0,
+                    opacity: 1,
                     duration: 0.3,
-                    ease: "power1.inout",
+                    ease: "power1.inOut",
                     stagger: {
                         amount: 1,
                         from: "start",
@@ -411,8 +434,20 @@
             );
     };
 
+    // Watch for loader completion and start animations
+    watch(loading, (newValue) => {
+        if (!newValue) {
+            animations();
+        }
+    });
+
+    // Ensure animations start only after loader is gone
     onMounted(() => {
-        animations();
+        nextTick(() => {
+            if (!loading.value) {
+                animations();
+            }
+        });
     });
 
     // SEO Meta Tags
@@ -446,5 +481,26 @@
 <style scoped>
     .line {
         overflow: hidden !important;
+    }
+
+    .main-heading .char,
+    .main-heading-mobile .char {
+        opacity: 0;
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+
+    .pencil,
+    .pencil-mobile,
+    .laptop,
+    .laptop-mobile {
+        scale: 0;
+        visibility: hidden;
+    }
+
+    .button,
+    .button-mobile {
+        opacity: 0;
+        visibility: hidden;
     }
 </style>

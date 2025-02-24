@@ -7,7 +7,7 @@
             "#Pan-asian Restaurant"
         ],
         "image": {
-            "desktop": "/images/home/hunan-square.png",
+            "desktop": "/images/projects/hunan.png",
             "mobile": "/images/home/mobile/hunan.png"
         },
         "bg_color": "#C73834",
@@ -22,7 +22,7 @@
             "#Goa"
         ],
         "image": {
-            "desktop": "/images/home/goacars.png",
+            "desktop": "/images/projects/goa.png",
             "mobile": "/images/home/mobile/goacars.png"
         },
         "bg_color": "#F4F4F4",
@@ -52,7 +52,7 @@
             "#Bikehealth"
         ],
         "image": {
-            "desktop": "/images/home/voc.png",
+            "desktop": "/images/projects/federate.png",
             "mobile": "/images/home/mobile/voc.png"
         },
         "bg_color": "#E3343C",
@@ -67,7 +67,7 @@
             "#Realestate"
         ],
         "image": {
-            "desktop": "/images/home/azure.png",
+            "desktop": "/images/projects/azure.png",
             "mobile": "/images/home/mobile/azure.png"
         },
         "bg_color": "#F4F4F4",

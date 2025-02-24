@@ -1,16 +1,16 @@
 <template>
     <div class="mt-[27vw] md:mt-[10vw]">
-        <hover-grid />
+        <!-- <hover-grid /> -->
 
         <div class="relative z-[1]">
             <!-- Heading Section Start -->
             <section class="section relative">
-                <div class="px-[6vw] md:pl-[4.5vw] md:pr-[6vw] pt-[5vw] pb-[8vw]">
+                <div class="px-[6vw] md:pl-[4.5vw] md:pr-[6vw] pt-[5vw] pb-[8vw] md:pb-[6vw]">
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
                         <div class="pt-[2vw] relative md:w-full hidden md:block">
-                            <NuxtImg id="pencil" width="309" height="315" class="pencil absolute bottom-0 w-[6.5vw] left-[51.5%] translate-x-[70%] translate-y-[10%]" src="/images/work/heart.png" alt="Rocket Image" />
-                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text178px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center">
+                            <NuxtImg id="pencil" width="309" height="315" class="pencil absolute bottom-0 w-[8.5vw] left-[45.5%] translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Rocket Image" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text178px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
                                 <span class="overflow-hidden">SITES WE'VE </span><span id="heading-space" class="inline-block w-[7vw]"></span>
                                 <span class="overflow-hidden">SHIPPED </span>
                             </h1>
@@ -30,33 +30,32 @@
             <!-- Heading Section End -->
 
             <!-- Project Grid Section Start -->
-            <section class="mt-[15vw] md:mt-[1vw] pb-[5vw] md:pb-[8vw]">
+            <section class="mt-[15vw] md:mt-[0vw] pb-[5vw] md:pb-[8vw]">
                 <div class="px-[12.5vw] md:px-[5vw]">
-                    <div class="relative border-x border-[#454545]">
+                    <div class="relative">
                         <!-- Desktop View -->
-                        <div class="relative text-[#FFFFFF]">
-                            <NuxtLink to="/" v-for="(_, index) in 6" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
+                        <div class="relative text-[#FFFFFF] bg-[#151515]">
+                            <NuxtLink to="/" v-for="(project, index) in projects" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
                                 <div class="flex-1 pt-[1.75vw] pb-[3.5vw]">
                                     <div class="flex gap-[5vw]">
                                         <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
                                         <div>
-                                            <p class="font-anton text40px-desktop">Hunan Square</p>
+                                            <p class="font-anton text40px-desktop">{{ project.title }}</p>
                                             <div class="flex gap-[.5vw] mt-[1vw]">
-                                                <div class="rounded-full border border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">Horteca</div>
-                                                <div class="rounded-full border border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">Pan-asian Restaurant</div>
-                                                <div class="rounded-full border border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">Web design</div>
-                                                <div class="rounded-full border border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">Web development</div>
+                                                <div v-for="tag in project.tags" class="rounded-full border-[.5px] tracking-tight border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">{{ tag }}</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="border border-t-0 border-[#A3A3A3] bg-[#151515] p-[1vw] absolute top-0 right-[5vw] w-[36.5%] clip-target z-[1]">
-                                    <div class="flex flex-col gap-[1.5vw]">
+                                <div class="border border-t-0 border-[#A3A3A3] bg-[#151515] p-[1vw] absolute top-0 right-[5vw] w-[34.5%] clip-target z-[1]">
+                                    <div class="flex flex-col gap-[1vw]">
                                         <div class="">
-                                            <NuxtImg width="1210" height="946" src="/images/projects/federate.png" />
+                                            <NuxtImg width="1210" height="946" :src="project.image.desktop" alt="Project Image" />
                                         </div>
-                                        <div><p class="font-inter text26px-desktop leading-[1.15]">A bento-style web design for a consulting firm that delivers cutting-edge IT</p></div>
+                                        <div>
+                                            <p class="font-inter text26px-desktop leading-[1.15] tracking-tight">{{ project.description }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </NuxtLink>
@@ -127,7 +126,7 @@
             },
         })
             .from("#heading-space", {
-                width: "0vw",
+                width: "2vw",
                 duration: 0.5,
             })
             .from(
@@ -179,7 +178,6 @@
 
     onMounted(async () => {
         projects.value = await $fetch("/data/all-projects.json");
-        chunkedProjects.value = chunkArray(projects.value, 3);
 
         await nextTick();
         animation();
