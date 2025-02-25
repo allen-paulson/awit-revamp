@@ -4,14 +4,14 @@
 
         <div class="z-[1]">
             <!-- Landing Section Start -->
-            <section class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end">
+            <section id="landing-section" class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end opacity-0 duration-500">
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
                         <NuxtImg id="pencil" width="218" height="200" src="/images/home/pencil.png" class="pencil absolute left-0 bottom-0 w-[6vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
                         <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
                         <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0">
-                            <span class="overflow-hidden">WE ARE A TEAM OF WEB</span>
+                            <span class="overflow-hidden">WE ARE A TEAM OF </span>
                             <span class="overflow-hidden">DESIGNERS AND DEVELOPERS</span>
                             <span class="overflow-hidden">WHO BUILD WEBSITES</span>
                         </h1>
@@ -31,7 +31,7 @@
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
                                 <span class="overflow-hidden">WE ARE A</span>
                                 <span class="overflow-hidden">TEAM OF</span>
-                                <span class="overflow-hidden">WEB DESIGNERS</span>
+                                <span class="overflow-hidden">DESIGNERS</span>
                                 <span class="overflow-hidden">AND DEVELOPERS</span>
                                 <span class="overflow-hidden">WHO BUILD</span>
                                 <span class="pl-[15vw] overflow-hidden">WEBSITES</span>
@@ -188,67 +188,17 @@
             </section>
             <!-- Technologies Section End -->
 
-            <!-- Why You Need Us Section Start -->
-            <section class="section relative">
-                <div class="section-heading px-[5vw] md:px-[4vw] pt-[20vw] md:pt-[8vw] pb-[5vw]">
-                    <!-- DEsktop View -->
-                    <div class="hidden md:flex items-end gap-[6vw]">
-                        <div>
-                            <the-breadcrumbs number="02" title="WHY YOU NEED US" />
-                            <div class="pl-[4.75vw] pt-[2vw] relative w-max">
-                                <NuxtImg width="309" height="315" class="heading-img absolute z-[1] bottom-0 w-[8.5vw] left-1/4 translate-x-[40%] translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
-                                <h2 v-split-text="{ splitBy: 'words, char' }" class="heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] relative z-0 leading-[1.12]">
-                                    <span class="overflow-hidden"> HOW A WEBSITE CAN</span>
-                                    <span class="overflow-hidden">BOOST <span class="inline-block w-[3.5vw]"></span> YOUR BUSINESS</span>
-                                </h2>
-                            </div>
-                        </div>
-                        <div>
-                            <NuxtImg width="204" height="193" class="w-[20vw]" src="/images/home/illus.svg" alt="Illustration" />
-                        </div>
-                    </div>
-
-                    <!-- Mobile View -->
-                    <div class="md:hidden flex flex-col gap-[14vw]">
-                        <div class="">
-                            <div class="oveflow-hidden pl-[22vw]">
-                                <the-breadcrumbs number="02" title=" WHY YOU NEED US" />
-                            </div>
-                            <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                                <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[24vw] md:w-[8.5vw] left-1/2 md:left-1/4 translate-x-[60%] md:translate-x-[40%] -translate-y-[45%] md:translate-y-[10%]" src="/images/home/rocket.png" alt="Rocket Image" />
-                                <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-                                    <span class="overflow-hidden">HOW A WEBSITE</span>
-                                    <span class="overflow-hidden">CAN BOOST</span>
-                                    <span class="overflow-hidden">YOUR BUSINESS?</span>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="flex justify-end pr-[5vw]">
-                            <NuxtImg width="204" height="193" class="w-[50vw]" src="/images/home/illus.svg" alt="Illustration" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border-y border-[#555555] mt-[14vw] md:mt-[2vw]">
-                    <div class="flex flex-col md:flex-row">
-                        <div v-for="whyNeed in whyNeedUs" :key="whyNeed.id" :class="{ 'md:border-l-0 border-t-0': whyNeed.id === 1 }" class="flex-1 px-[4.5vw] pb-[14vw] md:pb-[4vw] pt-[14vw] md:pt-[9vw] md:border-t-0 border-t md:border-l border-[#555555]">
-                            <div class="flex flex-col">
-                                <NuxtImg class="w-[14vw] md:w-[5.5vw]" :src="whyNeed.image" :alt="whyNeed.title" />
-                                <p class="font-anton text48px-desktop text36px-mobile text-[#F1F1F1] mt-[4vw] md:mt-[2.75vw] leading-[1.1] max-w-[84%] md:max-w-[95%]">{{ whyNeed.title }}</p>
-                                <p class="font-inter font-medium text16px-desktop text14px-mobile text-[#F1F1F1] mt-[4vw] md:mt-[1.65vw] leading-[1.7]">{{ whyNeed.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Why You Need Us Section End -->
-
             <!-- Projects Section Start -->
             <ProjectSectionHome @projects-loaded="refreshScrollTrigger" />
             <!-- Projects Section End -->
 
+            <div class="px-[2vw]">
+                <div class="border-t border-[#F1F1F1] relative"></div>
+            </div>
             <!-- Contact Section Start -->
-            <ContactForm />
+            <section class="md:-mt-[6.5vw]">
+                <ContactForm />
+            </section>
             <!-- Contact Section End -->
         </div>
     </div>
@@ -268,6 +218,7 @@
 
     const animations = () => {
         gsap.registerPlugin(ScrollTrigger);
+        document.getElementById("landing-section").classList.remove("opacity-0");
 
         const isMobile = window.innerWidth < 768;
 

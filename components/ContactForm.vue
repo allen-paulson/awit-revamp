@@ -2,17 +2,14 @@
     <!-- Form Section Start -->
     <section class="section relative">
         <div class="px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[10vw] md:pb-[5vw]">
-            <div class="flex flex-col md:flex-row gap-[15vw] md:gap-[10vw]">
-                <div class="section-heading md:w-[50%]">
+            <div class="flex flex-col md:flex-row gap-[15vw] md:gap-[0vw]">
+                <div class="section-heading md:w-[39%] md:pt-[2vw]">
                     <div>
                         <div class="pl-[8vw] md:pl-0">
-                            <the-breadcrumbs number="05" title="LET’S TALK" />
+                            <the-breadcrumbs number="03" title="LET’S COLLABORATE" />
                         </div>
                         <div class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative">
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">HAVE A PROJECT IN MIND?</h2>
-                        </div>
-                        <div class="md:pl-[4.75vw] mt-[4vw] md:mt-[2vw] relative">
-                            <p v-split-text="{ splitBy: 'words, char' }" class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">DROP US A LINE.</p>
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] flex flex-col"><span>LET’S GET</span> <span class="md:!ml-[6vw]">IN TOUCH</span></h2>
                         </div>
                     </div>
 
@@ -79,95 +76,122 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-[50%] md:pr-[4vw]">
+                <div class="md:w-[61%] md:pr-[6.5vw] border-l border-[#FFFFFF]/25 md:pl-[8vw] md:pt-[8vw] md:pb-[10vw]">
                     <div class="relative">
                         <form class="flex flex-col gap-[8vw] md:gap-[3.5vw]">
-                            <div class="relative">
-                                <fieldset class="flex flex-col gap-[1vw]">
-                                    <legend class="text16px-desktop text12px-mobile font-inter font-medium">TYPE OF SERVICE</legend>
-                                    <div class="flex gap-[1.5vw] md:gap-[.75vw] mt-[4vw] md:mt-[1.5vw]">
-                                        <div>
-                                            <label for="website" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[4vw] md:px-[2vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">WEBSITE</p>
-                                                <input type="radio" name="service" value="website" id="website" class="sr-only" required />
-                                            </label>
-                                        </div>
+                            <div class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
+                                <p>Hi ArtworksIT team,</p>
 
-                                        <div>
-                                            <label for="ui-ux" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[4vw] md:px-[2vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">UI/UX</p>
-                                                <input type="radio" name="service" value="ui-ux" id="ui-ux" class="sr-only" required />
-                                            </label>
-                                        </div>
-
-                                        <div>
-                                            <label for="e-commerce" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[4vw] md:px-[2vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">E-COMMERCE</p>
-                                                <input type="radio" name="service" value="e-commerce" id="e-commerce" class="sr-only" required />
-                                            </label>
-                                        </div>
+                                <div class="mt-[1.75vw]">
+                                    I,
+                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                        {
+                                        <input type="text" name="name" v-model="name" placeholder=" Your name here " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" />
+                                        }
                                     </div>
-                                </fieldset>
-                            </div>
 
-                            <div class="relative">
-                                <fieldset class="flex flex-col gap-[1vw]">
-                                    <legend class="text16px-desktop text12px-mobile font-inter font-medium">BUDGET IN INR</legend>
-                                    <div class="flex gap-[1.5vw] md:gap-[.75vw] mt-[4vw] md:mt-[1.5vw]">
-                                        <div>
-                                            <label for="below-3-lakhs" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[2.5vw] md:px-[1vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">< ₹3 LAKHS</p>
-                                                <input type="radio" name="budget" value="below-3-lakhs" id="below-3-lakhs" class="sr-only" required />
-                                            </label>
-                                        </div>
+                                    want help kicking off a project. You <span class="md:w-[1.5vw] inline-block"></span> can reach me via
 
-                                        <div>
-                                            <label for="3-5-lakhs" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[2.5vw] md:px-[1vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">₹3-5 LAKHS</p>
-                                                <input type="radio" name="budget" value="3-5-lakhs" id="3-5-lakhs" class="sr-only" required />
-                                            </label>
+                                    <div class="inline-block !font-light relative">
+                                        {
+                                        <div class="absolute right-0 translate-y-[20%] -translate-x-[15%] top-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
+                                            </svg>
                                         </div>
-
-                                        <div>
-                                            <label for="5-10-lakhs" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[2.5vw] md:px-[1vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">₹5-10 LAKHS</p>
-                                                <input type="radio" name="budget" value="5-10-lakhs" id="5-10-lakhs" class="sr-only" required />
-                                            </label>
+                                        <div class="inline-block relative">
+                                            <select v-model="contactType" name="contact-via" id="contact-via" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[5vw]">
+                                                <option value="Email">Email</option>
+                                                <option value="Phone">Phone</option>
+                                            </select>
                                         </div>
-
-                                        <div>
-                                            <label for="more-than-10-lakhs" class="flex cursor-pointer rounded-full border text-[#F1F1F1]-color border-white-color bg-transparent py-[2vw] md:py-[.75vw] px-[2.5vw] md:px-[1vw] text16px-desktop text9px-mobile font-medium hover:bg-white-color hover:text-background-black duration-500 has-[:checked]:bg-white-color has-[:checked]:text-background-black">
-                                                <p class="text-inherit">> ₹10 LAKHS</p>
-                                                <input type="radio" name="budget" value="more-than-10-lakhs" id="more-than-10-lakhs" class="sr-only" required />
-                                            </label>
-                                        </div>
+                                        }
                                     </div>
-                                </fieldset>
-                            </div>
 
-                            <div class="relative -mt-[.95vw]">
-                                <div class="relative border-b border-[#707070]">
-                                    <input type="text" name="name" id="name" placeholder="Enter your name" class="peer w-full bg-transparent py-[2.5vw] md:py-[.75vw] md:pr-[2vw] md:pl-[.5vw] text-[16px] md:text16px-desktop font-medium placeholder:text-transparent" required />
-                                    <label for="name" class="pointer-events-none peer-focus:text9px-mobile md:peer-focus:text12px-desktop text9px-mobile md:text12px-desktop peer-placeholder-shown:text12px-mobile md:peer-placeholder-shown:text16px-desktop font-inter font-medium absolute left-0 top-full peer-focus:top-full translate-y-[70%] peer-focus:translate-y-[70%] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 duration-500">NAME</label>
+                                    &nbsp; at &nbsp;
+
+                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                        {
+                                        <div v-if="contactType === 'Email'" class="inline-block">
+                                            <input type="email" name="name" placeholder=" anedoe@gmail.com " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                        </div>
+                                        <div v-else class="inline-block">
+                                            <input type="tel" name="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                        </div>
+
+                                        }
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="relative -mt-[.95vw]">
-                                <div class="relative border-b border-[#707070]">
-                                    <input type="email" name="email" id="email" placeholder="Enter your email" class="peer w-full bg-transparent py-[2.5vw] md:py-[.75vw] md:pr-[2vw] md:pl-[.5vw] text-[16px] md:text16px-desktop font-medium placeholder:text-transparent" required />
-                                    <label for="email" class="pointer-events-none peer-focus:text9px-mobile md:peer-focus:text12px-desktop text9px-mobile md:text12px-desktop peer-placeholder-shown:text12px-mobile md:peer-placeholder-shown:text16px-desktop font-inter font-medium absolute left-0 top-full peer-focus:top-full translate-y-[70%] peer-focus:translate-y-[70%] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 duration-500">E-MAIL</label>
-                                </div>
-                            </div>
-
-                            <div class="relative">
-                                <button class="flex justify-between items-center border border-[#F1F1F1] w-full rounded-full pl-[5vw] md:pl-[2vw] py-[1.5vw] md:py-[.25vw] pr-[1.25vw] md:pr-[.25vw] group">
-                                    <p class="text14px-desktop text14px-mobile font-inter text-[#F1F1F1] leading-[1]">LET’S TALK</p>
-                                    <div class="flex items-center justify-center bg-[#F1F1F1] w-[8vw] h-[8vw] md:w-[3.75vw] md:h-[3.75vw] rounded-full md:scale-[15%] md:group-hover:scale-100 duration-500">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[50%] text-[#1c1c1c] duration-500 md:group-hover:opacity-100 md:opacity-0 -rotate-45 md:group-hover:rotate-0">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                        </svg>
+                                <div class="mt-[1.65vw]">
+                                    My business or project is called
+                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                        {
+                                        <input type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[34vw]" />
+                                        }.
                                     </div>
-                                </button>
+                                    &nbsp;&nbsp; And, I’m looking for
+
+                                    <div class="inline-block !font-light relative">
+                                        {
+                                        <div class="absolute right-0 translate-y-[20%] -translate-x-[15%] top-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
+                                            </svg>
+                                        </div>
+                                        <div class="inline-block relative">
+                                            <select name="contact-via" id="contact-via" v-model="lookingFor" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
+                                                <option value="website">Website</option>
+                                                <option value="ecom">E-commerce</option>
+                                                <option value="ui/ux">UI/UX</option>
+                                            </select>
+                                        </div>
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="mt-[1.75vw]">
+                                    and I’m aiming and I’m aiming
+                                    <div class="inline-block !font-light relative">
+                                        {
+                                        <div class="absolute right-0 translate-y-[20%] -translate-x-[15%] top-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
+                                            </svg>
+                                        </div>
+                                        <div class="inline-block relative">
+                                            <select name="contact-via" id="contact-via" v-model="timeline" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
+                                                <option value="3weeks">3 weeks</option>
+                                                <option value="ecom">1 - 3 months</option>
+                                                <option value="ui/ux">>3 months</option>
+                                            </select>
+                                        </div>
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="mt-[1.75vw]">
+                                    <span class="w-[13vw] inline-block"></span> And here’s more about what I have in mind
+
+                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                        {
+                                        <input type="text" name="name" v-model="message" placeholder=" Anything else " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[39vw]" />
+                                        }.
+                                    </div>
+                                </div>
+
+                                <div class="mt-[1.75vw]">
+                                    Cheers,
+                                    <div class="flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light w-max">
+                                        {
+                                        <input type="text" name="name" v-model="name" placeholder=" Jane Dane " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-max" />
+                                        }.
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <button class="rounded-full px-[1vw] py-[.5vw] flex items-center gap-[2vw]"></button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -177,3 +201,14 @@
     </section>
     <!-- Form Section End -->
 </template>
+
+<script setup>
+    const name = ref("");
+    const contactType = ref("Email");
+    const email = ref("");
+    const phone = ref("");
+    const message = ref("");
+    const lookingFor = ref("website");
+    const projectName = ref("");
+    const timeline = ref("3weeks");
+</script>

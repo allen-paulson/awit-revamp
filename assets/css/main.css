@@ -6,11 +6,6 @@
     html {
         @apply leading-[1];
     }
-
-    input,
-    textarea {
-        @apply !outline-none ring-0 border-none;
-    }
 }
 
 @layer utilities {
@@ -140,5 +135,13 @@
 
     .text56px-mobile {
         @apply text-[13.25vw];
+    }
+
+    .text76px-mobile {
+        @apply text-[17vw];
+    }
+
+    .text130px-mobile {
+        @apply text-[29vw];
     }
 }

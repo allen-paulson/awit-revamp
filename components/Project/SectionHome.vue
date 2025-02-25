@@ -4,7 +4,7 @@
             <div class="section-heading px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
                 <div class="hidden md:block">
-                    <the-breadcrumbs number="03" title="WHY YOU NEED US" />
+                    <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
                             <NuxtImg width="309" height="315" class="heading-img absolute bottom-0 w-[6.5vw] left-1/4 translate-x-[70%] translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
@@ -105,7 +105,114 @@
 
 <script setup>
     const emit = defineEmits(["projects-loaded"]);
-    const projects = ref([]);
+    const projects = [ 
+        {
+            id: 1,
+            title: "Azure",
+            users_chat: [
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "Client",
+                    message: "I want the best looking modern website for an apartment",
+                    time: "14 h",
+                },
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "User",
+                    message: "Client didn’t even negotiate much, let’s do a good job!",
+                    time: "14 h",
+                },
+            ],
+            image: {
+                desktop: "/images/projects/azure.png",
+            },
+        },
+        {
+            id: 2,
+            title: "VOC Automotive",
+            users_chat: [
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "Client",
+                    message: "Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.",
+                    time: "10 h",
+                },
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "User",
+                    message: "Lets do it!!",
+                    time: "10 h",
+                },
+            ],
+            image: {
+                desktop: "/images/projects/voc.png",
+            },
+        },
+        {
+            id: 3,
+            title: "Federate One",
+            users_chat: [
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "Client",
+                    message: "We need a portfolio site to showcase our design work.",
+                    time: "8 h",
+                },
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "User",
+                    message: "Perfect, I'll create a visually stunning gallery.",
+                    time: "8 h",
+                },
+            ],
+            image: {
+                desktop: "/images/projects/rotten.png",
+            },
+        },
+        {
+            id: 4,
+            title: "Goa Cars",
+            users_chat: [
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "Client",
+                    message: "We are the biggest car rental company in Goa, so our website should also be the best while being easy to book a car",
+                    time: "12 h",
+                },
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "User",
+                    message: "Ez Pz and live in 2 months",
+                    time: "12 h",
+                },
+            ],
+            image: {
+                desktop: "/images/projects/goa.png",
+            },
+        },
+        {
+            id: 5,
+            title: "Strand Lifesciences",
+            users_chat: [
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "Client",
+                    message: "We need a corporate site within 2 weeks.",
+                    time: "6 h",
+                },
+                {
+                    avatar: "bg-slate-400",
+                    user_type: "User",
+                    message: "Hold my Figma and VS Code!!! Live in 10 days",
+                    time: "6 h",
+                },
+            ],
+            image: {
+                desktop: "/images/projects/strands.png",
+            },
+        },
+    ];
+
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
     const containerRef = ref(null);
@@ -141,35 +248,41 @@
                         duration: 1,
                         ease: "none",
                     },
-                    `>`
-                ); // Using ">" ensures sequential animation
+                    ">"
+                );
+
+                // Apply grayscale and opacity to previous card
+                if (i > 0) {
+                    tl.to(
+                        cards[i - 1],
+                        {
+                            filter: "grayscale(100%)",
+                            duration: 0.5,
+                            ease: "none",
+                        },
+                        "<+=0.5" // Start halfway through current card's animation
+                    ).to(
+                        cards[i - 1].querySelector(".card-inner"),
+                        {
+                            opacity: 0.75,
+                            duration: 0.5,
+                            ease: "none",
+                        },
+                        "<"
+                    );
+                }
 
                 gsap.set(card, {
                     top: `${i * 6}vw`,
                 });
             }
-
-            tl.to(card, {
-                filter: "grayscale(100%)",
-                duration: 0.5,
-                ease: "none",
-            }).to(
-                card.querySelector(".card-inner"),
-                {
-                    opacity: 0.75,
-                    duration: 0.5,
-                    ease: "none",
-                },
-                `>`
-            );
         });
+
         gsap.set(cards[0], { filter: "grayscale(0%)" });
         gsap.set(cards[0], { opacity: 1 });
     };
 
     onMounted(async () => {
-        projects.value = await $fetch("/data/projects.json");
-        await nextTick();
         emit("projects-loaded");
         animation();
     });
