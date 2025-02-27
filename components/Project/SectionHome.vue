@@ -7,8 +7,8 @@
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
-                            <NuxtImg width="309" height="315" class="heading-img absolute bottom-0 w-[6.5vw] left-1/4 translate-x-[70%] translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
-                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
+                            <NuxtImg width="430" height="474" src="/images/home/popcorn.png" alt="Popcorn Image" class="heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
                                 <span class="overflow-hidden">IT'S STORY </span><span id="heading-space" class="inline-block w-[7vw]"></span>
                                 <span class="overflow-hidden">TIME </span>
                             </h1>
@@ -46,12 +46,12 @@
                             <div v-for="(project, index) in projects" :key="index" class="desktop-project__item">
                                 <div class="relative border-t border-[#FFFFFF] pb-[10vw] bg-[#151515]">
                                     <div class="flex justify-between px-[1vw] pt-[1vw] gap-[16vw]">
-                                        <div class="card-inner flex gap-[16vw]">
+                                        <div class="card-inner flex gap-[16vw] flex-1">
                                             <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
                                             <div class="flex flex-col gap-[3vw]">
                                                 <p class="font-anton text60px-desktop">{{ project.title }}</p>
                                                 <div class="flex flex-col gap-[.75vw]">
-                                                    <div class="flex gap-[1vw]">
+                                                    <!-- <div class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
                                                             <div class="rounded-full w-[3vw] aspect-square bg-slate-400"></div>
                                                             <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
@@ -64,25 +64,26 @@
                                                             </div>
                                                             <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.</p>
                                                         </div>
-                                                    </div>
-                                                    <div class="flex gap-[1vw]">
+                                                    </div> -->
+
+                                                    <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
-                                                            <div class="rounded-full w-[3vw] aspect-square bg-slate-400"></div>
+                                                            <div class="rounded-full w-[3vw] aspect-square bg-red-300" :class="chat.avatar"></div>
                                                             <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
                                                         </div>
                                                         <div class="mt-[.5vw] pb-[2vw]">
                                                             <div class="flex gap-[.75vw] items-center">
-                                                                <p class="font-inter text18px-desktop font-bold">User</p>
+                                                                <p class="font-inter text18px-desktop font-bold">{{ chat.user_type }}</p>
                                                                 <span class="w-[.25vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
-                                                                <p class="font-inter text18px-desktop font-light opacity-80">12 h</p>
+                                                                <p class="font-inter text18px-desktop font-light opacity-80">{{ chat.time }}</p>
                                                             </div>
-                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">Let's do it!!</p>
+                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">{{ chat.message }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="w-[45%]">
+                                        <div class="w-[27.5%]">
                                             <NuxtImg class="w-full" :src="project.image.desktop" alt="Arrow Image" />
                                         </div>
                                     </div>
@@ -105,7 +106,7 @@
 
 <script setup>
     const emit = defineEmits(["projects-loaded"]);
-    const projects = [ 
+    const projects = [
         {
             id: 1,
             title: "Azure",
@@ -225,7 +226,7 @@
             scrollTrigger: {
                 trigger: containerRef.value,
                 pin: true,
-                start: "top 17.5%",
+                start: "top 12.5%",
                 end: `+=${cards.length * 50}%`,
                 scrub: 1,
                 anticipatePin: 1,
@@ -252,7 +253,7 @@
                 );
 
                 // Apply grayscale and opacity to previous card
-                if (i > 0) {
+                if (i + 1 > 0) {
                     tl.to(
                         cards[i - 1],
                         {

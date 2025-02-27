@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute left-0 top-0 h-full z-0 hidden md:block">
+    <div class="absolute left-0 top-0 h-full z-0 hidden md:block pointer-events-none">
         <div ref="projectCursor" class="project-cursor fixed w-16 h-16 rounded-full bg-[#fffcfc] blur-3xl z-[0]"></div>
         <div ref="gridContainer" class="grid-container absolute z-[1] left-0 top-0 w-full">
             <div v-for="i in totalGrids" :key="i"></div>

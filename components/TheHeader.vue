@@ -1,6 +1,6 @@
 <template>
     <header class="text16px-desktop fixed w-full top-0 left-0 z-[10] pointer-events-none">
-        <div class="flex items-start md:items-center justify-between px-[5vw] md:px-[4vw] py-[5vw] md:py-[2.5vw]">
+        <div class="flex items-start justify-between px-[5vw] md:px-[3vw] py-[5vw] md:pb-[2.5vw] md:pt-[1vw]">
             <NuxtLink to="/" class="pointer-events-auto">
                 <svg xmlns=" http://www.w3.org/2000/svg" width="244" height="52" class="w-[30vw] h-auto md:w-[14vw]" viewBox="0 0 244 52">
                     <g id="Group_36402" data-name="Group 36402" transform="translate(-56 -79)">
@@ -67,27 +67,32 @@
                 </svg>
             </NuxtLink>
 
-            <nav class="">
-                <ul class="flex flex-col md:gap-[.75vw] gap-[3vw] font-medium text15px-desktop text10px-mobile uppercase text-[#F1F1F1] pointer-events-auto">
-                    <li>
-                        <NuxtLink to="/work" aria-label="Work Link" class="relative overflow-hidden group flex">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1]">Work</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Work</span>
-                        </NuxtLink>
-                    </li>
+            <nav class="flex items-center gap-[1vw]">
+                <ul class="flex md:gap-[.5vw] gap-[3vw] font-inter uppercase font-medium text24px-desktop text10px-mobile text-[#F1F1F1] pointer-events-auto">
                     <li>
                         <NuxtLink to="/team" aria-label="Team Link" class="relative overflow-hidden group flex">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1]">Team</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Team</span>
+                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Team</span>,
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Team</span>
                         </NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/contact" aria-label="Let's Talk Link" class="relative overflow-hidden group flex">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1]">Let's Talk</span>
-                            <span class="absolute top-full flex leading-[1] not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Let's Talk</span>
+                        <NuxtLink to="/work" aria-label="Work Link" class="relative overflow-hidden group flex">
+                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Work</span>,
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Work</span>
+                        </NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/contact" aria-label="Contact Link" class="relative overflow-hidden group flex">
+                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span>.
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Contact</span>
                         </NuxtLink>
                     </li>
                 </ul>
+
+                <NuxtLink to="/" aria-label="WhatsApp Link" class="relative overflow-hidden group flex text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
+                    <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
+                    <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">WhatsApp</span>
+                </NuxtLink>
             </nav>
         </div>
     </header>

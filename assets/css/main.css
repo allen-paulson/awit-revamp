@@ -33,6 +33,10 @@
         @apply md:!text-[1.1vw];
     }
 
+    .text20px-desktop {
+        @apply md:!text-[1.125vw];
+    }
+
     .text24px-desktop {
         @apply md:!text-[1.2vw];
     }

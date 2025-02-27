@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 inter: ["Inter", "sans-serif"],
                 anton: ["Anton", "sans-serif"],
+                alex: ["Alex Brush", "serif"],
             },
             colors: {
                 "background-black": "#151515",
