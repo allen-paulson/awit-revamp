@@ -11,7 +11,7 @@
         "text_color": "#FFFFFF",
         "image": {
             "desktop": "/images/projects/hunan.png",
-            "mobile": "/images/home/hunan-square.png"
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/hunan-square",
         "filters": [
@@ -75,7 +75,7 @@
         "text_color": "#663300",
         "image": {
             "desktop": "/images/projects/goa.png",
-            "mobile": "/images/home/hunan-square.png"
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/vailankanni",
         "filters": [
@@ -95,8 +95,8 @@
         "bg_color": "#F0F0F0",
         "text_color": "#333333",
         "image": {
-            "desktop": "/images/projects/goa.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/acme-d.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/acme-designers",
         "filters": [
@@ -116,8 +116,8 @@
         "bg_color": "#FFE6E6",
         "text_color": "#660000",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/voc.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/voc-automotive",
         "filters": [
@@ -138,8 +138,8 @@
         "bg_color": "#E6FFE6",
         "text_color": "#006600",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/vrieves.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/vrieves",
         "filters": [
@@ -161,8 +161,8 @@
         "bg_color": "#F8E6FF",
         "text_color": "#330066",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/mph.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/mumbai-post-house",
         "filters": [
@@ -182,8 +182,8 @@
         "bg_color": "#FFE6F0",
         "text_color": "#660033",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/rotten.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/rotten-grapes",
         "filters": [
@@ -203,8 +203,8 @@
         "bg_color": "#F0E6FF",
         "text_color": "#330066",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/banani.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/banani-vista",
         "filters": [
@@ -224,8 +224,8 @@
         "bg_color": "#F5F5F5",
         "text_color": "#1A1A1A",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/openstreet.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/openstreet-photography",
         "filters": [
@@ -244,8 +244,8 @@
         "bg_color": "#E6F0FF",
         "text_color": "#003366",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/ryze.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/ryze-chemie",
         "filters": [
@@ -266,8 +266,8 @@
         "bg_color": "#E6FFE6",
         "text_color": "#006600",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/strands.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/strand-life-sciences",
         "filters": [
@@ -287,79 +287,14 @@
         "bg_color": "#F0FFE6",
         "text_color": "#336600",
         "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
+            "desktop": "/images/projects/aaiwini.png",
+            "mobile": "/images/projects/voc.png"
         },
         "link": "/aaiwini",
         "filters": [
             "agriculture",
             "sustainability",
             "farming"
-        ]
-    },
-    {
-        "title": "ANGKOR TRI ACADEMY",
-        "year": "2021",
-        "tags": [
-            "#Genimics",
-            "#bioinformatics",
-            "#science"
-        ],
-        "description": "Advanced research institute",
-        "bg_color": "#FFE6E6",
-        "text_color": "#660000",
-        "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
-        },
-        "link": "/angkor-tri-academy",
-        "filters": [
-            "education",
-            "research",
-            "science"
-        ]
-    },
-    {
-        "title": "INTENTIONAL COACHING",
-        "year": "2023",
-        "tags": [
-            "#Argriculture",
-            "#harvest"
-        ],
-        "description": "Professional growth mentoring",
-        "bg_color": "#E6F3FF",
-        "text_color": "#003366",
-        "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
-        },
-        "link": "/intentional-coaching",
-        "filters": [
-            "coaching",
-            "professional-development",
-            "mentoring"
-        ]
-    },
-    {
-        "title": "INTELLITHINK",
-        "year": "2023",
-        "tags": [
-            "#Genimics",
-            "#bioinformatics",
-            "#science"
-        ],
-        "description": "AI-powered research solutions",
-        "bg_color": "#F0F0F0",
-        "text_color": "#333333",
-        "image": {
-            "desktop": "/images/home/hunan-square.png",
-            "mobile": "/images/home/hunan-square.png"
-        },
-        "link": "/intellithink",
-        "filters": [
-            "technology",
-            "ai",
-            "research"
         ]
     }
 ]

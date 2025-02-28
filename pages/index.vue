@@ -105,51 +105,51 @@
                                 <small-boxes direction="tl" />
                                 <small-boxes direction="tr" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="290" height="100" src="/images/home/tailwind.png" class="w-[65%] relative z-[2]" alt="Tailwind Image" />
+                                <NuxtImg width="238" height="76" src="/images/home/figma.png" class="w-[60%] relative z-[2]" alt="Digita lOcean Image" />
                             </div>
                             <div class="md:col-start-6 aspect-square border border-l-0 md:border-b-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="204" height="122" src="/images/home/gsap.png" class="w-[52.5%] relative z-[2]" alt="GSAP Image" />
+                                <NuxtImg width="134" height="136" src="/images/home/xd.png" class="w-[35%] relative z-[2]" alt="Xd Image" />
                             </div>
                             <div class="md:row-start-2 aspect-square border border-l-0 md:border-l border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tl" />
                                 <small-boxes direction="tr" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="276" height="48" src="/images/home/digital.png" class="w-[65%] relative z-[2]" alt="Digita lOcean Image" />
+                                <NuxtImg width="238" height="70" src="/images/home/apsara.png" class="w-[60%] relative z-[2]" alt="Procreate Image" />
                             </div>
                             <div class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="md:hidden">
                                     <small-boxes direction="tl" />
                                 </div>
-
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="236" height="48" src="/images/home/next.png" class="w-[55%] relative z-[2]" alt="NextJS Image" />
+                                <NuxtImg width="137" height="135" src="/images/home/ps.png" class="w-[35%] relative z-[2]" alt="Ps Image" />
                             </div>
                             <div class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="294" height="82" src="/images/home/laravel.png" class="w-[65%] relative z-[2]" alt="Laravel Image" />
-                            </div>
-                            <div class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-                                <small-boxes direction="tr" />
-                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="266" height="100" src="/images/home/cloudflare.png" class="w-[65%] relative z-[2]" alt="Cloudflare Image" />
+                                <NuxtImg width="130" height="130" src="/images/home/ai.png" class="w-[35%] relative z-[2]" alt="Ai Image" />
                             </div>
                             <div class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="md:hidden">
                                     <small-boxes direction="tl" />
                                 </div>
+                                <NuxtImg width="290" height="100" src="/images/home/tailwind.png" class="w-[65%] relative z-[2]" alt="Tailwind Image" />
 
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="320" height="83" src="/images/home/procreate.png" class="w-[65%] relative z-[2]" alt="Procreate Image" />
+                            </div>
+                            <div class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+                                <small-boxes direction="tr" />
+                                <small-boxes direction="br" />
+                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
+                                <NuxtImg width="236" height="48" src="/images/home/nuxt.png" class="w-[60%] relative z-[2]" alt="NextJS Image" />
                             </div>
                             <div class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="308" height="160" src="/images/home/framer.png" class="w-[65%] relative z-[2]" alt="Framer Image" />
+                                <NuxtImg width="204" height="122" src="/images/home/gsap.png" class="w-[50%] relative z-[2]" alt="GSAP Image" />
                             </div>
                             <div class="md:row-start-3 aspect-square border border-t-0 border-l-0 md:border-l border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tl" />
@@ -157,7 +157,23 @@
                                 <small-boxes direction="br" />
                                 <small-boxes direction="bl" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="134" height="136" src="/images/home/ae.png" class="w-[35%] relative z-[2]" alt="Ae Image" />
+                                <NuxtImg width="278" height="52" src="/images/home/alpinejs.png" class="w-[60%] relative z-[2]" alt="Ae Image" />
+                            </div>
+                            <div class="md:row-start-3 aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+                                <small-boxes direction="tr" />
+                                <small-boxes direction="br" />
+                                <div class="md:hidden">
+                                    <small-boxes direction="tl" />
+                                    <small-boxes direction="bl" />
+                                </div>
+                                <NuxtImg width="294" height="82" src="/images/home/laravel.png" class="w-[65%] relative z-[2]" alt="Laravel Image" />
+
+                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
+                            </div>
+                            <div class="md:row-start-3 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+                                <small-boxes direction="tr" />
+                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
+                                <NuxtImg width="257" height="59" src="/images/home/filament.png" class="w-[60%] relative z-[2]" alt="Framer Image" />
                             </div>
                             <div class="md:row-start-3 aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
@@ -168,19 +184,25 @@
                                 </div>
 
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="130" height="130" src="/images/home/ai.png" class="w-[35%] relative z-[2]" alt="Ai Image" />
+                                <NuxtImg width="219 " height="115" src="/images/home/mysql.png" class="w-[50%] relative z-[2]" alt="Ai Image" />
                             </div>
                             <div class="md:row-start-3 aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="137" height="135" src="/images/home/ps.png" class="w-[35%] relative z-[2]" alt="Ps Image" />
+                                <NuxtImg width="164" height="164" src="/images/home/postgres.png" class="w-[35%] relative z-[2]" alt="Ps Image" />
                             </div>
                             <div class="md:row-start-3 aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
-                                <NuxtImg width="134" height="136" src="/images/home/xd.png" class="w-[35%] relative z-[2]" alt="Xd Image" />
+                                <NuxtImg width="266" height="100" src="/images/home/cloudflare.png" class="w-[60%] relative z-[2]" alt="Cloudflare Image" />
+                            </div>
+                            <div class="md:row-start-4 aspect-square border border-t-0 border-[#5C5C5C] flex items-center justify-center relative">
+                                <small-boxes direction="tr" />
+                                <small-boxes direction="br" />
+                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
+                                <NuxtImg width="134" height="136" src="/images/home/ae.png" class="w-[35%] relative z-[2]" alt="Xd Image" />
                             </div>
                         </div>
                     </div>
@@ -197,7 +219,6 @@
             <ProjectSectionHome @projects-loaded="refreshScrollTrigger" />
             <!-- Projects Section End -->
 
-           
             <!-- Contact Section Start -->
             <section class="md:-mt-[2.5vw]">
                 <ContactForm />

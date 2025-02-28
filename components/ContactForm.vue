@@ -1,11 +1,11 @@
 <template>
     <!-- Contact Landing Section Start -->
-    <section v-if="path === '/contact'" class="relative">
+    <section v-if="path === '/contact'" id="contact-heading" class="relative">
         <div class="px-[6vw] md:px-[4.5vw] pt-[5vw] pb-[8vw] md:pb-[6vw]">
             <div class="relative text-[#F1F1F1]">
                 <!-- Desktop View -->
                 <div class="relative md:w-full hidden md:block">
-                    <NuxtImg id="pencil" width="311" class="pencil absolute bottom-[37.5%] w-[9vw] right-[17%] !-translate-x-[70%] !-translate-y-[10%] z-[1]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg id="pencil" width="311" class="heading-img absolute bottom-[37.5%] w-[9vw] right-[17%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/contact/phone.png" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                         <span class="overflow-hidden">LET’S WORK </span>
                         <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -15,7 +15,7 @@
                 </div>
                 <!-- Mobile View -->
                 <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                    <NuxtImg height="349" class="pencil-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg height="349" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                         <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>LET’S</span> <span>WORK</span> </span>
                         <span class="overflow-hidden text130px-mobile">TOGETHER</span>
@@ -61,8 +61,8 @@
                     <div id="socials" class="md:pl-[4.75vw] pl-[8vw] mt-[6vw] md:mt-[10vw]">
                         <div class="grid grid-cols-3 w-max">
                             <div class="col-start-2">
-                                <NuxtLink to="https://calendly.com/artworksit/30min" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45.569" height="28.76" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#DA483A]" viewBox="0 0 45.569 28.76">
+                                <NuxtLink to="https://www.behance.net/ashwind" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45.569" height="28.76" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#003ECB]" viewBox="0 0 45.569 28.76">
                                         <path
                                             id="_8a7a186666c0d51cd04d97fca1b9ee64"
                                             data-name="8a7a186666c0d51cd04d97fca1b9ee64"
@@ -89,7 +89,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-2">
-                                <NuxtLink id="instagram" to="https://calendly.com/artworksit/30min" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink id="instagram" to="https://www.instagram.com/_artworksit/" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="38.057" height="38.057" class="w-[30%] md:w-[35%] duration-500" viewBox="0 0 38.057 38.057">
                                         <!-- Define gradient -->
                                         <defs>
@@ -112,7 +112,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-2">
-                                <NuxtLink to="https://calendly.com/artworksit/30min" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://www.linkedin.com/company/artworksit/posts/?feedView=all" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="41.705" height="39.853" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#0156A4]" viewBox="0 0 41.705 39.853">
                                         <path
                                             id="b5783c601e16032733df8073caacab72"
@@ -391,6 +391,7 @@
 
 <script setup>
     import { gsap } from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
     const { path } = useRoute();
 
     const name = ref("");
@@ -512,6 +513,34 @@
         );
     };
 
+    const headinganimation = () => {
+        const contactHeading = document.querySelector("#contact-heading");
+        if (contactHeading) {
+            const tl = gsap.timeline();
+
+            tl.set([".main-heading .char", ".main-heading-mobile .char"], { opacity: 0, y: "100%" }).set(".heading-img", { scale: 0 }).set(".heading-img-mobile", { scale: 0 });
+
+            tl.to([".main-heading .char", ".main-heading-mobile .char"], {
+                opacity: 1,
+                y: "0%",
+                duration: 0.3,
+                ease: "power1.inout",
+                stagger: {
+                    amount: 1,
+                    from: "start",
+                },
+            }).from(
+                [".heading-img", ".heading-img-mobile"],
+                {
+                    scale: 0,
+                    duration: 1.2,
+                    ease: "elastic.out(1, 0.6)",
+                },
+                "-=.04"
+            );
+        }
+    };
+
     // Update width function for all selects
     const updateSelectWidths = () => {
         nextTick(() => {
@@ -531,6 +560,8 @@
     watch([contactType, lookingFor, timeline], updateSelectWidths);
 
     onMounted(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        headinganimation();
         updateSelectWidths();
         formAnimation();
     });

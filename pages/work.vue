@@ -9,7 +9,7 @@
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
                         <div class="relative md:w-full hidden md:block">
-                            <NuxtImg id="pencil" width="309" height="315" class="pencil absolute bottom-[37.5%] w-[12vw] right-[7.5%] !-translate-x-[70%] !-translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" class="heading-img absolute bottom-[37.5%] w-[12vw] right-[7.5%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                                 <span class="overflow-hidden">SITES WE'VE </span>
                                 <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -20,7 +20,7 @@
 
                         <!-- Mobile View -->
                         <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                            <NuxtImg width="309" height="315" class="pencil-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.png" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                                 <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>SITES</span> <span>WE'VE</span> </span>
                                 <span class="overflow-hidden text130px-mobile">SHIPPED</span>
@@ -36,7 +36,7 @@
                 <div class="px-[6vw] md:px-[5vw]">
                     <div class="relative">
                         <!-- Desktop View -->
-                        <div class="relative text-[#FFFFFF] bg-[#151515] hidden md:block">
+                        <div class="relative text-[#FFFFFF] bg-[#151515] hidden md:block work-projects-container">
                             <NuxtLink to="/" v-for="(project, index) in projects" :key="index" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
                                 <div class="flex-1 pt-[1.75vw] pb-[3.5vw]">
                                     <div class="flex gap-[5vw]">
@@ -121,28 +121,9 @@
     const animation = () => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const sections = document.querySelectorAll(".section");
-
-        sections.forEach((section) => {
-            gsap.set(section, { filter: "blur(0px)" });
-
-            gsap.to(section, {
-                filter: "blur(10px)",
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "bottom 50%",
-                    end: "bottom -20%",
-                    scrub: true,
-                    toggleActions: "play reverse play reverse",
-                },
-            });
-        });
-
         const tl = gsap.timeline();
 
-        gsap.set([".main-heading .char", ".main-heading-mobile .char"], { opacity: 0, y: "100%" });
+        tl.set([".main-heading .char", ".main-heading-mobile .char"], { opacity: 0, y: "100%" }).set(".heading-img", { scale: 0 }).set(".heading-img-mobile", { scale: 0 });
 
         tl.to([".main-heading .char", ".main-heading-mobile .char"], {
             opacity: 1,
@@ -153,93 +134,74 @@
                 amount: 1,
                 from: "start",
             },
-        })
-            .from("#heading-space", {
-                width: "2vw",
-                duration: 0.5,
-            })
-            .from(
-                [".pencil", ".pencil-mobile"],
-                {
-                    scale: 0,
-                    duration: 1.2,
-                    ease: "elastic.out(1, 0.6)",
-                },
-                "-=.2"
-            );
+        }).from(
+            [".heading-img", ".heading-img-mobile"],
+            {
+                scale: 0,
+                duration: 1.2,
+                ease: "elastic.out(1, 0.6)",
+            },
+            "-=.04"
+        );
 
-        // Projects hover animation
         const workItems = document.querySelectorAll(".work-item");
         let currentAnimatingElement = null;
-        let isAnimating = false;
-        let animationQueue = null;
+        let currentLeaveAnimation = null;
 
         workItems.forEach((item) => {
             item.addEventListener("mouseenter", () => {
                 // If we're already hovering on this element, do nothing
                 if (currentAnimatingElement === item) return;
 
-                // If an animation is in progress, cancel it and queue this one
-                if (isAnimating) {
-                    animationQueue = () => animateElement(item);
-                    return;
+                // If there's a current leave animation happening, kill it
+                if (currentLeaveAnimation) {
+                    currentLeaveAnimation.kill();
+                    currentLeaveAnimation = null;
                 }
 
-                animateElement(item);
-            });
+                // If we have a previous element, animate it out first
+                if (currentAnimatingElement) {
+                    const prevElement = currentAnimatingElement;
 
-            item.addEventListener("mouseleave", () => {
-                // Only handle leave for the current element
-                if (currentAnimatingElement === item) {
-                    resetAllAnimations();
+                    // Start the leave animation for previous element
+                    currentLeaveAnimation = gsap.to(prevElement.querySelector(".clip-target"), {
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                        duration: 0.4,
+                        ease: "sine.inOut",
+                        onComplete: () => {
+                            currentLeaveAnimation = null;
+                        },
+                    });
                 }
-            });
-        });
 
-        function animateElement(el) {
-            // Reset any previous animations
-            resetAllAnimations();
+                // Update current element and animate it in
+                currentAnimatingElement = item;
 
-            // Set flags
-            isAnimating = true;
-            currentAnimatingElement = el;
-
-            // Run animation
-            gsap.to(el.querySelector(".clip-target"), {
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                duration: 0.8,
-                ease: "sine.inOut",
-                onComplete: () => {
-                    isAnimating = false;
-
-                    // If there's a queued animation, run it
-                    if (animationQueue) {
-                        const nextAnimation = animationQueue;
-                        animationQueue = null;
-                        nextAnimation();
-                    }
-                },
-            });
-        }
-
-        function resetAllAnimations() {
-            // Reset all elements to initial state
-            workItems.forEach((item) => {
+                // Animate the new element
                 gsap.to(item.querySelector(".clip-target"), {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                    duration: 0.5,
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    duration: 0.8,
                     ease: "sine.inOut",
                 });
             });
-
-            currentAnimatingElement = null;
-            animationQueue = null;
-        }
+        });
 
         // Handle leaving the entire container area
-        const container = document.querySelector(".your-container-selector");
+        const container = document.querySelector(".work-projects-container");
         if (container) {
-            container.addEventListener("mouseleave", resetAllAnimations);
+            container.addEventListener("mouseleave", () => {
+                if (!currentAnimatingElement) return;
+
+                // Animate out the current element
+                gsap.to(currentAnimatingElement.querySelector(".clip-target"), {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    duration: 0.5,
+                    ease: "sine.inOut",
+                    onComplete: () => {
+                        currentAnimatingElement = null;
+                    },
+                });
+            });
         }
     };
 

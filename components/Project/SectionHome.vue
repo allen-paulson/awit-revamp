@@ -5,7 +5,7 @@
                 <!-- Desktop View -->
                 <div class="hidden md:block">
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
-                    <div class="flex items-end gap-[3vw]">
+                    <div class="flex justify-center items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
                             <NuxtImg width="430" height="474" src="/images/home/popcorn.png" alt="Popcorn Image" class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
