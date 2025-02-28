@@ -1,5 +1,5 @@
 <template>
-    <div ref="loader" class="loader fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 origin-center scale-150 z-[9999] bg-white flex w-screen items-center justify-center rounded-full aspect-square">
+    <div ref="loader" class="loader fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 origin-center scale-[2.5] md:scale-150 z-[9999] bg-white flex w-screen items-center justify-center rounded-full aspect-square">
         <div class="h-full w-full font-anton text-background-black text44px-desktop relative">
             <div>
                 <div class="overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

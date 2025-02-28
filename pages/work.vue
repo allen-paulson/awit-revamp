@@ -5,14 +5,16 @@
         <div class="relative z-[1]">
             <!-- Heading Section Start -->
             <section class="relative">
-                <div class="px-[6vw] md:pl-[4.5vw] md:pr-[6vw] pt-[5vw] pb-[8vw] md:pb-[6vw]">
+                <div class="px-[6vw] md:px-[4.5vw] pt-[5vw] md:pt-0 pb-[8vw] md:pb-[6vw]">
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
-                        <div class="pt-[2vw] relative md:w-full hidden md:block">
-                            <NuxtImg id="pencil" width="309" height="315" class="pencil absolute bottom-0 w-[8.5vw] left-[45.5%] translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
-                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text178px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
-                                <span class="overflow-hidden">SITES WE'VE </span><span id="heading-space" class="inline-block w-[7vw]"></span>
-                                <span class="overflow-hidden">SHIPPED </span>
+                        <div class="relative md:w-full hidden md:block">
+                            <NuxtImg id="pencil" width="309" height="315" class="pencil absolute bottom-[37.5%] w-[12vw] right-[7.5%] !-translate-x-[70%] !-translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
+                                <span class="overflow-hidden">SITES WE'VE </span>
+                                <span class="!inline-flex justify-end -mt-[2.75vw]">
+                                    <span class="overflow-hidden">SHIPPED </span>
+                                </span>
                             </h1>
                         </div>
 

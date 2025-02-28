@@ -86,7 +86,7 @@
     }
 
     .text262px-desktop {
-        @apply md:!text-[15.3vw];
+        @apply md:!text-[13.8vw];
     }
 
     /* ======================================================= */
@@ -109,8 +109,16 @@
         @apply text-[3.25vw];
     }
 
+    .text16px-mobile {
+        @apply text-[3.75vw];
+    }
+
     .text18px-mobile {
         @apply text-[4.15vw];
+    }
+
+    .text20px-mobile {
+        @apply text-[4.75vw];
     }
 
     .text28px-mobile {

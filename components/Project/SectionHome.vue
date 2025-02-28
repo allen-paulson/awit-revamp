@@ -1,14 +1,14 @@
 <template>
     <section class="relative overflow-hidden md:pb-[6vw]">
         <div class="relative z-[2]">
-            <div class="section-heading px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
+            <div class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
                 <div class="hidden md:block">
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
-                            <NuxtImg width="430" height="474" src="/images/home/popcorn.png" alt="Popcorn Image" class="heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
-                            <h1 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
+                            <NuxtImg width="430" height="474" src="/images/home/popcorn.png" alt="Popcorn Image" class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
+                            <h1 v-split-text="{ splitBy: 'words, char' }" class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
                                 <span class="overflow-hidden">IT'S STORY </span><span id="heading-space" class="inline-block w-[7vw]"></span>
                                 <span class="overflow-hidden">TIME </span>
                             </h1>
@@ -22,17 +22,15 @@
                         <div class="oveflow-hidden pl-[22vw]">
                             <the-breadcrumbs number="02" title=" WHY YOU NEED US" />
                         </div>
-                        <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                            <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[18vw] md:w-[6.5vw] left-1/4 translate-x-[60%] md:translate-x-[70%] -translate-y-[70%] md:translate-y-[10%]" src="/images/home/eye.png" alt="Eye Image" />
-                            <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-                                <span class="overflow-hidden">HERE’S OUR </span>
-                                <span class="overflow-hidden">TOP 5 <span class="w-[13vw] inline-block"></span> BEST </span>
-                                <span class="overflow-hidden">WORKS</span>
+                        <div class="pt-[4vw] md:pt-[2vw] relative">
+                            <NuxtImg width="430" height="474" class="work-heading-img-mobile absolute bottom-0 w-[25vw] md:w-[6.5vw] left-1/4 translate-x-[45%] translate-y-[10%] z-[1]" src="/images/home/popcorn.png" alt="Eye Image" />
+                            <h2 v-split-text="{ splitBy: 'words, char' }" class="work-heading-mobile font-anton text-[19vw] -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden w-full">
+                                <span class="overflow-hidden">IT'S STORY </span>
+                                <span class="!inline-flex justify-end">
+                                    <span class="overflow-hidden">TIME </span>
+                                </span>
                             </h2>
                         </div>
-                    </div>
-                    <div class="flex justify-end -mt-[10vw]">
-                        <the-button text="SEE ALL OF THEM" to="/" />
                     </div>
                 </div>
             </div>
@@ -51,21 +49,6 @@
                                             <div class="flex flex-col gap-[3vw]">
                                                 <p class="font-anton text60px-desktop">{{ project.title }}</p>
                                                 <div class="flex flex-col gap-[.75vw]">
-                                                    <!-- <div class="flex gap-[1vw]">
-                                                        <div class="flex flex-col">
-                                                            <div class="rounded-full w-[3vw] aspect-square bg-slate-400"></div>
-                                                            <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
-                                                        </div>
-                                                        <div class="mt-[.5vw] pb-[2vw]">
-                                                            <div class="flex gap-[.75vw] items-center">
-                                                                <p class="font-inter text18px-desktop font-bold">Client</p>
-                                                                <span class="w-[.25vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
-                                                                <p class="font-inter text18px-desktop font-light opacity-80">12 h</p>
-                                                            </div>
-                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.</p>
-                                                        </div>
-                                                    </div> -->
-
                                                     <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
                                                             <div class="rounded-full w-[3vw] aspect-square bg-red-300" :class="chat.avatar"></div>
@@ -93,9 +76,37 @@
                     </div>
 
                     <!-- Mobile View -->
-                    <div class="grid gap-[15vw] md:hidden px-[12vw]">
-                        <div v-for="(project, index) in projects" :key="index">
-                            <ProjectCardPenta :project="project" :index="index" />
+                    <div class="grid gap-[15vw] md:hidden pb-[16vw]">
+                        <div v-for="(project, index) in projects" :key="index" class="">
+                            <div class="border-[.6px] border-[#D0D0D0] p-[3vw] pt-[5vw]">
+                                <div class="flex justify-between">
+                                    <p class="text34px-mobile text-white font-anton">{{ project.title }}</p>
+                                    <NuxtImg width="38" height="38" class="w-[8vw] -mt-[2vw]" src="/images/work/arrow.svg" />
+                                </div>
+
+                                <div class="mt-[4.5vw]">
+                                    <NuxtImg class="w-full" :src="project.image.desktop" alt="Arrow Image" />
+                                </div>
+
+                                <div class="mt-[6.5vw] pl-[3vw]">
+                                    <div class="flex flex-col gap-[3vw]">
+                                        <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[3vw]">
+                                            <div class="flex flex-col">
+                                                <div class="rounded-full w-[10vw] aspect-square bg-red-300" :class="chat.avatar"></div>
+                                                <div :class="chatIndex !== 0 ? 'hidden' : ''" class="flex-1 w-px bg-[#454545] mx-auto mt-[2vw]"></div>
+                                            </div>
+                                            <div class="mt-[1vw] pb-[5vw]">
+                                                <div class="flex gap-[2vw] items-center">
+                                                    <p class="font-inter text14px-mobile font-semibold">{{ chat.user_type }}</p>
+                                                    <span class="w-[.75vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
+                                                    <p class="font-inter text14px-mobile font-light opacity-80">{{ chat.time }}</p>
+                                                </div>
+                                                <p class="font-inter text14px-mobile mt-[2vw] leading-[1.3] w-[90%]">{{ chat.message }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,7 +130,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "User",
+                    user_type: "ArtworksIT",
                     message: "Client didn’t even negotiate much, let’s do a good job!",
                     time: "14 h",
                 },
@@ -140,7 +151,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "User",
+                    user_type: "ArtworksIT",
                     message: "Lets do it!!",
                     time: "10 h",
                 },
@@ -161,7 +172,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "User",
+                    user_type: "ArtworksIT",
                     message: "Perfect, I'll create a visually stunning gallery.",
                     time: "8 h",
                 },
@@ -182,7 +193,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "User",
+                    user_type: "ArtworksIT",
                     message: "Ez Pz and live in 2 months",
                     time: "12 h",
                 },
@@ -203,7 +214,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "User",
+                    user_type: "ArtworksIT",
                     message: "Hold my Figma and VS Code!!! Live in 10 days",
                     time: "6 h",
                 },
@@ -221,6 +232,42 @@
     const animation = () => {
         gsap.registerPlugin(ScrollTrigger);
         const cards = gsap.utils.toArray(".desktop-project__item");
+
+        gsap.set([".work-heading .char", ".work-heading-mobile .char"], { opacity: 0, y: "100%" });
+
+        const headingTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section-heading-work",
+                start: "top 90%",
+                end: "top 70%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        headingTl
+            .to([".work-heading .char", ".work-heading-mobile .char"], {
+                opacity: 1,
+                y: "0%",
+                duration: 0.3,
+                ease: "power1.inout",
+                stagger: {
+                    amount: 1,
+                    from: "start",
+                },
+            })
+            .from("#heading-space", {
+                width: "2vw",
+                duration: 0.5,
+            })
+            .from(
+                [".work-heading-img", ".work-heading-img-mobile"],
+                {
+                    scale: 0,
+                    duration: 1.2,
+                    ease: "elastic.out(1, 0.6)",
+                },
+                "-=.2"
+            );
 
         const tl = gsap.timeline({
             scrollTrigger: {

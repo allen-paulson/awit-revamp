@@ -8,7 +8,7 @@
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
-                        <NuxtImg id="pencil" width="218" height="200" src="/images/home/pencil.png" class="pencil absolute left-0 bottom-0 w-[6vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
+                        <NuxtImg id="pencil" width="276" height="188" src="/images/home/saw.png" class="pencil absolute left-0 bottom-0 w-[8vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
                         <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
                         <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0">
                             <span class="overflow-hidden">WE ARE A TEAM OF </span>
@@ -17,7 +17,7 @@
                         </h1>
 
                         <div class="button absolute bottom-[1vw] right-0">
-                            <the-button text="LET'S TALK" to="/" />
+                            <the-button text="LET'S TALK" to="/contact" />
                         </div>
                     </div>
                 </div>
@@ -26,12 +26,12 @@
                 <div class="md:hidden px-[7vw] pt-[26vw] pb-[38vw]">
                     <div class="relative flex flex-col gap-[5vw]">
                         <div class="relative">
-                            <NuxtImg width="218" height="200" src="/images/home/pencil.png" class="pencil-mobile absolute right-[5%] top-[6%] translate-y-full w-[16vw] z-[1]" alt="Pencil Image" />
+                            <NuxtImg width="276" height="188" src="/images/home/saw.png" class="pencil-mobile absolute right-[5%] !-translate-x-1/2 top-[10%] translate-y-full w-[20vw] z-[1]" alt="Pencil Image" />
                             <NuxtImg width="362" height="275" src="/images/home/laptop.png" class="laptop-mobile absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-[1]" alt="Laptop Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
                                 <span class="overflow-hidden">WE ARE A</span>
                                 <span class="overflow-hidden">TEAM OF</span>
-                                <span class="overflow-hidden">DESIGNERS</span>
+                                <span class="overflow-hidden pl-[10vw]">DESIGNERS</span>
                                 <span class="overflow-hidden">AND DEVELOPERS</span>
                                 <span class="overflow-hidden">WHO BUILD</span>
                                 <span class="pl-[15vw] overflow-hidden">WEBSITES</span>
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="button-mobile flex justify-end">
-                            <the-button text="LET'S TALK" to="/" />
+                            <the-button text="LET'S TALK" to="/contact" />
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <the-breadcrumbs number="01" title="TECHNOLOGIES" />
                         </div>
                         <div class="pl-[4.75vw] pt-[2vw] relative w-max">
-                            <NuxtImg width="276" height="188" class="heading-img absolute w-[8vw] bottom-0 translate-y-[20%] right-[2.5%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
+                            <NuxtImg width="218" height="200" class="heading-img absolute w-[6vw] bottom-0 translate-y-[20%] right-[8.5%] -translate-x-full z-[1]" src="/images/home/pencil.png" alt="Saw Image" />
                             <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex gap-[3.5vw] relative z-[0] overflow-hidden"><span>TOOLS OF OUR</span> <span>TRADE</span></h2>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                             <the-breadcrumbs number="01" title="TECHNOLOGIES" />
                         </div>
                         <div class="pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative w-max">
-                            <NuxtImg width="276" height="188" class="heading-img-mobile absolute w-[16vw] bottom-0 translate-y-[20%] right-[15%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
+                            <NuxtImg width="218" height="200" class="heading-img-mobile absolute w-[16vw] bottom-0 translate-y-[20%] right-[15%] -translate-x-full z-[1]" src="/images/home/pencil.png" alt="pencil Image" />
                             <h2 v-split-text="{ splitBy: 'words, char' }" class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
                                 <span class="overflow-hidden">TOOLS OF </span>
                                 <span class="overflow-hidden">OUR <span class="w-[7vw] inline-block"></span> TRADE</span>
@@ -188,15 +188,18 @@
             </section>
             <!-- Technologies Section End -->
 
+            <!-- HR -->
+            <div class="md:hidden px-[5vw] pt-[15vw]">
+                <div class="border-t-[.5px] border-white"></div>
+            </div>
+
             <!-- Projects Section Start -->
             <ProjectSectionHome @projects-loaded="refreshScrollTrigger" />
             <!-- Projects Section End -->
 
-            <div class="px-[2vw]">
-                <div class="border-t border-[#F1F1F1] relative"></div>
-            </div>
+           
             <!-- Contact Section Start -->
-            <section class="md:-mt-[6.5vw]">
+            <section class="md:-mt-[2.5vw]">
                 <ContactForm />
             </section>
             <!-- Contact Section End -->
@@ -359,7 +362,7 @@
                     duration: 1.2,
                     ease: "elastic.out(1, 0.6)", // Elastic pop effect
                 },
-                "-=0.4"
+                "-=0.8"
             )
             .to(
                 [".laptop", ".laptop-mobile"],
