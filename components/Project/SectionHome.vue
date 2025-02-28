@@ -130,7 +130,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "ArtworksIT",
+                    user_type: "ArtWorksIT",
                     message: "Client didn’t even negotiate much, let’s do a good job!",
                     time: "14 h",
                 },
@@ -151,7 +151,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "ArtworksIT",
+                    user_type: "ArtWorksIT",
                     message: "Lets do it!!",
                     time: "10 h",
                 },
@@ -172,7 +172,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "ArtworksIT",
+                    user_type: "ArtWorksIT",
                     message: "Perfect, I'll create a visually stunning gallery.",
                     time: "8 h",
                 },
@@ -193,7 +193,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "ArtworksIT",
+                    user_type: "ArtWorksIT",
                     message: "Ez Pz and live in 2 months",
                     time: "12 h",
                 },
@@ -214,7 +214,7 @@
                 },
                 {
                     avatar: "bg-slate-400",
-                    user_type: "ArtworksIT",
+                    user_type: "ArtWorksIT",
                     message: "Hold my Figma and VS Code!!! Live in 10 days",
                     time: "6 h",
                 },
