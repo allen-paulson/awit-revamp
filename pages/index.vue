@@ -60,7 +60,7 @@
                                     <span class="group-hover:-translate-y-full duration-500 leading-[1]">BEHANCÉ</span>
                                     <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">BEHANCÉ</span>
                                 </NuxtLink>
-                                <NuxtLink to="/" target="_blank" class="flex relative group overflow-hidden" aria-label="Behance Link">
+                                <NuxtLink to="https://x.com/artworksit_in" target="_blank" class="flex relative group overflow-hidden" aria-label="Behance Link">
                                     <span class="group-hover:-translate-y-full duration-500 leading-[1]">X</span>
                                     <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">X</span>
                                 </NuxtLink>
