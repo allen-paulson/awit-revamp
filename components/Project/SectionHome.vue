@@ -51,7 +51,9 @@
                                                 <div class="flex flex-col gap-[.75vw]">
                                                     <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
-                                                            <div class="rounded-full w-[3vw] aspect-square bg-red-300" :class="chat.avatar"></div>
+                                                            <div class="rounded-full w-[3vw] aspect-square bg-red-300 overflow-hidden">
+                                                                <NuxtImg width="30" height="30" class="w-full h-full" :src="chat.avatar" alt="Chat Icon" />
+                                                            </div>
                                                             <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
                                                         </div>
                                                         <div class="mt-[.5vw] pb-[2vw]">
@@ -123,13 +125,13 @@
             title: "Azure",
             users_chat: [
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "Client",
                     message: "I want the best looking modern website for an apartment",
                     time: "14 h",
                 },
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "ArtWorksIT",
                     message: "Client didn’t even negotiate much, let’s do a good job!",
                     time: "14 h",
@@ -144,13 +146,13 @@
             title: "VOC Automotive",
             users_chat: [
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/voc.png",
                     user_type: "Client",
                     message: "Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.",
                     time: "10 h",
                 },
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "ArtWorksIT",
                     message: "Lets do it!!",
                     time: "10 h",
@@ -165,13 +167,13 @@
             title: "Federate One",
             users_chat: [
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/rotten.png",
                     user_type: "Client",
                     message: "We need a portfolio site to showcase our design work.",
                     time: "8 h",
                 },
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "ArtWorksIT",
                     message: "Perfect, I'll create a visually stunning gallery.",
                     time: "8 h",
@@ -186,13 +188,13 @@
             title: "Goa Cars",
             users_chat: [
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/goacars.png",
                     user_type: "Client",
                     message: "We are the biggest car rental company in Goa, so our website should also be the best while being easy to book a car",
                     time: "12 h",
                 },
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "ArtWorksIT",
                     message: "Ez Pz and live in 2 months",
                     time: "12 h",
@@ -207,13 +209,13 @@
             title: "Strand Lifesciences",
             users_chat: [
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/opanstreet.png",
                     user_type: "Client",
                     message: "We need a corporate site within 2 weeks.",
                     time: "6 h",
                 },
                 {
-                    avatar: "bg-slate-400",
+                    avatar: "/images/work/azure.png",
                     user_type: "ArtWorksIT",
                     message: "Hold my Figma and VS Code!!! Live in 10 days",
                     time: "6 h",

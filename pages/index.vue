@@ -8,8 +8,8 @@
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
-                        <NuxtImg id="pencil" width="276" height="188" src="/images/home/saw.png" class="pencil absolute left-0 bottom-0 w-[8vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
-                        <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-0 top-0 w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
+                        <NuxtImg id="pencil" width="276" height="188" src="/images/home/saw.png" class="pencil !invisible absolute left-0 bottom-0 w-[8vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
+                        <NuxtImg id="laptop" width="362" height="275" src="/images/home/laptop.png" class="laptop absolute right-[-6%] top-[10%] w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
                         <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0">
                             <span class="overflow-hidden">WE ARE A TEAM OF </span>
                             <span class="overflow-hidden">DESIGNERS AND DEVELOPERS</span>
@@ -26,7 +26,7 @@
                 <div class="md:hidden px-[7vw] pt-[26vw] pb-[38vw]">
                     <div class="relative flex flex-col gap-[5vw]">
                         <div class="relative">
-                            <NuxtImg width="276" height="188" src="/images/home/saw.png" class="pencil-mobile absolute right-[5%] !-translate-x-1/2 top-[10%] translate-y-full w-[20vw] z-[1]" alt="Pencil Image" />
+                            <NuxtImg width="276" height="188" src="/images/home/saw.png" class="pencil-mobile invisible absolute right-[5%] !-translate-x-1/2 top-[10%] translate-y-full w-[20vw] z-[1]" alt="Pencil Image" />
                             <NuxtImg width="362" height="275" src="/images/home/laptop.png" class="laptop-mobile absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-[1]" alt="Laptop Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
                                 <span class="overflow-hidden">WE ARE A</span>
@@ -48,15 +48,15 @@
                     <div class="pv-[5vw] md:pb-[3vw] pt-[6vw] md:pt-[2vw] will-change-auto border-t border-[#F1F1F1]">
                         <div class="flex justify-between items-center text15px-desktop text12px-mobile font-medium leading-[2]">
                             <div class="flex gap-[4vw] md:gap-[3vw]">
-                                <NuxtLink to="/" target="_blank" class="flex relative group overflow-hidden" aria-label="Linkedin Link">
+                                <NuxtLink to="https://www.linkedin.com/company/artworksit/posts/?feedView=all" target="_blank" class="flex relative group overflow-hidden" aria-label="Linkedin Link">
                                     <span class="group-hover:-translate-y-full duration-500 leading-[1]">LINKEDIN</span>
                                     <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">LINKEDIN</span>
                                 </NuxtLink>
-                                <NuxtLink to="/" target="_blank" class="flex relative group overflow-hidden" aria-label="Instagram Link">
+                                <NuxtLink to="https://www.instagram.com/_artworksit/" target="_blank" class="flex relative group overflow-hidden" aria-label="Instagram Link">
                                     <span class="group-hover:-translate-y-full duration-500 leading-[1]">INSTAGRAM</span>
                                     <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">INSTAGRAM</span>
                                 </NuxtLink>
-                                <NuxtLink to="/" target="_blank" class="flex relative group overflow-hidden" aria-label="Behance Link">
+                                <NuxtLink to="https://www.behance.net/ashwind" target="_blank" class="flex relative group overflow-hidden" aria-label="Behance Link">
                                     <span class="group-hover:-translate-y-full duration-500 leading-[1]">BEHANCÉ</span>
                                     <span class="absolute top-full flex leading-[1] not-main-nav-link group-hover:-translate-y-full duration-500">BEHANCÉ</span>
                                 </NuxtLink>

@@ -373,10 +373,10 @@
                     <!-- Success Message -->
                     <div v-if="formSubmitted" v-split-text="{ splitBy: 'words, char' }" id="success-message" class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
                         <p>Hi {{ name }},</p>
-                        <div class="mt-[2vw]">
+                        <div class="mt-[3vw] md:mt-[2vw]">
                             <p>Thanks for reaching out! We'd love to help with your {{ lookingFor }}. I will contact you shortly.</p>
                         </div>
-                        <div class="mt-[2vw] !inline-flex flex-col">
+                        <div class="mt-[3vw] md:mt-[2vw] !inline-flex flex-col">
                             <p>Best Wishes,</p>
                             <p>Uday</p>
                             <p class="font-bold">ArtWorksIT</p>
