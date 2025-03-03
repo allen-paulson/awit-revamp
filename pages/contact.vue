@@ -10,19 +10,20 @@
     const router = useRequestURL().href;
     // SEO Meta Tags
     useSeoMeta({
-        title: "Contact | ArtWorksIT",
-        description: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
-        ogTitle: "Contact | ArtWorksIT",
-        ogDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
-        ogImage: "[og:image]",
+        title: "ArtWorksIT - Web Design Studio",
+        description: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        ogTitle: "ArtWorksIT - Web Design Studio",
+        ogDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        ogImage: "/images/meta.png",
         ogUrl: router,
-        twitterTitle: "Contact | ArtWorksIT",
-        twitterDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
-        twitterImage: "[twitter:image]",
-        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
+        twitterTitle: "ArtWorksIT - Web Design Studio",
+        twitterDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        twitterImage: "/images/meta.png",
+        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites.",
     });
 
     useHead({
+        titleTemplate: (title) => (title ? `${title}` : "ArtWorksIT - Web Design Studio"),
         htmlAttrs: {
             lang: "en",
         },

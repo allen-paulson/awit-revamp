@@ -440,6 +440,7 @@
     });
 
     useHead({
+        titleTemplate: (title) => (title ? `${title}` : "ArtWorksIT - Web Design Studio"),
         htmlAttrs: {
             lang: "en",
         },
