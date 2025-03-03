@@ -131,7 +131,7 @@
                     time: "14 h",
                 },
                 {
-                    avatar: "/images/work/azure.png",
+                    avatar: "/images/work/awit.png",
                     user_type: "ArtWorksIT",
                     message: "Client didn’t even negotiate much, let’s do a good job!",
                     time: "14 h",
@@ -152,7 +152,7 @@
                     time: "10 h",
                 },
                 {
-                    avatar: "/images/work/azure.png",
+                    avatar: "/images/work/awit.png",
                     user_type: "ArtWorksIT",
                     message: "Lets do it!!",
                     time: "10 h",
@@ -169,18 +169,18 @@
                 {
                     avatar: "/images/work/federate.png",
                     user_type: "Federate One",
-                    message: "We need a portfolio site to showcase our design work.",
+                    message: "What we do is cyber security but I don’t want a traditional IT website",
                     time: "8 h",
                 },
                 {
-                    avatar: "/images/work/azure.png",
+                    avatar: "/images/work/awit.png",
                     user_type: "ArtWorksIT",
-                    message: "Perfect, I'll create a visually stunning gallery.",
+                    message: "Let’s go crazy on this one, and not make a traditional site",
                     time: "8 h",
                 },
             ],
             image: {
-                desktop: "/images/projects/rotten.png",
+                desktop: "/images/projects/federate.png",
             },
         },
         {
@@ -194,7 +194,7 @@
                     time: "12 h",
                 },
                 {
-                    avatar: "/images/work/azure.png",
+                    avatar: "/images/work/awit.png",
                     user_type: "ArtWorksIT",
                     message: "Ez Pz and live in 2 months",
                     time: "12 h",
@@ -215,7 +215,7 @@
                     time: "6 h",
                 },
                 {
-                    avatar: "/images/work/azure.png",
+                    avatar: "/images/work/awit.png",
                     user_type: "ArtWorksIT",
                     message: "Hold my Figma and VS Code!!! Live in 10 days",
                     time: "6 h",
