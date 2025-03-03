@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/scripts": "^0.10.5",
     "@nuxthub/core": "^0.8.17",
+    "@nuxtjs/turnstile": "^0.9.12",
     "nuxt": "^3.6.0",
     "nuxt-split-type": "^0.1.8",
     "nuxt3-lenis": "^1.5.9",

@@ -222,8 +222,8 @@
                                         {
                                         <span ref="businessText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ projectName }}</span>
                                         <input ref="businessWidth" :style="{ width: businessWidth + 'px' }" required type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[15vw] max-w-[35vw]" />
-                                        }
-                                    </span>. I’m looking for
+                                        } </span
+                                    >. I’m looking for
 
                                     <span class="inline-block !font-light relative">
                                         {
@@ -244,7 +244,7 @@
                                     </span>
 
                                     and I’m aiming to launch by
-                                  <span class="inline-block !font-light relative">
+                                    <span class="inline-block !font-light relative">
                                         {
                                         <span class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
@@ -292,6 +292,7 @@
                                     </div>
                                 </button>
                             </div>
+                            <NuxtTurnstile v-model="token" />
                         </form>
                     </div>
 
@@ -367,6 +368,8 @@
                                     </svg>
                                 </button>
                             </div>
+
+                            <NuxtTurnstile v-model="token" />
                         </form>
                     </div>
 
@@ -402,6 +405,7 @@
     const lookingFor = ref("Website");
     const projectName = ref("");
     const timeline = ref("3 weeks");
+    const token = ref("");
 
     const selectedContactType = ref("email");
 
@@ -440,6 +444,7 @@
             looking: lookingFor.value,
             projectName: projectName.value,
             timeline: timeline.value,
+            "cf-turnstile-response": token.value,
         };
 
         await fetch(FORMSPARK_ACTION_URL, {
@@ -587,5 +592,9 @@
 
     #success-message .char {
         opacity: 0;
+    }
+
+    .cf-turnstile iframe[title="Widget containing a Cloudflare security challenge"] {
+        opacity: 0.0001;
     }
 </style>

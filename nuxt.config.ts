@@ -12,7 +12,10 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/turnstile"],
+    turnstile: {
+        siteKey: "1x00000000000000000000BB", // Replace with your actual site key before deployment
+    },
     css: ["~/assets/css/main.css"],
     postcss: {
         plugins: {
