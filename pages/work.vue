@@ -105,9 +105,9 @@
 </template>
 
 <script setup>
-    import { categories } from "~/utils/data.js";
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
+    const router = useRequestURL().href;
 
     const projects = ref([]);
 
@@ -143,7 +143,6 @@
             },
             "-=.04"
         );
-
     };
 
     onMounted(async () => {
@@ -155,16 +154,16 @@
 
     // SEO Meta Tags
     useSeoMeta({
-        title: "Projects | ArtworksIT",
-        description: "AProjects | rtworksIT",
-        ogTitle: "Projects | ArtworksIT",
-        ogDescription: "Projects | ArtworksIT",
+        title: "Works | ArtWorksIT",
+        description: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
+        ogTitle: "Works | ArtWorksIT",
+        ogDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
         ogImage: "[og:image]",
-        ogUrl: "[og:url]",
-        twitterTitle: "Projects | ArtworksIT",
-        twitterDescription: "Projects | ArtworksIT",
+        ogUrl: router,
+        twitterTitle: "Works | ArtWorksIT",
+        twitterDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
         twitterImage: "[twitter:image]",
-        twitterCard: "summary",
+        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
     });
 
     useHead({
@@ -186,11 +185,11 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
         transition: clip-path 0.8s ease-in-out;
     }
- 
+
     .work-item:hover .clip-target {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
- 
+
     .work-projects-container:not(:hover) .clip-target {
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
         transition: clip-path 0.5s ease-in-out;
