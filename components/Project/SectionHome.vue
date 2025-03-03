@@ -52,7 +52,7 @@
                                                     <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
                                                             <div class="rounded-full w-[3vw] aspect-square bg-red-300 overflow-hidden">
-                                                                <NuxtImg width="30" height="30" class="w-full h-full" :src="chat.avatar" alt="Chat Icon" />
+                                                                <NuxtImg class="w-full h-full" :src="chat.avatar" alt="Chat Icon" />
                                                             </div>
                                                             <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
                                                         </div>

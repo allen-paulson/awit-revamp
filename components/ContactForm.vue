@@ -206,10 +206,10 @@
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
                                         <span v-if="contactType === 'Email'" class="inline-block">
-                                            <input type="email" name="name" v-model="email" placeholder=" anedoe@gmail.com " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <input type="email" name="name" v-model="email" placeholder=" anedoe@gmail.com " required autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
                                         <span v-else class="inline-block">
-                                            <input type="tel" name="phone" v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <input type="tel" name="phone" required v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
 
                                         }
@@ -222,9 +222,8 @@
                                         {
                                         <span ref="businessText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ projectName }}</span>
                                         <input ref="businessWidth" :style="{ width: businessWidth + 'px' }" required type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[15vw] max-w-[35vw]" />
-                                        }.
-                                    </span>
-                                    &nbsp; And, I’m looking for
+                                        }
+                                    </span>. I’m looking for
 
                                     <span class="inline-block !font-light relative">
                                         {
@@ -244,11 +243,8 @@
                                         }
                                     </span>
 
-                                    and I’m aiming and I’m aiming
-                                </span>
-
-                                <span class="">
-                                    <span class="inline-block !font-light relative">
+                                    and I’m aiming to launch by
+                                  <span class="inline-block !font-light relative">
                                         {
                                         <span class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
@@ -258,9 +254,9 @@
                                         <span class="inline-block relative">
                                             <span ref="timelineText" class="absolute invisible whitespace-nowrap inline-block">{{ timeline }}</span>
                                             <select required :style="{ width: timelineWidth + 'px' }" name="contact-via" id="contact-via" v-model="timeline" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
-                                                <option value="3weeks">3 weeks</option>
+                                                <option value="3 weeks">3 weeks</option>
                                                 <option value="1 - 3 months">1 - 3 months</option>
-                                                <option value="3 months">>3 months</option>
+                                                <option value=">3 months">>3 months</option>
                                             </select>
                                         </span>
                                         }
@@ -405,7 +401,7 @@
     const message = ref("");
     const lookingFor = ref("Website");
     const projectName = ref("");
-    const timeline = ref("3weeks");
+    const timeline = ref("3 weeks");
 
     const selectedContactType = ref("email");
 

@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #151515 inset !important;
+    background-color: #151515 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    box-shadow: 0 0 0 1000px #151515 inset !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0 1000px #151515 inset !important;
+    box-shadow: 0 0 0 1000px #151515 inset !important;
+    background-color: #151515 !important;
+    color: white !important;
+}
+
+option {
+    color: white !important;
+    background-color: #363636 !important;
+    border: 1px solid white !important;
+}
+
 @layer base {
     html {
         @apply leading-[1];
