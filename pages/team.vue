@@ -24,8 +24,8 @@
 
             <div class="md:mt-[4vw] mt-[20vw]">
                 <div>
-                    <img class="h-full md:h-[95%] w-full object-cover hidden md:block" src="https://artworksit.com/assets/images/about/artworks.webp" alt="" />
-                    <img class="h-full w-full object-cover md:hidden" src="https://artworksit.com/assets/images/about/artworksphone.webp" alt="" />
+                    <img class="h-full md:h-[95%] w-full object-cover hidden md:block" src="/images/team/artworks.webp" alt="" />
+                    <img class="h-full w-full object-cover md:hidden" src="/images/team/artworksphone.webp" alt="" />
                 </div>
                 <div class="md:hidden">
                     <div class="bg-[#ACACAC] h-[0.14vw] md:h-[1px] w-full md:mt-[2vw] mt-[6vw]"></div>
@@ -137,7 +137,7 @@
             <div class="px-[4vw] pb-[5vw]">
                 <div class="mt-[12vw] md:mt-[6vw] gap-[2vw] md:grid grid-cols-4">
                     <div class="col-span-3 h-[60vw] md:h-[26vw]">
-                        <img class="h-full w-full object-cover" src="https://artworksit.com/assets/images/about/koko.webp" alt="" />
+                        <img class="h-full w-full object-cover" src="/images/team/koko.webp" alt="" />
                     </div>
                     <div class="col-span-1 pt-[1.5vw]">
                         <div class="flex gap-[6vw] items-center justify-between md:justify-start">
