@@ -3,8 +3,9 @@
         "title": "HUNAN SQUARE",
         "year": "2024",
         "tags": [
-            "#Horeca",
-            "#Pan-asian Restaurant"
+            "#Food & Beverage",
+            "#Hospitality",
+            "#Restaurant"
         ],
         "description": "Authentic Asian dining experience",
         "bg_color": "#C73834",
@@ -24,9 +25,9 @@
         "title": "FEDERATE ONE",
         "year": "2023",
         "tags": [
-            "#Cybersecurity",
-            "#Iot",
-            "#pki"
+            "#Corporate",
+            "#Enterprise",
+            "#Cybersecurity"
         ],
         "description": "Advanced IoT security solutions",
         "bg_color": "#F5BD5F",
@@ -67,10 +68,10 @@
         "title": "VAILANKANNI",
         "year": "2021",
         "tags": [
-            "#Carrentals",
-            "#Goa"
+            "#Car Rental",
+            "#Travel & Tourism"
         ],
-        "description": "Premium car rental service",
+        "description": "Premium car rental in Goa",
         "bg_color": "#FFE8D8",
         "text_color": "#663300",
         "image": {
@@ -89,7 +90,8 @@
         "year": "2024",
         "tags": [
             "#Architecture",
-            "#Interiordesign"
+            "#Interior Design",
+            "#Commercial Spaces"
         ],
         "description": "Innovative architectural solutions",
         "bg_color": "#F0F0F0",
@@ -109,8 +111,8 @@
         "title": "VOC AUTOMOTIVE",
         "year": "2024",
         "tags": [
-            "#Bikeservicing",
-            "#Bikehealth"
+            "#Automotive",
+            "#Two-Wheeler Maintenance"
         ],
         "description": "Expert motorcycle maintenance",
         "bg_color": "#FFE6E6",
@@ -130,9 +132,9 @@
         "title": "VRIEVES",
         "year": "2023",
         "tags": [
-            "#e-commerce",
-            "#Nutrition",
-            "#Teaflavours"
+            "#E-commerce",
+            "#Tea",
+            "#Health & Wellness,"
         ],
         "description": "Premium tea blend collection",
         "bg_color": "#E6FFE6",
@@ -152,10 +154,9 @@
         "title": "MUMBAI POST HOUSE",
         "year": "2034",
         "tags": [
-            "#fimproduction",
-            "#visualeffects",
-            "#visualeffects",
-            "#soundeffects"
+            "#Post-Production Studio",
+            "#Video Editing",
+            "#Sound Mixing"
         ],
         "description": "Creative post-production studio",
         "bg_color": "#F8E6FF",
@@ -175,8 +176,9 @@
         "title": "ROTTEN GRAPES",
         "year": "2023",
         "tags": [
-            "#Geospace",
-            "#saas"
+            "#Corporate",
+            "#Geospatial Technology",
+            "#GIS Solutions"
         ],
         "description": "Geospatial analytics platform",
         "bg_color": "#FFE6F0",
@@ -196,8 +198,9 @@
         "title": "BANANI VISTA",
         "year": "2034",
         "tags": [
-            "#Spiritualhealing",
-            "#well-being"
+            "#Coaching",
+            "#Holistic Healing",
+            "#Mindfulness Courses"
         ],
         "description": "Holistic wellness center",
         "bg_color": "#F0E6FF",
@@ -217,8 +220,10 @@
         "title": "OPENSTREET PHOTOGRAPHY",
         "year": "2022",
         "tags": [
-            "#weddingphotography",
-            "#capturemoments"
+            "#Portfolio",
+            "#Wedding Photography",
+            "#Videography",
+            "#Event Photography"
         ],
         "description": "Capturing timeless memories",
         "bg_color": "#F5F5F5",
@@ -238,7 +243,10 @@
         "title": "RYZE CHEMIE",
         "year": "2024",
         "tags": [
-            "#Chemicalsforindustries"
+            "#Corporate",
+            "#Industry",
+            "#Manufacturing",
+            "#Industrial Chemicals"
         ],
         "description": "Industrial chemical solutions",
         "bg_color": "#E6F0FF",
@@ -258,9 +266,9 @@
         "title": "STRAND LIFE SCIENCES",
         "year": "2023",
         "tags": [
-            "#Genimics",
-            "#bioinformatics",
-            "#science"
+            "#Corporate",
+            "#Genomics",
+            "#Research"
         ],
         "description": "Advanced genomics research",
         "bg_color": "#E6FFE6",
@@ -280,8 +288,9 @@
         "title": "AAIWINI",
         "year": "2023",
         "tags": [
-            "#Argriculture",
-            "#harvest"
+            "#Agriculture",
+            "#Supply Chain",
+            "#Sustainable Farming"
         ],
         "description": "Sustainable farming solutions",
         "bg_color": "#F0FFE6",
