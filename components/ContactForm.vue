@@ -167,7 +167,7 @@
                     <div v-show="!formSubmitted" id="contact-form" class="relative hidden md:block">
                         <form @submit.prevent="submitForm" class="flex flex-col gap-[8vw] md:gap-[3.5vw]">
                             <p class="relative font-inter text26px-desktop font-medium text-white leading-[1.5]">
-                                <span>Hi ArtworksIT team,</span>
+                                <span>Hi ArtWorksIT team,</span>
 
                                 <span class="inline-block mt-[1.75vw]">
                                     I,
@@ -432,7 +432,7 @@
     const formSubmitted = ref(false);
 
     // Form submission
-    const FORMSPARK_ACTION_URL = "https://submit-form.com/AQbUAba3m";
+    const FORMSPARK_ACTION_URL = "https://submit-form.com/cxKaSGeC3";
 
     const submitForm = async () => {
         const formData = {

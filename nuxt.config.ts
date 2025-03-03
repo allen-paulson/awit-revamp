@@ -7,10 +7,16 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/turnstile", "@nuxtjs/seo"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/turnstile", "@nuxtjs/seo", "nuxt-umami"],
     turnstile: {
-        siteKey: "1x00000000000000000000BB", // Replace with your actual site key before deployment
+        siteKey: "0x4AAAAAAA_aGj2KM0xzaZVe", // Replace with your actual site key before deployment
     },
+    umami: {
+        id: 'd3a19892-3db8-46ea-8b02-49b5a514dec7',
+        host: 'https://analytics.artworksit.com',
+        autoTrack: true,
+        ignoreLocalhost: true
+      },
     css: ["~/assets/css/main.css"],
     postcss: {
         plugins: {
