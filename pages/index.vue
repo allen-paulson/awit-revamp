@@ -229,10 +229,10 @@
 </template>
 
 <script setup>
-    import { whyNeedUs } from "~/utils/data.js";
-
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
+
+    const router = useRequestURL().href;
 
     const refreshScrollTrigger = () => {
         ScrollTrigger.refresh();
@@ -427,16 +427,16 @@
 
     // SEO Meta Tags
     useSeoMeta({
-        title: "ArtworksIT",
-        description: "ArtworksIT",
-        ogTitle: "ArtworksIT",
-        ogDescription: "ArtworksIT",
+        title: "ArtWorksIT - Web Design Studio",
+        description: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
+        ogTitle: "ArtWorksIT - Web Design Studio",
+        ogDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
         ogImage: "[og:image]",
-        ogUrl: "[og:url]",
-        twitterTitle: "ArtworksIT",
-        twitterDescription: "ArtworksIT",
+        ogUrl: router,
+        twitterTitle: "ArtWorksIT - Web Design Studio",
+        twitterDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
         twitterImage: "[twitter:image]",
-        twitterCard: "summary",
+        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
     });
 
     useHead({
