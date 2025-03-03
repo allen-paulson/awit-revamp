@@ -1,1 +1,3 @@
-
+User-agent: *
+Disallow:
+Sitemap: https://artworksit.com/sitemap.xml

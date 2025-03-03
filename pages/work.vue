@@ -37,7 +37,7 @@
                     <div class="relative">
                         <!-- Desktop View -->
                         <div class="relative text-[#FFFFFF] bg-[#151515] hidden md:block work-projects-container">
-                            <NuxtLink :to="project.link" v-for="(project, index) in projects" :key="index" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
+                            <NuxtLink target="_blank" :to="project.link" v-for="(project, index) in projects" :key="index" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
                                 <div class="flex-1 pt-[1.75vw] pb-[3.5vw]">
                                     <div class="flex gap-[5vw]">
                                         <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
@@ -65,7 +65,7 @@
 
                         <!-- Mobile View -->
                         <div class="grid gap-[4vw] relative md:hidden">
-                            <div to="/" v-for="(project, index) in projects" :key="index" class="border-[.75px] border-white">
+                            <NuxtLink target="_blank" :to="project.link" v-for="(project, index) in projects" :key="index" class="block border-[.75px] border-white">
                                 <div class="p-[3vw] pb-[4vw]">
                                     <div class="flex flex-col">
                                         <div class="flex justify-between">
@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>

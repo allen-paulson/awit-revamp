@@ -428,15 +428,15 @@
     // SEO Meta Tags
     useSeoMeta({
         title: "ArtWorksIT - Web Design Studio",
-        description: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
+        description: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
         ogTitle: "ArtWorksIT - Web Design Studio",
-        ogDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
-        ogImage: "[og:image]",
+        ogDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        ogImage: "/images/meta.png",
         ogUrl: router,
         twitterTitle: "ArtWorksIT - Web Design Studio",
-        twitterDescription: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
-        twitterImage: "[twitter:image]",
-        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites that prioritizes user experience at reasonable costs.",
+        twitterDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        twitterImage: "/images/meta.png",
+        twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites.",
     });
 
     useHead({
