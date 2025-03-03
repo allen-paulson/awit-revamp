@@ -5,7 +5,7 @@
             <div class="section-heading px-[2vw] md:pr-[12vw] md:pl-[4vw] flex flex-col md:flex-row md:justify-between md:items-end gap-[6vw] md:gap-0">
                 <div class="flex justify-end md:order-2 h-auto">
                     <div class="">
-                        <the-button text="JOIN US" to="/" />
+                        <the-button text="JOIN US" to="mailto:info@artworksit.com?subject=Job%20Inquiry&body=Hi%20ArtWorksIT%2C%0A%0AI%20would%20to%20apply%20for%20%3C%3E.%20Please%20find%20the%20attached%20resume.%0A%0AThanks%2C%0A%3C%3E" />
                     </div>
                 </div>
                 <!-- Desktop View -->
