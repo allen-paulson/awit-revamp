@@ -144,65 +144,6 @@
             "-=.04"
         );
 
-        const workItems = document.querySelectorAll(".work-item");
-        let currentAnimatingElement = null;
-        let currentLeaveAnimation = null;
-
-        workItems.forEach((item) => {
-            item.addEventListener("mouseenter", () => {
-                // If we're already hovering on this element, do nothing
-                if (currentAnimatingElement === item) return;
-
-                // If there's a current leave animation happening, kill it
-                if (currentLeaveAnimation) {
-                    currentLeaveAnimation.kill();
-                    currentLeaveAnimation = null;
-                }
-
-                // If we have a previous element, animate it out first
-                if (currentAnimatingElement) {
-                    const prevElement = currentAnimatingElement;
-
-                    // Start the leave animation for previous element
-                    currentLeaveAnimation = gsap.to(prevElement.querySelector(".clip-target"), {
-                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                        duration: 0.4,
-                        ease: "sine.inOut",
-                        onComplete: () => {
-                            currentLeaveAnimation = null;
-                        },
-                    });
-                }
-
-                // Update current element and animate it in
-                currentAnimatingElement = item;
-
-                // Animate the new element
-                gsap.to(item.querySelector(".clip-target"), {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    duration: 0.8,
-                    ease: "sine.inOut",
-                });
-            });
-        });
-
-        // Handle leaving the entire container area
-        const container = document.querySelector(".work-projects-container");
-        if (container) {
-            container.addEventListener("mouseleave", () => {
-                if (!currentAnimatingElement) return;
-
-                // Animate out the current element
-                gsap.to(currentAnimatingElement.querySelector(".clip-target"), {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                    duration: 0.5,
-                    ease: "sine.inOut",
-                    onComplete: () => {
-                        currentAnimatingElement = null;
-                    },
-                });
-            });
-        }
     };
 
     onMounted(async () => {
@@ -241,7 +182,17 @@
 </script>
 
 <style scoped>
-    .clip-target {
+    .work-item .clip-target {
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        transition: clip-path 0.8s ease-in-out;
+    }
+ 
+    .work-item:hover .clip-target {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+ 
+    .work-projects-container:not(:hover) .clip-target {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        transition: clip-path 0.5s ease-in-out;
     }
 </style>
