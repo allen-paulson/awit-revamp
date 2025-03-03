@@ -26,7 +26,7 @@
                 <div class="md:hidden px-[7vw] pt-[26vw] pb-[38vw]">
                     <div class="relative flex flex-col gap-[5vw]">
                         <div class="relative">
-                            <NuxtImg width="276" height="188" src="/images/home/saw.png" class="pencil-mobile invisible absolute right-[5%] !-translate-x-1/2 top-[10%] translate-y-full w-[20vw] z-[1]" alt="Pencil Image" />
+                            <!-- <NuxtImg width="276" height="188" src="/images/home/saw.png" class="pencil-mobile invisible absolute right-[5%] !-translate-x-1/2 top-[10%] translate-y-full w-[20vw] z-[1]" alt="Pencil Image" /> -->
                             <NuxtImg width="362" height="275" src="/images/home/laptop.png" class="laptop-mobile absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-[1]" alt="Laptop Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]">
                                 <span class="overflow-hidden">WE ARE A</span>

@@ -3,7 +3,7 @@
         <div class="h-full w-full font-anton text-background-black text44px-desktop relative">
             <div>
                 <div class="overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <p id="first-text" v-split-text="{ splitBy: 'words, char' }" class="-translate-y-full">AWIT</p>
+                    <p id="first-text" v-split-text="{ splitBy: 'words, char' }" class="-translate-y-full">WEB DESIGN STUDIO</p>
                 </div>
                 <div class="overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <p id="second-text" v-split-text="{ splitBy: 'words, char' }" class="">ARTWORKSIT</p>

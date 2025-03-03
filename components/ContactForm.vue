@@ -15,10 +15,10 @@
                 </div>
                 <!-- Mobile View -->
                 <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                    <NuxtImg height="349" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg height="349" class="heading-img-mobile absolute bottom-0 w-[21vw] left-1/4 translate-x-[35%] -translate-y-[100%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                         <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>LET’S</span> <span>WORK</span> </span>
-                        <span class="overflow-hidden text130px-mobile">TOGETHER</span>
+                        <span class="overflow-hidden text-[24.9vw]">TOGETHER</span>
                     </h1>
                 </div>
             </div>
@@ -164,139 +164,143 @@
 
                 <div class="md:w-[61%] md:pr-[6.5vw] md:border-l md:border-[#FFFFFF]/25 md:pl-[8vw] md:pt-[8vw] md:pb-[10vw]">
                     <!-- Desktop View -->
-                    <div v-if="!formSubmitted" id="contact-form" class="relative hidden md:block">
+                    <div v-show="!formSubmitted" id="contact-form" class="relative hidden md:block">
                         <form @submit.prevent="submitForm" class="flex flex-col gap-[8vw] md:gap-[3.5vw]">
-                            <div class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
-                                <p>Hi ArtworksIT team,</p>
+                            <p class="relative font-inter text26px-desktop font-medium text-white leading-[1.5]">
+                                <span>Hi ArtworksIT team,</span>
 
-                                <div class="mt-[1.75vw]">
+                                <span class="inline-block mt-[1.75vw]">
                                     I,
-                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                    <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
-                                        <div class="relative inline-block">
-                                            <div class="absolute w-full bottom-0 h-px bg-white/25"></div>
-                                            <input type="text" name="name" v-model="name" placeholder=" Your name here " autocomplete="false" class="w-full bg-transparent focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" />
-                                        </div>
+                                        <span class="relative inline-block">
+                                            <span ref="nameText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ name }}</span>
+
+                                            <span class="absolute w-full bottom-0 h-px bg-white/25"></span>
+                                            <input :style="{ width: nameWidth + 'px' }" ref="nameWidth" required type="text" name="name" v-model="name" placeholder=" Your name here " autocomplete="false" class="w-full bg-transparent focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[10vw] max-w-[35vw]" />
+                                        </span>
                                         }
-                                    </div>
+                                    </span>
 
                                     want help kicking off a project. You can reach me via
 
-                                    <div class="inline-block !font-light relative">
+                                    <span class="inline-block !font-light relative">
                                         {
-                                        <div class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
+                                        <span class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
                                                 <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
                                             </svg>
-                                        </div>
-                                        <div class="inline-block relative">
+                                        </span>
+                                        <span class="inline-block relative">
                                             <span ref="contactTypeText" class="absolute invisible whitespace-nowrap">{{ contactType }}</span>
                                             <select :style="{ width: contactTypeWidth + 'px' }" @change="updateWidth" v-model="contactType" name="contact-via" id="contact-via" class="bg-transparent border-none ring-0 outline-none appearance-none">
                                                 <option value="Email">Email</option>
                                                 <option value="Phone">Phone</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         }
-                                    </div>
+                                    </span>
 
                                     &nbsp; at &nbsp;
 
-                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                    <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
-                                        <div v-if="contactType === 'Email'" class="inline-block">
+                                        <span v-if="contactType === 'Email'" class="inline-block">
                                             <input type="email" name="name" v-model="email" placeholder=" anedoe@gmail.com " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
-                                        </div>
-                                        <div v-else class="inline-block">
+                                        </span>
+                                        <span v-else class="inline-block">
                                             <input type="tel" name="phone" v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
-                                        </div>
+                                        </span>
 
                                         }
-                                    </div>
-                                </div>
+                                    </span>
+                                </span>
 
-                                <div class="mt-[1.65vw]">
+                                <span class="mt-[1.65vw] inline-block">
                                     My business or project is called
-                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                    <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
-                                        <input type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[34vw]" />
+                                        <span ref="businessText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ projectName }}</span>
+                                        <input ref="businessWidth" :style="{ width: businessWidth + 'px' }" required type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[15vw] max-w-[35vw]" />
                                         }.
-                                    </div>
-                                    &nbsp;&nbsp; And, I’m looking for
+                                    </span>
+                                    &nbsp; And, I’m looking for
 
-                                    <div class="inline-block !font-light relative">
+                                    <span class="inline-block !font-light relative">
                                         {
-                                        <div class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
+                                        <span class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
                                                 <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
                                             </svg>
-                                        </div>
-                                        <div class="inline-block relative">
+                                        </span>
+                                        <span class="inline-block relative">
                                             <span ref="lookingForText" class="absolute invisible whitespace-nowrap">{{ lookingFor }}</span>
-                                            <select :style="{ width: lookingForWidth + 'px' }" name="contact-via" id="contact-via" v-model="lookingFor" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
+                                            <select required :style="{ width: lookingForWidth + 'px' }" name="contact-via" id="contact-via" v-model="lookingFor" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
                                                 <option value="Website">Website</option>
                                                 <option value="E-commerce">E-commerce</option>
                                                 <option value="UI/UX">UI/UX</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         }
-                                    </div>
-                                </div>
+                                    </span>
 
-                                <div class="mt-[1.75vw]">
                                     and I’m aiming and I’m aiming
-                                    <div class="inline-block !font-light relative">
+                                </span>
+
+                                <span class="">
+                                    <span class="inline-block !font-light relative">
                                         {
-                                        <div class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
+                                        <span class="absolute right-0 translate-y-[5%] -translate-x-[15%] top-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="size-[1.75vw] -rotate-90 text-white" viewBox="0 0 24 24">
                                                 <path fill="currentColor" d="M12.29 8.71L9.7 11.3a.996.996 0 0 0 0 1.41l2.59 2.59c.63.63 1.71.18 1.71-.71V9.41c0-.89-1.08-1.33-1.71-.7" />
                                             </svg>
-                                        </div>
-                                        <div class="inline-block relative">
+                                        </span>
+                                        <span class="inline-block relative">
                                             <span ref="timelineText" class="absolute invisible whitespace-nowrap inline-block">{{ timeline }}</span>
-                                            <select :style="{ width: timelineWidth + 'px' }" name="contact-via" id="contact-via" v-model="timeline" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
+                                            <select required :style="{ width: timelineWidth + 'px' }" name="contact-via" id="contact-via" v-model="timeline" class="bg-transparent border-none ring-0 outline-none appearance-none md:w-[9vw]">
                                                 <option value="3weeks">3 weeks</option>
                                                 <option value="1 - 3 months">1 - 3 months</option>
                                                 <option value="3 months">>3 months</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         }
-                                    </div>
-                                </div>
+                                    </span>
+                                </span>
 
-                                <div class="mt-[1.75vw]">
-                                    <span class="w-[13vw] inline-block"></span> And here’s more about what I have in mind
+                                <span class="mt-[1.75vw] inline-block">
+                                    And here’s more about what I have in mind
 
-                                    <div class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
+                                    <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
-                                        <input type="text" name="name" v-model="message" placeholder=" Anything else " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[39vw]" />
+                                        <input type="text" required name="name" v-model="message" placeholder=" Anything else " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[39vw]" />
                                         }.
-                                    </div>
-                                </div>
+                                    </span>
+                                </span>
 
-                                <div class="mt-[1.75vw]">
+                                <span class="mt-[1.75vw] inline-block">
                                     Cheers,
-                                    <div class="flex items-center text-[#FFFFFF] gap-[.1vw] font-light w-max">
-                                        <p class="text36px-desktop font-alex">{{ name }}</p>
+                                    <span class="flex items-center text-[#FFFFFF] gap-[.1vw] font-light max-w-[20vw] leading-[1] mt-[2vw] text-wrap">
+                                        <span class="text36px-desktop font-alex">{{ name }}</span>
+                                    </span>
+                                </span>
+                            </p>
+                            <div class="flex justify-end mt-[1vw]">
+                                <button class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
+                                    <div class="relative w-full pr-[12vw] md:pr-[4vw]">
+                                        <p class="text15px-desktop text14px-mobile font-semibold">SEND MESSAGE</p>
+                                        <div class="rounded-full bg-background-black aspect-square w-[6.5vw] md:w-[2.05vw] absolute right-[1vw] md:right-[.2vw] flex items-center justify-center top-1/2 -translate-y-1/2 md:scale-[30%] md:group-hover:scale-100 duration-500 will-change-transform">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-[50%] text-[#F1F1F1] duration-500 md:group-hover:opacity-100 md:opacity-0" viewBox="0 0 13.216 13.216">
+                                                <path id="_9ca54370bbdf94fe6f5a6be762b92d08" data-name="9ca54370bbdf94fe6f5a6be762b92d08" d="M12.4,8.927a.5.5,0,0,0,0-.721L9.251,5.149a.537.537,0,0,0-.743,0,.5.5,0,0,0,0,.721l2.255,2.188H1.525a.51.51,0,1,0,0,1.019h9.238L8.508,11.264a.5.5,0,0,0,0,.721.537.537,0,0,0,.743,0Z" transform="translate(-4.243 5.343) rotate(-45)" fill="currentColor" />
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="flex justify-end mt-[3vw]">
-                                    <button class="rounded-full px-[1.25vw] py-[.65vw] flex items-center gap-[1.65vw] bg-[#EDEDED] text-[#1F1F1F] hover:text-white hover:border-white group duration-300 hover:bg-[#1F1F1F] border border-[#1F1F1F]">
-                                        <span class="font-inter font-semibold text20px-desktop duration-300">SEND MESSAGE</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="27.577" height="20.639" class="w-[1.5vw] duration-300" viewBox="0 0 27.577 20.639">
-                                            <g id="Group_68977" data-name="Group 68977" transform="translate(1.25 0.571)">
-                                                <path id="Path_59803" data-name="Path 59803" d="M-14976.656-17280.961a25.87,25.87,0,0,0,4.1,5.67,26.026,26.026,0,0,0,5.683,4.111,17.119,17.119,0,0,0-5.683,3.582,23.684,23.684,0,0,0-4.1,6.2" transform="translate(14992.629 17280.961)" fill="none" stroke="currentColor" stroke-linejoin="bevel" stroke-width="2.5" />
-                                                <path id="Path_59804" data-name="Path 59804" d="M-14973.152-17267.937h-24.771" transform="translate(14997.924 17277.717)" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2.5" />
-                                            </g>
-                                        </svg>
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </form>
                     </div>
 
                     <!-- Mobile View -->
-                    <div v-if="!formSubmitted" id="contact-form-mobile" class="relative md:hidden">
+                    <div v-show="!formSubmitted" id="contact-form-mobile" class="relative md:hidden">
                         <form @submit.prevent="submitForm" class="text20px-mobile grid gap-[9vw]">
                             <div class="flex flex-col gap-[2vw]">
                                 <p class="font-medium">My name is</p>
@@ -371,7 +375,7 @@
                     </div>
 
                     <!-- Success Message -->
-                    <div v-if="formSubmitted" v-split-text="{ splitBy: 'words, char' }" id="success-message" class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
+                    <div v-show="formSubmitted" v-split-text="{ splitBy: 'words, char' }" id="success-message" class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
                         <p>Hi {{ name }},</p>
                         <div class="mt-[3vw] md:mt-[2vw]">
                             <p>Thanks for reaching out! We'd love to help with your {{ lookingFor }}. I will contact you shortly.</p>
@@ -415,11 +419,15 @@
     const contactTypeWidth = ref(0);
     const lookingForWidth = ref(0);
     const timelineWidth = ref(0);
+    const nameWidth = ref(0);
+    const businessWidth = ref(0);
 
     // Create refs for invisible measurement spans
     const contactTypeText = ref(null);
     const lookingForText = ref(null);
     const timelineText = ref(null);
+    const nameText = ref(null);
+    const businessText = ref(null);
 
     const formSubmitted = ref(false);
 
@@ -553,17 +561,25 @@
             if (timelineText.value) {
                 timelineWidth.value = timelineText.value.offsetWidth + 20;
             }
+            if (nameText.value) {
+                nameWidth.value = nameText.value.offsetWidth + 20;
+            }
+            if (businessText.value) {
+                businessWidth.value = businessText.value.offsetWidth + 20;
+            }
         });
     };
 
     // Watch all select values for changes
-    watch([contactType, lookingFor, timeline], updateSelectWidths);
+    watch([contactType, lookingFor, timeline, name, projectName], updateSelectWidths);
 
     onMounted(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        headinganimation();
-        updateSelectWidths();
-        formAnimation();
+        nextTick(() => {
+            gsap.registerPlugin(ScrollTrigger);
+            headinganimation();
+            updateSelectWidths();
+            formAnimation();
+        });
     });
 </script>
 

@@ -126,7 +126,7 @@
             users_chat: [
                 {
                     avatar: "/images/work/azure.png",
-                    user_type: "Client",
+                    user_type: "Azure",
                     message: "I want the best looking modern website for an apartment",
                     time: "14 h",
                 },
@@ -147,7 +147,7 @@
             users_chat: [
                 {
                     avatar: "/images/work/voc.png",
-                    user_type: "Client",
+                    user_type: "VOC Automotive",
                     message: "Here’s the logo. Now build a website for 2 wheeler servicing Brand. We need lots of enquiries.",
                     time: "10 h",
                 },
@@ -167,8 +167,8 @@
             title: "Federate One",
             users_chat: [
                 {
-                    avatar: "/images/work/rotten.png",
-                    user_type: "Client",
+                    avatar: "/images/work/federate.png",
+                    user_type: "Federate One",
                     message: "We need a portfolio site to showcase our design work.",
                     time: "8 h",
                 },
@@ -189,7 +189,7 @@
             users_chat: [
                 {
                     avatar: "/images/work/goacars.png",
-                    user_type: "Client",
+                    user_type: "Goa Cars",
                     message: "We are the biggest car rental company in Goa, so our website should also be the best while being easy to book a car",
                     time: "12 h",
                 },
@@ -209,8 +209,8 @@
             title: "Strand Lifesciences",
             users_chat: [
                 {
-                    avatar: "/images/work/opanstreet.png",
-                    user_type: "Client",
+                    avatar: "/images/work/strands.png",
+                    user_type: "Strand Lifesciences",
                     message: "We need a corporate site within 2 weeks.",
                     time: "6 h",
                 },
