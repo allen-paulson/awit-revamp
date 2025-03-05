@@ -1,9 +1,9 @@
 <template>
-    <section class="relative overflow-hidden md:pb-[6vw]">
+    <section class="relative overflow-hidden md:pb-[6vw] ">
         <div class="relative z-[2]">
             <div class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
-                <div class="hidden md:block">
+                <div class="hidden md:block delete">
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex justify-center items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
