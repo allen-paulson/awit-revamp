@@ -9,7 +9,7 @@
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
                         <div class="relative md:w-full hidden md:block">
-                            <NuxtImg width="309" height="315" format="webp" class="heading-img absolute bottom-[37.5%] w-[12vw] right-[7.5%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" format="webp" class="heading-img absolute bottom-[37.5%] w-[12vw] right-[7.5%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.webp" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                                 <span class="overflow-hidden">SITES WE'VE </span>
                                 <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -20,7 +20,7 @@
 
                         <!-- Mobile View -->
                         <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                            <NuxtImg width="309" height="315" format="webp" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" format="webp" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.webp" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                                 <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>SITES</span> <span>WE'VE</span> </span>
                                 <span class="overflow-hidden text130px-mobile">SHIPPED</span>
@@ -162,11 +162,11 @@
         description: "Explore ArtWorksIT's work, crafted with story and design.",
         ogTitle: "Our Work | ArtWorksIT",
         ogDescription: "Explore ArtWorksIT's work, crafted with story and design.",
-        ogImage: "/images/meta.png",
+        ogImage: "/images/meta.webp",
         ogUrl: router,
         twitterTitle: "Our Work | ArtWorksIT",
         twitterDescription: "Explore ArtWorksIT's work, crafted with story and design.",
-        twitterImage: "/images/meta.png",
+        twitterImage: "/images/meta.webp",
         twitterCard: "Explore ArtWorksIT's work, crafted with story and design.",
     });
 
@@ -179,7 +179,7 @@
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/favicon.png",
+                href: "/favicon.webp",
             },
         ],
     });

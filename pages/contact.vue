@@ -14,11 +14,11 @@
         description: "Let’s build something awesome together. Hit us up!",
         ogTitle: "Talk to ArtWorksIT",
         ogDescription: "Let’s build something awesome together. Hit us up!",
-        ogImage: "/images/meta.png",
+        ogImage: "/images/meta.webp",
         ogUrl: router,
         twitterTitle: "Talk to ArtWorksIT",
         twitterDescription: "Let’s build something awesome together. Hit us up!",
-        twitterImage: "/images/meta.png",
+        twitterImage: "/images/meta.webp",
         twitterCard: "Let’s build something awesome together. Hit us up!",
     });
 
@@ -31,7 +31,7 @@
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/favicon.png",
+                href: "/favicon.webp",
             },
         ],
     });

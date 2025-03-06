@@ -1,19 +1,19 @@
 export const whyNeedUs = [
     {
         id: 1,
-        image: "/images/home/store.png",
+        image: "/images/home/store.webp",
         title: "SHOWCASE PRODUCTS AND SERVICES",
         description: "A WEBSITE ACTS AS A PORTFOLIO WHERE YOU CAN HIGHLIGHT YOUR OFFERINGS WITH DETAILED DESCRIPTIONS, HIGH-QUALITY IMAGES, AND CUSTOMER TESTIMONIALS.",
     },
     {
         id: 2,
-        image: "/images/home/palms.png",
+        image: "/images/home/palms.webp",
         title: "BUILD CREDIBILITY AND TRUST",
         description: "A WEBSITE ACTS AS A PORTFOLIO WHERE YOU CAN HIGHLIGHT YOUR OFFERINGS WITH DETAILED DESCRIPTIONS, HIGH-QUALITY IMAGES, AND CUSTOMER TESTIMONIALS.",
     },
     {
         id: 3,
-        image: "/images/home/wallet.png",
+        image: "/images/home/wallet.webp",
         title: "COST-EFFECTIVE MARKETING",
         description: "A WEBSITE ACTS AS A PORTFOLIO WHERE YOU CAN HIGHLIGHT YOUR OFFERINGS WITH DETAILED DESCRIPTIONS, HIGH-QUALITY IMAGES, AND CUSTOMER TESTIMONIALS.",
     },

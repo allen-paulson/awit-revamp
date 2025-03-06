@@ -5,7 +5,7 @@
             <div class="relative text-[#F1F1F1]">
                 <!-- Desktop View -->
                 <div class="relative md:w-full hidden md:block">
-                    <NuxtImg id="pencil" width="311" format="webp" class="heading-img absolute bottom-[37.5%] w-[9vw] right-[17%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg id="pencil" width="311" format="webp" class="heading-img absolute bottom-[37.5%] w-[9vw] right-[17%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/contact/phone.webp" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                         <span class="overflow-hidden">LET’S WORK </span>
                         <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -15,7 +15,7 @@
                 </div>
                 <!-- Mobile View -->
                 <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                    <NuxtImg height="349" format="webp" class="heading-img-mobile absolute bottom-0 w-[21vw] left-1/4 translate-x-[35%] -translate-y-[100%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg height="349" format="webp" class="heading-img-mobile absolute bottom-0 w-[21vw] left-1/4 translate-x-[35%] -translate-y-[100%] z-[2]" src="/images/contact/phone.webp" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                         <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>LET’S</span> <span>WORK</span> </span>
                         <span class="overflow-hidden text-[24.9vw]">TOGETHER</span>

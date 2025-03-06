@@ -39,7 +39,7 @@
             <div class="section-heading px-[4vw]">
                 <!-- Desktop Heading -->
                 <div class="relative w-max hidden md:block">
-                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[9vw] bottom-0 translate-y-[20%] left-[9.5%] translate-x-full z-[1]" src="/images/home/laptop.png" alt="Saw Image" />
+                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[9vw] bottom-0 translate-y-[20%] left-[9.5%] translate-x-full z-[1]" src="/images/home/laptop.webp" alt="Saw Image" />
                     <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
                         <span class="overflow-hidden">THE ARTISTS </span>
                         <span class="overflow-hidden">BEHIND <span class="inline-block md:w-[5vw]"></span> THE PIXELS</span>
@@ -48,7 +48,7 @@
 
                 <!-- Mobile Heading -->
                 <div class="relative w-max md:hidden">
-                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[8vw] bottom-0 translate-y-[20%] right-[2.5%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
+                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[8vw] bottom-0 translate-y-[20%] right-[2.5%] -translate-x-full z-[1]" src="/images/home/saw.webp" alt="Saw Image" />
                     <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
                         <span>THE ARTISTS </span>
                         <span>BEHIND THE PIXELS</span>
@@ -61,7 +61,7 @@
                         <div class="col-span-2">
                             <div class="relative">
                                 <div class="md:h-[27.5vw]">
-                                    <NuxtImg width="1516" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/ashwin-uday.png" alt="Ashwin & Uday Image" />
+                                    <NuxtImg width="1516" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/ashwin-uday.webp" alt="Ashwin & Uday Image" />
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-[5vw] pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -86,7 +86,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/sushma.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/sushma.webp" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/vinayak.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/vinayak.webp" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -114,7 +114,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/geethesh.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/geethesh.webp" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -170,23 +170,6 @@
 
     const animations = () => {
         gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray(".section").forEach((section) => {
-            gsap.set(section, { filter: "blur(0px)" });
-
-            gsap.to(section, {
-                filter: "blur(10px)",
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "bottom 50%",
-                    end: "bottom -20%",
-                    scrub: true,
-                    toggleActions: "play reverse play reverse",
-                },
-            });
-        });
 
         document.querySelectorAll(".section-heading").forEach((section) => {
             const headings = section.querySelectorAll(".heading");
@@ -271,11 +254,11 @@
         description: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
         ogTitle: "Team behind ArtWorksIT",
         ogDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-        ogImage: "/images/meta.png",
+        ogImage: "/images/meta.webp",
         ogUrl: router,
         twitterTitle: "Team behind ArtWorksIT",
         twitterDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-        twitterImage: "/images/meta.png",
+        twitterImage: "/images/meta.webp",
         twitterCard: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
     });
 
@@ -288,7 +271,7 @@
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/favicon.png",
+                href: "/favicon.webp",
             },
         ],
     });
