@@ -33,12 +33,16 @@
             duration: 0.6,
             delay: 1,
             ease: "power2.out",
+            force3D: true,
+            willChange: "transform",
         })
             .to("#first-text .char", {
                 y: "100%",
                 stagger: 0.05,
                 duration: 0.6,
                 ease: "power2.out",
+                force3D: true,
+                willChange: "transform",
             })
             .to(
                 loader.value,
@@ -46,6 +50,8 @@
                     scale: 0,
                     duration: 0.8,
                     ease: "power4.inOut",
+                    force3D: true,
+                    willChange: "transform",
                 },
                 "+=0.2"
             );

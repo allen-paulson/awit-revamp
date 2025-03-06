@@ -118,6 +118,10 @@
             .join(" ");
     };
 
+    gsap.defaults({
+        force3D: true,
+    });
+
     const animation = () => {
         gsap.registerPlugin(ScrollTrigger);
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="relative overflow-hidden md:pb-[6vw] ">
+    <section class="relative overflow-hidden md:pb-[6vw]">
         <div class="relative z-[2]">
             <div class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
                 <!-- Desktop View -->
@@ -233,6 +233,10 @@
     import ScrollTrigger from "gsap/ScrollTrigger";
     const containerRef = ref(null);
 
+    gsap.defaults({
+        force3D: true,
+    });
+
     const animation = () => {
         gsap.registerPlugin(ScrollTrigger);
         const cards = gsap.utils.toArray(".desktop-project__item");
@@ -279,6 +283,7 @@
                 pin: true,
                 start: "top 12.5%",
                 end: `+=${cards.length * 50}%`,
+                willChange: "transform",
                 scrub: 1,
                 anticipatePin: 1,
             },
@@ -297,6 +302,7 @@
                     card,
                     {
                         yPercent: 100,
+                        willChange: "transform",
                         duration: 1,
                         ease: "none",
                     },
@@ -309,6 +315,7 @@
                         cards[i - 1],
                         {
                             filter: "grayscale(100%)",
+                            willChange: "transform",
                             duration: 0.5,
                             ease: "none",
                         },
@@ -317,6 +324,7 @@
                         cards[i - 1].querySelector(".card-inner"),
                         {
                             opacity: 0.75,
+                            willChange: "transform",
                             duration: 0.5,
                             ease: "none",
                         },

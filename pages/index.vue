@@ -8,8 +8,8 @@
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
-                        <NuxtImg id="pencil" width="276" height="188" format="webp"  src="/images/home/saw.png" class="pencil !invisible absolute left-0 bottom-0 w-[8vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
-                        <NuxtImg id="laptop" width="362" height="275" format="webp"  src="/images/home/laptop.png" class="laptop absolute right-[-6%] top-[10%] w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
+                        <NuxtImg id="pencil" width="276" height="188" format="webp" src="/images/home/saw.png" class="pencil !invisible absolute left-0 bottom-0 w-[8vw] -translate-x-1/2 -translate-y-1/2 z-[1]" alt="Pencil Image" />
+                        <NuxtImg id="laptop" width="362" height="275" format="webp" src="/images/home/laptop.png" class="laptop absolute right-[-6%] top-[10%] w-[9vw] translate-x-1/2 translate-y-[30%] z-[1]" alt="Laptop Image" />
                         <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0">
                             <span class="overflow-hidden">WE ARE A TEAM OF </span>
                             <span class="overflow-hidden">DESIGNERS AND DEVELOPERS</span>
@@ -244,6 +244,10 @@
 
         // Store all the created ScrollTriggers in an array for easy cleanup
         const scrollTriggers = [];
+
+        gsap.defaults({
+            force3D: true,
+        });
 
         document.querySelectorAll(".section-heading").forEach((section) => {
             const breadcrumbs = section.querySelector(".breadcrumbs");
