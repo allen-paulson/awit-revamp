@@ -31,7 +31,7 @@
             y: "100%",
             stagger: 0.05,
             duration: 0.6,
-            delay: 0.6,
+            delay: 1,
             ease: "power2.out",
         })
             .to("#first-text .char", {
