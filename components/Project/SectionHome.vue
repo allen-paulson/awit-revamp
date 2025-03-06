@@ -7,7 +7,7 @@
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex justify-center items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
-                            <NuxtImg width="430" height="474" src="/images/home/popcorn.png" alt="Popcorn Image" class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
+                            <NuxtImg width="430" height="474" format="webp" src="/images/home/popcorn.png" alt="Popcorn Image" class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-[1]" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-[0]">
                                 <span class="overflow-hidden">IT'S STORY </span><span id="heading-space" class="inline-block w-[7vw]"></span>
                                 <span class="overflow-hidden">TIME </span>
@@ -23,7 +23,7 @@
                             <the-breadcrumbs number="02" title=" WHY YOU NEED US" />
                         </div>
                         <div class="pt-[4vw] md:pt-[2vw] relative">
-                            <NuxtImg width="430" height="474" class="work-heading-img-mobile absolute bottom-0 w-[25vw] md:w-[6.5vw] left-1/4 translate-x-[45%] translate-y-[10%] z-[1]" src="/images/home/popcorn.png" alt="Eye Image" />
+                            <NuxtImg width="430" height="474" format="webp" class="work-heading-img-mobile absolute bottom-0 w-[25vw] md:w-[6.5vw] left-1/4 translate-x-[45%] translate-y-[10%] z-[1]" src="/images/home/popcorn.png" alt="Eye Image" />
                             <h2 v-split-text="{ splitBy: 'words, char' }" class="work-heading-mobile font-anton text-[19vw] -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden w-full">
                                 <span class="overflow-hidden">IT'S STORY </span>
                                 <span class="!inline-flex justify-end">
@@ -52,7 +52,7 @@
                                                     <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
                                                             <div class="rounded-full w-[3vw] aspect-square bg-red-300 overflow-hidden">
-                                                                <NuxtImg class="w-full h-full" :src="chat.avatar" alt="Chat Icon" />
+                                                                <NuxtImg class="w-full h-full" format="webp" :src="chat.avatar" alt="Chat Icon" />
                                                             </div>
                                                             <div class="flex-1 w-px bg-[#C3C3C3] mx-auto mt-[.5vw]"></div>
                                                         </div>
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                         <div class="w-[27.5%]">
-                                            <NuxtImg class="w-full" :src="project.image.desktop" alt="Arrow Image" />
+                                            <NuxtImg class="w-full" format="webp" :src="project.image.desktop" alt="Arrow Image" />
                                         </div>
                                     </div>
                                 </div>
@@ -83,11 +83,11 @@
                             <div class="border-[.6px] border-[#D0D0D0] p-[3vw] pt-[5vw]">
                                 <div class="flex justify-between">
                                     <p class="text34px-mobile text-white font-anton">{{ project.title }}</p>
-                                    <NuxtImg width="38" height="38" class="w-[8vw] -mt-[2vw]" src="/images/work/arrow.svg" />
+                                    <NuxtImg width="38" height="38" format="webp" class="w-[8vw] -mt-[2vw]" src="/images/work/arrow.svg" />
                                 </div>
 
                                 <div class="mt-[4.5vw]">
-                                    <NuxtImg class="w-full" :src="project.image.desktop" alt="Arrow Image" />
+                                    <NuxtImg class="w-full" format="webp" :src="project.image.desktop" alt="Arrow Image" />
                                 </div>
 
                                 <div class="mt-[6.5vw] pl-[3vw]">
@@ -95,7 +95,7 @@
                                         <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[3vw]">
                                             <div class="flex flex-col">
                                                 <div class="rounded-full w-[10vw] aspect-square bg-red-300 overflow-hidden">
-                                                    <NuxtImg class="w-full h-full" :src="chat.avatar" alt="Chat Icon" />
+                                                    <NuxtImg class="w-full h-full" format="webp" :src="chat.avatar" alt="Chat Icon" />
                                                 </div>
                                                 <div :class="chatIndex !== 0 ? 'hidden' : ''" class="flex-1 w-px bg-[#454545] mx-auto mt-[2vw]"></div>
                                             </div>

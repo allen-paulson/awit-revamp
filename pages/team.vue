@@ -24,8 +24,8 @@
 
             <div class="md:mt-[4vw] mt-[20vw]">
                 <div>
-                    <img class="h-full md:h-[95%] w-full object-cover hidden md:block" src="/images/team/artworks.webp" alt="" />
-                    <img class="h-full w-full object-cover md:hidden" src="/images/team/artworksphone.webp" alt="" />
+                    <NuxtImg format="webp" class="h-full md:h-[95%] w-full object-cover hidden md:block" src="/images/team/artworks.webp" alt="ArtworksIT Image" />
+                    <NuxtImg format="webp" class="h-full w-full object-cover md:hidden" src="/images/team/artworksphone.webp" alt="ArtworksIT Image" />
                 </div>
                 <div class="md:hidden">
                     <div class="bg-[#ACACAC] h-[0.14vw] md:h-[1px] w-full md:mt-[2vw] mt-[6vw]"></div>
@@ -39,7 +39,7 @@
             <div class="section-heading px-[4vw]">
                 <!-- Desktop Heading -->
                 <div class="relative w-max hidden md:block">
-                    <NuxtImg width="276" height="188" class="heading-img absolute w-[9vw] bottom-0 translate-y-[20%] left-[9.5%] translate-x-full z-[1]" src="/images/home/laptop.png" alt="Saw Image" />
+                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[9vw] bottom-0 translate-y-[20%] left-[9.5%] translate-x-full z-[1]" src="/images/home/laptop.png" alt="Saw Image" />
                     <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
                         <span class="overflow-hidden">THE ARTISTS </span>
                         <span class="overflow-hidden">BEHIND <span class="inline-block md:w-[5vw]"></span> THE PIXELS</span>
@@ -48,7 +48,7 @@
 
                 <!-- Mobile Heading -->
                 <div class="relative w-max md:hidden">
-                    <NuxtImg width="276" height="188" class="heading-img absolute w-[8vw] bottom-0 translate-y-[20%] right-[2.5%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
+                    <NuxtImg width="276" height="188" format="webp" class="heading-img absolute w-[8vw] bottom-0 translate-y-[20%] right-[2.5%] -translate-x-full z-[1]" src="/images/home/saw.png" alt="Saw Image" />
                     <h2 v-split-text="{ splitBy: 'words, char' }" class="heading font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
                         <span>THE ARTISTS </span>
                         <span>BEHIND THE PIXELS</span>
@@ -61,7 +61,7 @@
                         <div class="col-span-2">
                             <div class="relative">
                                 <div class="md:h-[27.5vw]">
-                                    <NuxtImg width="1516" height="900" class="w-full h-full object-cover" src="/images/team/ashwin-uday.png" alt="Ashwin & Uday Image" />
+                                    <NuxtImg width="1516" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/ashwin-uday.png" alt="Ashwin & Uday Image" />
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-[5vw] pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -86,7 +86,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" class="w-full h-full object-cover" src="/images/team/sushma.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/sushma.png" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" class="w-full h-full object-cover" src="/images/team/vinayak.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/vinayak.png" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -114,7 +114,7 @@
                         </div>
                         <div class="relative">
                             <div class="md:h-[27.5vw]">
-                                <NuxtImg width="720" height="900" class="w-full h-full object-cover" src="/images/team/geethesh.png" alt="Sushma Image" />
+                                <NuxtImg width="720" height="900" format="webp" class="w-full h-full object-cover" src="/images/team/geethesh.png" alt="Sushma Image" />
                             </div>
 
                             <div class="pl-[1vw] mt-[5vw] md:mt-[1.75vw]">
@@ -137,7 +137,7 @@
             <div class="px-[4vw] pb-[5vw]">
                 <div class="mt-[12vw] md:mt-[6vw] gap-[2vw] md:grid grid-cols-4">
                     <div class="col-span-3 h-[60vw] md:h-[26vw]">
-                        <img class="h-full w-full object-cover" src="/images/team/koko.webp" alt="" />
+                        <NuxtImg class="h-full w-full object-cover" format="webp" src="/images/team/koko.webp" alt="Koko Image" />
                     </div>
                     <div class="col-span-1 pt-[1.5vw]">
                         <div class="flex gap-[6vw] items-center justify-between md:justify-start">

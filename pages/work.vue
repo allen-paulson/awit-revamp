@@ -9,7 +9,7 @@
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
                         <div class="relative md:w-full hidden md:block">
-                            <NuxtImg width="309" height="315" class="heading-img absolute bottom-[37.5%] w-[12vw] right-[7.5%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" format="webp" class="heading-img absolute bottom-[37.5%] w-[12vw] right-[7.5%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/projects/ship.png" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                                 <span class="overflow-hidden">SITES WE'VE </span>
                                 <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -20,7 +20,7 @@
 
                         <!-- Mobile View -->
                         <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                            <NuxtImg width="309" height="315" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.png" alt="Ship Image" />
+                            <NuxtImg width="309" height="315" format="webp" class="heading-img-mobile absolute bottom-0 w-[25vw] left-1/4 translate-x-[35%] -translate-y-[90%] z-[2]" src="/images/projects/ship.png" alt="Ship Image" />
                             <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                                 <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>SITES</span> <span>WE'VE</span> </span>
                                 <span class="overflow-hidden text130px-mobile">SHIPPED</span>
@@ -37,7 +37,7 @@
                     <div class="relative">
                         <!-- Desktop View -->
                         <div class="relative text-[#FFFFFF] bg-[#151515] hidden md:block work-projects-container">
-                            <NuxtLink target="_blank" :to="project.link" v-for="(project, index) in projects" :key="index" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
+                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" v-for="(project, index) in projects" :key="index" class="flex justify-between gap-[5vw] px-[3vw] relative work-item last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3] hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
                                 <div class="flex-1 pt-[1.75vw] pb-[3.5vw]">
                                     <div class="flex gap-[5vw]">
                                         <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
@@ -53,7 +53,7 @@
                                 <div class="border border-t-0 border-[#A3A3A3] bg-[#151515] p-[1vw] absolute top-0 right-[5vw] w-[34.5%] clip-target z-[1]">
                                     <div class="flex flex-col gap-[1vw]">
                                         <div class="">
-                                            <NuxtImg width="1210" height="946" :src="project.image.desktop" alt="Project Image" />
+                                            <NuxtImg width="1210" height="946" format="webp" :src="project.image.desktop" alt="Project Image" />
                                         </div>
                                         <div>
                                             <p class="font-inter text26px-desktop leading-[1.15] tracking-tight">{{ project.description }}</p>
@@ -65,15 +65,15 @@
 
                         <!-- Mobile View -->
                         <div class="grid gap-[4vw] relative md:hidden">
-                            <NuxtLink target="_blank" :to="project.link" v-for="(project, index) in projects" :key="index" class="block border-[.75px] border-white">
+                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" v-for="(project, index) in projects" :key="index" class="block border-[.75px] border-white">
                                 <div class="p-[3vw] pb-[4vw]">
                                     <div class="flex flex-col">
                                         <div class="flex justify-between">
                                             <div class="w-[50%]">
-                                                <NuxtImg width="1210" height="946" class="w-full" :src="project.image.desktop" alt="Project Image" />
+                                                <NuxtImg width="1210" height="946" format="webp" class="w-full" :src="project.image.desktop" alt="Project Image" />
                                             </div>
                                             <div>
-                                                <NuxtImg width="38" height="38" class="w-[8vw]" src="/images/work/arrow.svg" />
+                                                <NuxtImg width="38" height="38" format="webp" class="w-[8vw]" src="/images/work/arrow.svg" />
                                             </div>
                                         </div>
                                         <div class="mt-[30vw]">

@@ -5,7 +5,7 @@
             <div class="relative text-[#F1F1F1]">
                 <!-- Desktop View -->
                 <div class="relative md:w-full hidden md:block">
-                    <NuxtImg id="pencil" width="311" class="heading-img absolute bottom-[37.5%] w-[9vw] right-[17%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg id="pencil" width="311" format="webp" class="heading-img absolute bottom-[37.5%] w-[9vw] right-[17%] -translate-x-[70%] -translate-y-[10%] z-[1]" src="/images/contact/phone.png" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-[0] w-full">
                         <span class="overflow-hidden">LET’S WORK </span>
                         <span class="!inline-flex justify-end -mt-[2.75vw]">
@@ -15,7 +15,7 @@
                 </div>
                 <!-- Mobile View -->
                 <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                    <NuxtImg height="349" class="heading-img-mobile absolute bottom-0 w-[21vw] left-1/4 translate-x-[35%] -translate-y-[100%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
+                    <NuxtImg height="349" format="webp" class="heading-img-mobile absolute bottom-0 w-[21vw] left-1/4 translate-x-[35%] -translate-y-[100%] z-[2]" src="/images/contact/phone.png" alt="phone Image" />
                     <h1 v-split-text="{ splitBy: 'words, char' }" class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col">
                         <span class="overflow-hidden text76px-mobile !inline-flex justify-between"><span>LET’S</span> <span>WORK</span> </span>
                         <span class="overflow-hidden text-[24.9vw]">TOGETHER</span>
@@ -61,7 +61,7 @@
                     <div id="socials" class="md:pl-[4.75vw] pl-[8vw] mt-[6vw] md:mt-[10vw]">
                         <div class="grid grid-cols-3 w-max">
                             <div class="col-start-2">
-                                <NuxtLink to="https://www.behance.net/ashwind" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://www.behance.net/ashwind" aria-label="Behance link" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="45.569" height="28.76" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#003ECB]" viewBox="0 0 45.569 28.76">
                                         <path
                                             id="_8a7a186666c0d51cd04d97fca1b9ee64"
@@ -74,7 +74,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="col-start-3">
-                                <NuxtLink to="tel:+918792745204" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="tel:+918792745204" target="_blank" aria-label="Phone link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40.091" height="40.433" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#0156A4]" viewBox="0 0 40.091 40.433">
                                         <g id="phone-ringing-1--android-phone-mobile-device-smartphone-iphone-ringing-incoming-call" transform="translate(40.091) rotate(90)">
                                             <path
@@ -89,7 +89,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-2">
-                                <NuxtLink id="instagram" to="https://www.instagram.com/_artworksit/" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink id="instagram" to="https://www.instagram.com/_artworksit/" aria-label="Instagram link" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="38.057" height="38.057" class="w-[30%] md:w-[35%] duration-500" viewBox="0 0 38.057 38.057">
                                         <!-- Define gradient -->
                                         <defs>
@@ -112,7 +112,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-2">
-                                <NuxtLink to="https://www.linkedin.com/company/artworksit/posts/?feedView=all" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://www.linkedin.com/company/artworksit/posts/?feedView=all" target="_blank" aria-label="Linkedin link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="41.705" height="39.853" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#0156A4]" viewBox="0 0 41.705 39.853">
                                         <path
                                             id="b5783c601e16032733df8073caacab72"
@@ -124,7 +124,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-2">
-                                <NuxtLink to="mailto:uday@artworksit.com" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="mailto:uday@artworksit.com" target="_blank" aria-label="Mail link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg id="sign-at--mail-email-at-sign-read-address" class="w-[30%] md:w-[35%] duration-500 group-hover:text-[#DA483A]" xmlns="http://www.w3.org/2000/svg" width="41.02" height="41.126" viewBox="0 0 41.02 41.126">
                                         <path
                                             id="Union"
@@ -137,7 +137,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-3">
-                                <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="Whatsapp link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="41.119" height="41.127" class="w-[30%] md:w-[35%] group-hover:text-[#23D366] duration-500" viewBox="0 0 41.119 41.127">
                                         <path
                                             id="d8f677886d275cf001bf618e1fa3bda3"
@@ -149,7 +149,7 @@
                                 </NuxtLink>
                             </div>
                             <div>
-                                <NuxtLink to="https://calendly.com/artworksit/30min" target="_blank" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://calendly.com/artworksit/30min" target="_blank" aria-label="Calendly link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-[30%] md:w-[35%] h-auto duration-500 group-hover:text-[#016AFF]" viewBox="0 0 24 24">
                                         <path
                                             fill="currentColor"
@@ -281,7 +281,7 @@
                                 </span>
                             </p>
                             <div class="flex justify-end mt-[1vw]">
-                                <button class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
+                                <button aria-label="Send Message button" class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
                                     <div class="relative w-full pr-[12vw] md:pr-[4vw]">
                                         <p class="text15px-desktop text14px-mobile font-semibold">SEND MESSAGE</p>
                                         <div class="rounded-full bg-background-black aspect-square w-[6.5vw] md:w-[2.05vw] absolute right-[1vw] md:right-[.2vw] flex items-center justify-center top-1/2 -translate-y-1/2 md:scale-[30%] md:group-hover:scale-100 duration-500 will-change-transform">
@@ -336,9 +336,9 @@
 
                                 <div class="mt-[3vw]">
                                     <div class="flex items-center flex-wrap gap-[1.5vw] tracking-tight">
-                                        <button type="button" @click="lookingFor = 'website'" :class="lookingFor === 'website' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">Website</button>
-                                        <button type="button" @click="lookingFor = 'graphic design'" :class="lookingFor === 'graphic design' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">Graphic design</button>
-                                        <button type="button" @click="lookingFor = 'e-commerce'" :class="lookingFor === 'e-commerce' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">E-commerce</button>
+                                        <button aria-label="website button" type="button" @click="lookingFor = 'website'" :class="lookingFor === 'website' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">Website</button>
+                                        <button aria-label="graphic design button" type="button" @click="lookingFor = 'graphic design'" :class="lookingFor === 'graphic design' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">Graphic design</button>
+                                        <button aria-label="e-commerce button" type="button" @click="lookingFor = 'e-commerce'" :class="lookingFor === 'e-commerce' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">E-commerce</button>
                                     </div>
                                 </div>
                             </div>
@@ -348,9 +348,9 @@
 
                                 <div class="mt-[3vw]">
                                     <div class="flex items-center flex-wrap gap-[1.5vw] tracking-tight">
-                                        <button type="button" @click="timeline = '2 weeks'" :class="timeline === '2 weeks' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">2 weeks</button>
-                                        <button type="button" @click="timeline = '1-3 months'" :class="timeline === '1-3 months' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">1-3 months</button>
-                                        <button type="button" @click="timeline = '3-6 months'" :class="timeline === '3-6 months' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">3-6 months</button>
+                                        <button aria-label="2 week button" type="button" @click="timeline = '2 weeks'" :class="timeline === '2 weeks' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">2 weeks</button>
+                                        <button aria-label="1-3 months button" type="button" @click="timeline = '1-3 months'" :class="timeline === '1-3 months' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">1-3 months</button>
+                                        <button aria-label="3-6 months button" type="button" @click="timeline = '3-6 months'" :class="timeline === '3-6 months' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4vw] py-[2.5vw] text18px-mobile">3-6 months</button>
                                     </div>
                                 </div>
                             </div>
@@ -361,7 +361,7 @@
                             </div>
 
                             <div class="mt-[10vw]">
-                                <button type="submit" class="w-full bg-white text-[#1F1F1F] flex items-center justify-between px-[5vw] py-[2vw] rounded-full text14px-mobile font-inter font-semibold">
+                                <button type="submit" aria-label="send message button" class="w-full bg-white text-[#1F1F1F] flex items-center justify-between px-[5vw] py-[2vw] rounded-full text14px-mobile font-inter font-semibold">
                                     SEND MESSAGE
                                     <svg xmlns="http://www.w3.org/2000/svg" width="13.216" height="13.216" class="duration-400 rotate-45 size-[6vw]" viewBox="0 0 13.216 13.216">
                                         <path id="_9ca54370bbdf94fe6f5a6be762b92d08" data-name="9ca54370bbdf94fe6f5a6be762b92d08" d="M12.4,8.927a.5.5,0,0,0,0-.721L9.251,5.149a.537.537,0,0,0-.743,0,.5.5,0,0,0,0,.721l2.255,2.188H1.525a.51.51,0,1,0,0,1.019h9.238L8.508,11.264a.5.5,0,0,0,0,.721.537.537,0,0,0,.743,0Z" transform="translate(-4.243 5.343) rotate(-45)" fill="currentColor" />
