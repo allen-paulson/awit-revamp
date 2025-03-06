@@ -23,7 +23,7 @@
         </div> -->
 
         <div class="mt-[4vw]">
-            <NuxtImg width="3456" height="720" class="w-full" src="/images/footer/awit.png" alt="ArtworksIT Image" />
+            <NuxtImg width="3456" height="720" format="webp" class="w-full" src="/images/footer/awit.png" alt="ArtworksIT Image" />
         </div>
     </footer>
     <!-- Footer Section End -->
