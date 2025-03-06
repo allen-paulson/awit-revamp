@@ -292,7 +292,6 @@
                                     </div>
                                 </button>
                             </div>
-                            <NuxtTurnstile v-model="token" />
                         </form>
                     </div>
 
@@ -368,8 +367,6 @@
                                     </svg>
                                 </button>
                             </div>
-
-                            <NuxtTurnstile v-model="token" />
                         </form>
                     </div>
 
@@ -444,7 +441,6 @@
             looking: lookingFor.value,
             projectName: projectName.value,
             timeline: timeline.value,
-            "cf-turnstile-response": token.value,
         };
 
         await fetch(FORMSPARK_ACTION_URL, {
@@ -592,9 +588,5 @@
 
     #success-message .char {
         opacity: 0;
-    }
-
-    .cf-turnstile iframe[title="Widget containing a Cloudflare security challenge"] {
-        opacity: 0.0001;
     }
 </style>

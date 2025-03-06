@@ -5,6 +5,10 @@ export default defineNuxtConfig({
         routeRules: {
             "/about": { redirect: "/team" },
         },
+        prerender: {
+            routes: ['/','/team','/work','/contact'],
+            crawlLinks: true
+        }
     },
     devtools: {
         enabled: true,
@@ -12,7 +16,7 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/turnstile", "@nuxtjs/seo", "nuxt-umami"],
+    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/seo", "nuxt-umami"],
     fonts: {
         families: [
             {
@@ -26,9 +30,9 @@ export default defineNuxtConfig({
         ],
         priority: ["google", "bunny"],
     },
-    turnstile: {
-        siteKey: "0x4AAAAAAA_aGj2KM0xzaZVe", // Replace with your actual site key before deployment
-    },
+    // turnstile: {
+    //     siteKey: "0x4AAAAAAA_aGj2KM0xzaZVe", // Replace with your actual site key before deployment
+    // },
     umami: {
         id: "d3a19892-3db8-46ea-8b02-49b5a514dec7",
         host: "https://analytics.artworksit.com",
