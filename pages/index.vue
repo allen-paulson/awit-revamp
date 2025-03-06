@@ -233,35 +233,17 @@
     import ScrollTrigger from "gsap/ScrollTrigger";
 
     const router = useRequestURL().href;
-
-    const refreshScrollTrigger = () => {
-        ScrollTrigger.refresh();
-    };
-
     const loading = useState("isLoading");
 
     const animations = () => {
+        // Register plugin only once
         gsap.registerPlugin(ScrollTrigger);
         document.getElementById("landing-section").classList.remove("opacity-0");
 
         const isMobile = window.innerWidth < 768;
 
-        gsap.utils.toArray(".sectio").forEach((section) => {
-            gsap.set(section, { filter: "blur(0px)" });
-
-            gsap.to(section, {
-                filter: "blur(10px)",
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "bottom 50%",
-                    end: "bottom -20%",
-                    scrub: true,
-                    toggleActions: "play reverse play reverse",
-                },
-            });
-        });
+        // Store all the created ScrollTriggers in an array for easy cleanup
+        const scrollTriggers = [];
 
         document.querySelectorAll(".section-heading").forEach((section) => {
             const breadcrumbs = section.querySelector(".breadcrumbs");
@@ -271,7 +253,7 @@
             const imagesMobile = section.querySelectorAll(".heading-img-mobile");
 
             // Common ScrollTrigger start values
-            const startPosition = "top 90%"; // Trigger earlier so animation starts sooner
+            const startPosition = "top 90%";
 
             // Desktop Animation
             if (!isMobile) {
@@ -282,6 +264,8 @@
                         end: "top 70%",
                         scrub: false,
                         toggleActions: "play none none reverse",
+                        id: `desktop-${section.id || Math.random()}`, // Add unique ID
+                        onRefresh: (self) => scrollTriggers.push(self), // Store reference
                     },
                 });
 
@@ -320,6 +304,8 @@
                         end: "top 80%",
                         scrub: false,
                         toggleActions: "play none none reverse",
+                        id: `mobile-${section.id || Math.random()}`, // Add unique ID
+                        onRefresh: (self) => scrollTriggers.push(self), // Store reference
                     },
                 });
 
@@ -407,12 +393,34 @@
                 },
                 "-=1"
             );
+
+        // Return a cleanup function
+        return () => {
+            // Kill all ScrollTriggers
+            scrollTriggers.forEach((trigger) => trigger.kill());
+
+            // Kill all timelines
+            tl.kill();
+
+            // Clear any in-progress animations
+            gsap.killTweensOf([".main-heading .char", ".main-heading-mobile .char", ".pencil", ".pencil-mobile", ".laptop", ".laptop-mobile", ".button", ".button-mobile"]);
+        };
     };
+
+    // Store the cleanup function
+    let cleanupAnimations = null;
 
     // Watch for loader completion and start animations
     watch(loading, (newValue) => {
         if (!newValue) {
-            animations();
+            // Clean up previous animations if they exist
+            if (cleanupAnimations) {
+                cleanupAnimations();
+                cleanupAnimations = null;
+            }
+
+            // Start new animations and store cleanup function
+            cleanupAnimations = animations();
         }
     });
 
@@ -420,10 +428,34 @@
     onMounted(() => {
         nextTick(() => {
             if (!loading.value) {
-                animations();
+                // Clean up previous animations if they exist
+                if (cleanupAnimations) {
+                    cleanupAnimations();
+                    cleanupAnimations = null;
+                }
+
+                // Start new animations and store cleanup function
+                cleanupAnimations = animations();
             }
         });
     });
+
+    // Important: Clean up when component is unmounted
+    onBeforeUnmount(() => {
+        if (cleanupAnimations) {
+            cleanupAnimations();
+            cleanupAnimations = null;
+        }
+
+        // Additional cleanup to ensure all GSAP resources are released
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        gsap.killTweensOf("*");
+    });
+
+    // Function to manually refresh ScrollTrigger
+    const refreshScrollTrigger = () => {
+        ScrollTrigger.refresh();
+    };
 
     // SEO Meta Tags
     useSeoMeta({
