@@ -231,21 +231,19 @@
 <script setup>
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
 
     const router = useRequestURL().href;
     const loading = useState("isLoading");
 
     const animations = () => {
         // Register plugin only once
-        gsap.registerPlugin(ScrollTrigger);
         document.getElementById("landing-section").classList.remove("opacity-0");
-
         const isMobile = window.innerWidth < 768;
-
         // Store all the created ScrollTriggers in an array for easy cleanup
         const scrollTriggers = [];
 
-        gsap.defaults({
+        gsap.config({
             force3D: true,
         });
 

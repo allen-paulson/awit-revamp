@@ -16,14 +16,23 @@
 <script setup>
     import { ref, onMounted } from "vue";
     import { gsap } from "gsap";
-
+    gsap.config({
+      force3D:true
+    });
     const loader = ref(null);
 
     const emit = defineEmits(["animation-end"]);
 
     onMounted(() => {
         const tl = gsap.timeline({
-            onComplete: () => emit("animation-end"), // Emit event after animation ends
+          onComplete: () => {
+            // Kill GSAP tweens after animation completes
+            if (loader.value) {
+              gsap.killTweensOf(['.loader', '#first-text .char', '#second-text .char']);
+            }
+            // Then emit the event
+            emit("animation-end");
+          }
         });
 
         // Animate second text character by character
@@ -33,7 +42,6 @@
             duration: 0.6,
             delay: 1,
             ease: "power2.out",
-            force3D: true,
             willChange: "transform",
         })
             .to("#first-text .char", {
@@ -41,7 +49,6 @@
                 stagger: 0.05,
                 duration: 0.6,
                 ease: "power2.out",
-                force3D: true,
                 willChange: "transform",
             })
             .to(
@@ -50,10 +57,13 @@
                     scale: 0,
                     duration: 0.8,
                     ease: "power4.inOut",
-                    force3D: true,
                     willChange: "transform",
                 },
                 "+=0.2"
             );
     });
 </script>
+
+<style scoped>
+  .loader {  contain: layout style paint;}
+</style>
