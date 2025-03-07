@@ -146,7 +146,7 @@
             image: {
                 desktop: "/images/projects/azure.webp",
             },
-            link: "https://hunansquare.com/",
+            link: "https://azure-nuxt.pages.dev",
         },
         {
             id: 2,

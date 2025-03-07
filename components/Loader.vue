@@ -65,5 +65,9 @@
 </script>
 
 <style scoped>
-  .loader {  contain: layout style paint;}
+  .loader {
+    contain: strict;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
 </style>
