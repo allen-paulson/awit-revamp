@@ -179,7 +179,7 @@
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/favicon.webp",
+                href: "/favicon.png",
             },
             {
                 rel: "canonical",
