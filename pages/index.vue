@@ -484,6 +484,10 @@
                 type: "image/png",
                 href: "/favicon.webp",
             },
+            {
+                rel: "canonical",
+                href: router,
+            },
         ],
     });
 </script>

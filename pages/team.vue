@@ -162,7 +162,7 @@
 <script setup>
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
-    const router = useRequestURL().href
+    const router = useRequestURL().href;
 
     const refreshScrollTrigger = () => {
         ScrollTrigger.refresh();
@@ -272,6 +272,10 @@
                 rel: "icon",
                 type: "image/png",
                 href: "/favicon.webp",
+            },
+            {
+                rel: "canonical",
+                href: router,
             },
         ],
     });
