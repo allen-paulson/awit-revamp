@@ -7,7 +7,7 @@
             "#Hospitality",
             "#Restaurant"
         ],
-        "description": "Authentic Asian dining experience",
+        "description": "Modern Asian dining experience",
         "bg_color": "#C73834",
         "text_color": "#FFFFFF",
         "image": {
@@ -29,7 +29,7 @@
             "#Enterprise",
             "#Cybersecurity"
         ],
-        "description": "Advanced IoT security solutions",
+        "description": "IoT cybersecurity solutions",
         "bg_color": "#F5BD5F",
         "text_color": "#151515",
         "image": {
@@ -71,7 +71,7 @@
             "#Car Rental",
             "#Travel & Tourism"
         ],
-        "description": "Premium car rental in Goa",
+        "description": "Reliable car rentals in Goa",
         "bg_color": "#FFE8D8",
         "text_color": "#663300",
         "image": {
@@ -93,7 +93,7 @@
             "#Interior Design",
             "#Commercial Spaces"
         ],
-        "description": "Innovative architectural solutions",
+        "description": "Innovative architecture & design",
         "bg_color": "#F0F0F0",
         "text_color": "#333333",
         "image": {
@@ -136,7 +136,7 @@
             "#Tea",
             "#Health & Wellness,"
         ],
-        "description": "Premium tea blend collection",
+        "description": "Premium tea blends",
         "bg_color": "#E6FFE6",
         "text_color": "#006600",
         "image": {
@@ -202,7 +202,7 @@
             "#Holistic Healing",
             "#Mindfulness Courses"
         ],
-        "description": "Holistic wellness center",
+        "description": "Holistic wellness and healing",
         "bg_color": "#F0E6FF",
         "text_color": "#330066",
         "image": {
@@ -225,7 +225,7 @@
             "#Videography",
             "#Event Photography"
         ],
-        "description": "Capturing timeless memories",
+        "description": "Timeless photography & videography",
         "bg_color": "#F5F5F5",
         "text_color": "#1A1A1A",
         "image": {
@@ -270,7 +270,7 @@
             "#Genomics",
             "#Research"
         ],
-        "description": "Advanced genomics research",
+        "description": "Genomics research innovation",
         "bg_color": "#E6FFE6",
         "text_color": "#006600",
         "image": {
