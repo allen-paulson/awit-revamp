@@ -27,7 +27,7 @@
     <!-- Contact Landing Section End -->
 
     <!-- Form Section Start -->
-    <section class="form-section relative">
+    <section class="form-section relative bg-[#151515]">
         <div class="px-[5vw] md:px-[4vw] pb-[20vw] md:pb-[5vw]">
             <div class="flex flex-col md:flex-row gap-[15vw] md:gap-[0vw] border-t-[.75px] border-[#FFFFFF] md:pt-[1vw] pt-[4vw]">
                 <div class="section-heading md:w-[39%] md:pt-[2vw]">

@@ -69,7 +69,7 @@
                                 <div class="p-[3vw] pb-[4vw]">
                                     <div class="flex flex-col">
                                         <div class="flex justify-between">
-                                            <div class="w-[50%]">
+                                            <div class="w-[60%]">
                                                 <NuxtImg width="1210" height="946" format="webp" class="w-full" :src="project.image.desktop" alt="Project Image" />
                                             </div>
                                             <div>
