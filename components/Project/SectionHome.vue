@@ -240,10 +240,6 @@
 
     const containerRef = ref(null);
 
-    gsap.config({
-        force3D: true,
-    });
-
     const animation = () => {
         const cards = gsap.utils.toArray(".desktop-project__item");
 

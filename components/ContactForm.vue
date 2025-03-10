@@ -1,6 +1,6 @@
 <template>
     <!-- Contact Landing Section Start -->
-    <section v-if="path === '/contact'" id="contact-heading" class="relative">
+    <section v-if="path === '/contact'" id="contact-heading" class="relative pt-[5vw] md:pt-0">
         <div class="px-[6vw] md:px-[4.5vw] pt-[5vw] pb-[8vw] md:pb-[6vw]">
             <div class="relative text-[#F1F1F1]">
                 <!-- Desktop View -->

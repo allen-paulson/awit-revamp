@@ -21,9 +21,6 @@
 <script setup>
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
-    // gsap.defaults({
-    //     force3D: true,
-    // });
 
     
     const lenis = useLenis(({ scroll, velocity, progress, direction }) => {});
