@@ -71,33 +71,33 @@
                 <ul class="flex flex-col md:flex-row md:gap-[.5vw] font-inter uppercase font-medium text24px-desktop text10px-mobile text-[#F1F1F1] pointer-events-auto">
                     <li>
                         <NuxtLink to="/team" aria-label="Team Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Team</span><span class="hidden md:block">,</span>
-                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Team</span>
+                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Team</span><span class="hidden md:block">,</span>
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Team</span>
                         </NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="/work" aria-label="Work Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Work</span><span class="hidden md:block">,</span>
-                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Work</span>
+                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Work</span><span class="hidden md:block">,</span>
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Work</span>
                         </NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="/contact" aria-label="Contact Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span><span class="hidden md:block">.</span>
-                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">Contact</span>
+                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span><span class="hidden md:block">.</span>
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Contact</span>
                         </NuxtLink>
                     </li>
                     <li class="md:hidden">
                         <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw] text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
-                            <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
-                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">WhatsApp</span>
+                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
+                            <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">WhatsApp</span>
                         </NuxtLink>
                     </li>
                 </ul>
 
                 <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group hidden md:flex text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
-                    <span class="group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
-                    <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap group-hover:-translate-y-full duration-500">WhatsApp</span>
+                    <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
+                    <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">WhatsApp</span>
                 </NuxtLink>
             </nav>
         </div>
