@@ -69,19 +69,19 @@
 
             <nav class="flex flex-col md:flex-row items-center gap-[1vw]">
                 <ul class="flex flex-col md:flex-row md:gap-[.5vw] font-inter uppercase font-medium text24px-desktop text10px-mobile text-[#F1F1F1] pointer-events-auto">
-                    <li :class="route.path === '/team' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:rounded-full before:-translate-x-[215%] relative">
+                    <li :class="route.path === '/team' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:-translate-x-[215%] relative">
                         <NuxtLink to="/team" aria-label="Team Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
                             <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Team</span><span class="hidden md:block">,</span>
                             <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Team</span>
                         </NuxtLink>
                     </li>
-                    <li :class="route.path === '/work' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:rounded-full before:-translate-x-[215%] relative">
+                    <li :class="route.path === '/work' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:-translate-x-[215%] relative">
                         <NuxtLink to="/work" aria-label="Work Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
                             <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Work</span><span class="hidden md:block">,</span>
                             <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Work</span>
                         </NuxtLink>
                     </li>
-                    <li :class="route.path === '/contact' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:rounded-full before:-translate-x-[215%] relative">
+                    <li :class="route.path === '/contact' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:-translate-x-[215%] relative">
                         <NuxtLink to="/contact" aria-label="Contact Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
                             <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span><span class="hidden md:block">.</span>
                             <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Contact</span>
