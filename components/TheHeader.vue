@@ -83,7 +83,7 @@
                     </li>
                     <li :class="route.path === '/contact' ? 'before:scale-100' : 'before:scale-0'" class="before:absolute md:before:scale-0 before:left-0 before:top-1/2 before:-translate-y-1/2 before:aspect-square before:w-[1.25vw] before:bg-white-color before:-translate-x-[215%] relative">
                         <NuxtLink to="/contact" aria-label="Contact Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw]">
-                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span><span class="hidden md:block">.</span>
+                            <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">Contact</span><span class="hidden md:block">,</span>
                             <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">Contact</span>
                         </NuxtLink>
                     </li>
