@@ -3,11 +3,10 @@ export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
     nitro: {
         routeRules: {
-            "/about": { redirect: "/team" },
+            "/about": {redirect: "/team"},
         },
         prerender: {
-            routes: ['/','/team','/work','/contact'],
-            crawlLinks: true
+            routes: ['/', '/team', '/work', '/contact']
         }
     },
     devtools: {
