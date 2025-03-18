@@ -57,7 +57,7 @@
             "desktop": "/images/projects/azure.webp",
             "mobile": "/images/work/azure.webp"
         },
-        "link": "#",
+        "link": "https://azure-nuxt.pages.dev",
         "filters": [
             "real-estate",
             "luxury",

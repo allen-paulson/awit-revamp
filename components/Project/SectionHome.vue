@@ -132,7 +132,7 @@
                           <span class="w-[.75vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
                           <p class="font-inter text14px-mobile font-light opacity-80">{{ chat.time }}</p>
                         </div>
-                        <p class="font-inter text14px-mobile mt-[2vw] leading-[1.3] w-[90%]">{{ chat.message }}</p>
+                        <p class="font-inter text14px-mobile mt-[2vw] leading-[1.3] w-[90%]" v-html="chat.message"></p>
                       </div>
                     </div>
                   </div>
