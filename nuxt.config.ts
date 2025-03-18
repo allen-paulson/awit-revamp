@@ -6,7 +6,7 @@ export default defineNuxtConfig({
             "/about": {redirect: "/team"},
         },
         prerender: {
-            routes: ['/', '/team', '/work', '/contact']
+            routes: ['/', '/team', '/work', '/contact'],
         }
     },
     devtools: {
