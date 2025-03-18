@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-const router = useRequestURL().href;
+const config = useRuntimeConfig()
 // SEO Meta Tags
 useSeoMeta({
   ogSiteName: "ArtWorksIT",
@@ -15,11 +15,11 @@ useSeoMeta({
   description: "Let’s build something awesome together. Hit us up!",
   ogTitle: "Talk to ArtWorksIT",
   ogDescription: "Let’s build something awesome together. Hit us up!",
-  ogImage: "/images/meta/contact.png",
-  ogUrl: () => router,
+  ogImage: () => config.public.siteUrl + "/images/meta/contact.png",
+  ogUrl: () => config.public.siteUrl,
   twitterTitle: "Talk to ArtWorksIT",
   twitterDescription: "Let’s build something awesome together. Hit us up!",
-  twitterImage: "/images/meta/contact.png",
+  twitterImage: () => config.public.siteUrl + "/images/meta/contact.png",
   twitterCard: "Let’s build something awesome together. Hit us up!",
 });
 
@@ -32,11 +32,11 @@ useHead({
     {
       rel: "icon",
       type: "image/png",
-      href: "/favicon.png",
+      href: config.public.siteUrl + "/favicon.png",
     },
     {
       rel: "canonical",
-      href: router,
+      href: config.public.siteUrl,
     },
   ],
 });

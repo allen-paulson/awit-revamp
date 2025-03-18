@@ -15,6 +15,11 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
+    runtimeConfig: {
+        public: {
+            siteUrl: process.env.SITE_URL || 'https://artworksit.com'
+        }
+    },
     modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/seo", "nuxt-umami"],
     fonts: {
         families: [

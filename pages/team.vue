@@ -188,7 +188,7 @@
 import {gsap} from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const router = useRequestURL().href;
+const config = useRuntimeConfig()
 
 const refreshScrollTrigger = () => {
   ScrollTrigger.refresh();
@@ -281,11 +281,11 @@ useSeoMeta({
   description: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
   ogTitle: "Team behind ArtWorksIT",
   ogDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-  ogImage: "/images/meta/team.png",
-  ogUrl: () => router,
+  ogImage: () => config.public.siteUrl + "/images/meta/team.png",
+  ogUrl: () => config.public.siteUrl,
   twitterTitle: "Team behind ArtWorksIT",
   twitterDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-  twitterImage: "/images/meta/team.png",
+  twitterImage: () => config.public.siteUrl + "/images/meta/team.png",
   twitterCard: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
 });
 
@@ -298,11 +298,11 @@ useHead({
     {
       rel: "icon",
       type: "image/png",
-      href: "/favicon.png",
+      href: config.public.siteUrl + "/favicon.png",
     },
     {
       rel: "canonical",
-      href: router,
+      href: config.public.siteUrl,
     },
   ],
 });

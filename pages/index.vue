@@ -232,9 +232,8 @@
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
     gsap.registerPlugin(ScrollTrigger);
-
-    const router = useRequestURL().href;
     const loading = useState("isLoading");
+    const config = useRuntimeConfig()
 
     const animations = () => {
         // Register plugin only once
@@ -465,11 +464,11 @@
         description: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
         ogTitle: "ArtWorksIT - Web Design Studio",
         ogDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
-        ogImage: "/images/meta/home.png",
-        ogUrl: () => router,
+        ogImage: () => config.public.siteUrl + "/images/meta/home.png",
+        ogUrl: () => config.public.siteUrl,
         twitterTitle: "ArtWorksIT - Web Design Studio",
         twitterDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
-        twitterImage: "/images/meta/home.png",
+        twitterImage: () => config.public.siteUrl + "/images/meta/home.png",
         twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites.",
     });
 
@@ -482,11 +481,11 @@
             {
                 rel: "icon",
                 type: "image/png",
-                href: "/favicon.png",
+                href: config.public.siteUrl + "/favicon.png",
             },
             {
                 rel: "canonical",
-                href: router,
+                href: config.public.siteUrl,
             },
         ],
     });
