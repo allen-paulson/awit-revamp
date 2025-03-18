@@ -254,11 +254,11 @@
         description: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
         ogTitle: "Team behind ArtWorksIT",
         ogDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-        ogImage: "/images/meta.webp",
+        ogImage: "/images/meta/team.png",
         ogUrl: router,
         twitterTitle: "Team behind ArtWorksIT",
         twitterDescription: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
-        twitterImage: "/images/meta.webp",
+        twitterImage: "/images/meta/team.png",
         twitterCard: "Meet the artisans of ArtWorksIT. We’re hiring front-end developers and designers!",
     });
 

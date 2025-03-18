@@ -46,8 +46,8 @@
                                     <div class="flex justify-between px-[1vw] pt-[1vw] gap-[16vw]">
                                         <div class="card-inner flex gap-[16vw] flex-1">
                                             <p class="font-inter font-light text24px-desktop">0{{ index + 1 }}</p>
-                                            <div class="flex flex-col gap-[3vw]">
-                                                <p class="font-anton text60px-desktop">{{ project.title }}</p>
+                                            <div class="flex flex-col gap-[2vw]">
+                                                <p class="font-anton text60px-desktop origin-top-left">{{ project.title }}</p>
                                                 <div class="flex flex-col gap-[.75vw]">
                                                     <div v-for="(chat, chatIndex) in project.users_chat" :key="chatIndex" class="flex gap-[1vw]">
                                                         <div class="flex flex-col">
@@ -62,7 +62,7 @@
                                                                 <span class="w-[.25vw] aspect-square rounded-full bg-[#FFFFFF]"></span>
                                                                 <p class="font-inter text18px-desktop font-light opacity-80">{{ chat.time }}</p>
                                                             </div>
-                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.3]">{{ chat.message }}</p>
+                                                            <p class="font-inter text18px-desktop mt-[1vw] leading-[1.5]" v-html="chat.message"></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,7 +139,7 @@
                 {
                     avatar: "/images/work/awit.webp",
                     user_type: "ArtWorksIT",
-                    message: "Client didn’t even negotiate much, let’s do a good job!",
+                    message: `Client didn’t even negotiate much, let’s do a <br>good job! <span class="scale-[1.3] inline-block">🍾</span>`,
                     time: "14 h",
                 },
             ],
@@ -161,7 +161,7 @@
                 {
                     avatar: "/images/work/awit.webp",
                     user_type: "ArtWorksIT",
-                    message: "Lets do it!!",
+                    message: `Lets do it!! <span class="scale-[1.1]">🚀 🔥 💯</span>`,
                     time: "10 h",
                 },
             ],
@@ -183,7 +183,7 @@
                 {
                     avatar: "/images/work/awit.webp",
                     user_type: "ArtWorksIT",
-                    message: "Let’s go crazy on this one, and not make a traditional site",
+                    message: `Let’s go crazy on this one, and not make a traditional site <span class="scale-[1.1]">🎢</span>`,
                     time: "8 h",
                 },
             ],
@@ -205,7 +205,7 @@
                 {
                     avatar: "/images/work/awit.webp",
                     user_type: "ArtWorksIT",
-                    message: "Ez Pz and live in 2 months",
+                    message: `Ez Pz and live in 2 months <span class="scale-[1.1]">🌊</span>`,
                     time: "12 h",
                 },
             ],
@@ -227,7 +227,7 @@
                 {
                     avatar: "/images/work/awit.webp",
                     user_type: "ArtWorksIT",
-                    message: "Hold my Figma and VS Code!!! Live in 10 days",
+                    message: `Hold my Figma and VS Code!!! Live in 10 days<span class="scale-[1.1]"> ⏰</span>`,
                     time: "6 h",
                 },
             ],
@@ -321,21 +321,33 @@
                             duration: 0.5,
                             ease: "none",
                         },
-                        "<+=0.5" // Start halfway through current card's animation
-                    ).to(
-                        cards[i - 1].querySelector(".card-inner"),
-                        {
-                            opacity: 0.75,
-                            willChange: "transform",
-                            duration: 0.5,
-                            ease: "none",
-                        },
-                        "<"
-                    );
+                        "<+=0.5"
+                    )
+                        .to(
+                            cards[i - 1].querySelector(".card-inner p.font-anton"),
+                            {
+                                scale: 0.7,
+                                willChange: "transform",
+                                duration: 0.5,
+                                ease: "none",
+                            },
+                            "<"
+                        )
+                        .to(
+                            cards[i - 1].querySelector(".card-inner"),
+                            {
+                                opacity: 0.75,
+                                transformOrigin: "left",
+                                willChange: "transform",
+                                duration: 0.5,
+                                ease: "none",
+                            },
+                            "<"
+                        );
                 }
 
                 gsap.set(card, {
-                    top: `${i * 6}vw`,
+                    top: `${i * 4.75}vw`,
                 });
             }
         });

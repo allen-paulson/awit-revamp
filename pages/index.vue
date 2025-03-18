@@ -465,11 +465,11 @@
         description: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
         ogTitle: "ArtWorksIT - Web Design Studio",
         ogDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
-        ogImage: "/images/meta.webp",
+        ogImage: "/images/meta/home.png",
         ogUrl: router,
         twitterTitle: "ArtWorksIT - Web Design Studio",
         twitterDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
-        twitterImage: "/images/meta.webp",
+        twitterImage: "/images/meta/home.png",
         twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites.",
     });
 

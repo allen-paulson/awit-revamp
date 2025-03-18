@@ -65,28 +65,28 @@
 
                         <!-- Mobile View -->
                         <div class="grid gap-[4vw] relative md:hidden">
-                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" v-for="(project, index) in projects" :key="index" class="block border-[.75px] border-white">
+                            <div v-for="(project, index) in projects" :key="index" class="block border-[.75px] border-white">
                                 <div class="p-[3vw] pb-[4vw]">
                                     <div class="flex flex-col">
                                         <div class="flex justify-between">
-                                            <div class="w-[60%]">
+                                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" class="w-[60%] inline-block">
                                                 <NuxtImg width="1210" height="946" format="webp" class="w-full" :src="project.image.desktop" alt="Project Image" />
-                                            </div>
-                                            <div>
+                                            </NuxtLink>
+                                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" class="inline-block">
                                                 <NuxtImg width="38" height="38" format="webp" class="w-[8vw]" src="/images/work/arrow.svg" />
-                                            </div>
+                                            </NuxtLink>
                                         </div>
                                         <div class="mt-[30vw]">
-                                            <p class="font-anton text40px-mobile text-white">{{ capitalizeFirstLetter(project.title) }}</p>
-                                            <div class="mt-[4vw] flex flex-wrap gap-[2vw]">
+                                            <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'" class="font-anton text40px-mobile text-white">{{ capitalizeFirstLetter(project.title) }}</NuxtLink>
+                                            <p class="mt-[4vw] font-inter text16px-desktop leading-[1.2]">{{ project.description }}</p>
+                                            <div class="mt-[10vw] flex flex-wrap gap-[2vw]">
                                                 <div v-for="tag in project.tags" class="rounded-full border border-white px-[2.5vw] py-[2vw] font-inter text14px-mobile">{{ tag }}</div>
                                             </div>
 
-                                            <p class="mt-[10vw] font-inter text16px-desktop leading-[1.2]">{{ project.description }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </NuxtLink>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,11 +162,11 @@
         description: "Explore ArtWorksIT's work, crafted with story and design.",
         ogTitle: "Our Work | ArtWorksIT",
         ogDescription: "Explore ArtWorksIT's work, crafted with story and design.",
-        ogImage: "/images/meta.webp",
+        ogImage: "/images/meta/work.png",
         ogUrl: router,
         twitterTitle: "Our Work | ArtWorksIT",
         twitterDescription: "Explore ArtWorksIT's work, crafted with story and design.",
-        twitterImage: "/images/meta.webp",
+        twitterImage: "/images/meta/work.png",
         twitterCard: "Explore ArtWorksIT's work, crafted with story and design.",
     });
 
