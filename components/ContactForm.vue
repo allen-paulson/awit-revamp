@@ -206,10 +206,10 @@
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
                                         <span v-if="contactType === 'Email'" class="inline-block">
-                                            <input type="email" name="name" v-model="email" placeholder=" anedoe@gmail.com " required autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <input type="email" required name="name" v-model="email" placeholder=" anedoe@gmail.com " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
                                         <span v-else class="inline-block">
-                                            <input type="tel" name="phone" required v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <input type="tel" required name="phone" v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
 
                                         }
@@ -300,7 +300,7 @@
                         <form @submit.prevent="submitForm" class="text20px-mobile grid gap-[9vw]">
                             <div class="flex flex-col gap-[2vw]">
                                 <p class="font-medium">My name is</p>
-                                <input type="text" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="name" placeholder=" Your name " autocomplete="false" />
+                                <input type="text" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="name" placeholder=" Your name " autocomplete="false" required />
                             </div>
 
                             <div class="flex flex-col gap-[1vw]">
@@ -317,17 +317,17 @@
                                 </div>
                                 <div class="mt-[3vw]">
                                     <div v-if="selectedContactType === 'email'">
-                                        <input type="email" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="email" placeholder=" Your email " autocomplete="false" />
+                                        <input type="email" required class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="email" placeholder=" Your email " autocomplete="false" />
                                     </div>
                                     <div v-else>
-                                        <input type="tel" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="phone" placeholder=" Your phone number " autocomplete="false" />
+                                        <input type="tel" required class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="phone" placeholder=" Your phone number " autocomplete="false" />
                                     </div>
                                 </div>
                             </div>
 
                             <div class="flex flex-col gap-[2vw]">
                                 <p class="font-medium">My business or project is called</p>
-                                <input type="text" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="name" placeholder=" Your name " autocomplete="false" />
+                                <input type="text" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="projectName" placeholder=" Your business name " autocomplete="false" />
                             </div>
 
                             <div class="flex flex-col gap-[1vw]">

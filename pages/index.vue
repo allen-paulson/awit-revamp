@@ -131,7 +131,7 @@
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
                                 <NuxtImg width="130" height="130" format="webp" src="/images/home/ai.webp" class="w-[35%] relative z-[2]" alt="Ai Image" />
                             </div>
-                            <div class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+                            <div class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <div class="md:hidden">
                                     <small-boxes direction="tl" />
@@ -175,7 +175,7 @@
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
                                 <NuxtImg width="257" height="59" format="webp" src="/images/home/filament.webp" class="w-[60%] relative z-[2]" alt="Framer Image" />
                             </div>
-                            <div class="md:row-start-3 aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+                            <div class="md:row-start-3 aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
                                 <div class="md:hidden">
@@ -198,7 +198,13 @@
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
                                 <NuxtImg width="266" height="100" format="webp" src="/images/home/cloudflare.webp" class="w-[60%] relative z-[2]" alt="Cloudflare Image" />
                             </div>
-                            <div class="md:row-start-4 aspect-square border border-t-0 border-[#5C5C5C] flex items-center justify-center relative">
+                            <div class="md:row-start-4 aspect-square border md:border-l border-l-0 border-t-0 border-[#5C5C5C] flex items-center justify-center relative">
+                                <small-boxes direction="tr" />
+                                <small-boxes direction="br" />
+                                <div class="absolute inset-0 z-0 bg-[#151515]"></div>
+                                <NuxtImg width="134" height="136" format="webp" src="/images/home/ploi.png" class="w-[90%] relative z-[2]" alt="Ploi Image" />
+                            </div>
+                            <div class="md:row-start-4 aspect-square border md:border-l-0 border-t-0 border-[#5C5C5C] flex items-center justify-center relative">
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
                                 <div class="absolute inset-0 z-0 bg-[#151515]"></div>
@@ -233,7 +239,7 @@
     import ScrollTrigger from "gsap/ScrollTrigger";
     gsap.registerPlugin(ScrollTrigger);
     const loading = useState("isLoading");
-    const config = useRuntimeConfig()
+    const config = useRuntimeConfig();
 
     const animations = () => {
         // Register plugin only once
