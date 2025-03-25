@@ -286,12 +286,21 @@
                                 </span>
                             </p>
                             <div class="flex justify-end mt-[1vw]">
-                                <button type="submit" aria-label="Send Message button" class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
-                                    <div class="relative w-full pr-[12vw] md:pr-[4vw]">
+                                <button :disabled="formLoading" type="submit" aria-label="Send Message button" class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
+                                    <div v-if="!formLoading" class="relative w-full pr-[12vw] md:pr-[4vw]">
                                         <p class="text15px-desktop text14px-mobile font-semibold">SEND MESSAGE</p>
                                         <div class="rounded-full bg-background-black aspect-square w-[6.5vw] md:w-[2.05vw] absolute right-[1vw] md:right-[.2vw] flex items-center justify-center top-1/2 -translate-y-1/2 md:scale-[30%] md:group-hover:scale-100 duration-500 will-change-transform">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-[50%] text-[#F1F1F1] duration-500 md:group-hover:opacity-100 md:opacity-0" viewBox="0 0 13.216 13.216">
                                                 <path id="_9ca54370bbdf94fe6f5a6be762b92d08" data-name="9ca54370bbdf94fe6f5a6be762b92d08" d="M12.4,8.927a.5.5,0,0,0,0-.721L9.251,5.149a.537.537,0,0,0-.743,0,.5.5,0,0,0,0,.721l2.255,2.188H1.525a.51.51,0,1,0,0,1.019h9.238L8.508,11.264a.5.5,0,0,0,0,.721.537.537,0,0,0,.743,0Z" transform="translate(-4.243 5.343) rotate(-45)" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div v-else class="relative w-full pr-[12vw] md:pr-[4vw]">
+                                        <p class="text15px-desktop text14px-mobile font-semibold">SENDING...</p>
+                                        <div class="rounded-full bg-background-black aspect-square w-[6.5vw] md:w-[2.05vw] absolute right-[1vw] md:right-[.2vw] flex items-center justify-center top-1/2 -translate-y-1/2 duration-500 will-change-transform">
+                                            <svg class="size-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
                                         </div>
                                     </div>
@@ -372,23 +381,32 @@
                             </div>
 
                             <div class="mt-[10vw]">
-                                <button type="submit" aria-label="send message button" class="w-full bg-white text-[#1F1F1F] flex items-center justify-between px-[5vw] py-[2vw] rounded-full text14px-mobile font-inter font-semibold">
-                                    SEND MESSAGE
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.216" height="13.216" class="duration-400 rotate-45 size-[6vw]" viewBox="0 0 13.216 13.216">
-                                        <path id="_9ca54370bbdf94fe6f5a6be762b92d08" data-name="9ca54370bbdf94fe6f5a6be762b92d08" d="M12.4,8.927a.5.5,0,0,0,0-.721L9.251,5.149a.537.537,0,0,0-.743,0,.5.5,0,0,0,0,.721l2.255,2.188H1.525a.51.51,0,1,0,0,1.019h9.238L8.508,11.264a.5.5,0,0,0,0,.721.537.537,0,0,0,.743,0Z" transform="translate(-4.243 5.343) rotate(-45)" fill="currentColor" />
-                                    </svg>
+                                <button :disabled="formLoading" type="submit" aria-label="send message button" class="w-full bg-white text-[#1F1F1F] px-[5vw] py-[2vw] rounded-full text14px-mobile font-inter font-semibold">
+                                    <div v-if="!formLoading" class="flex items-center justify-between">
+                                        SEND MESSAGE
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.216" height="13.216" class="duration-400 rotate-45 size-[6vw]" viewBox="0 0 13.216 13.216">
+                                            <path id="_9ca54370bbdf94fe6f5a6be762b92d08" data-name="9ca54370bbdf94fe6f5a6be762b92d08" d="M12.4,8.927a.5.5,0,0,0,0-.721L9.251,5.149a.537.537,0,0,0-.743,0,.5.5,0,0,0,0,.721l2.255,2.188H1.525a.51.51,0,1,0,0,1.019h9.238L8.508,11.264a.5.5,0,0,0,0,.721.537.537,0,0,0,.743,0Z" transform="translate(-4.243 5.343) rotate(-45)" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <div v-else class="flex items-center justify-between">
+                                        SENDING...
+                                        <svg class="size-5 animate-spin text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                    </div>
                                 </button>
                             </div>
                         </Form>
                     </div>
 
                     <!-- Success Message -->
-                    <div v-show="formSubmitted" v-split-text="{ splitBy: 'words, char' }" id="success-message" class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
-                        <p>Hi {{ name }},</p>
-                        <div class="mt-[3vw] md:mt-[2vw]">
+                    <div v-show="formSubmitted" id="success-message" class="relative font-inter text26px-desktop font-medium text-white leading-[1.35]">
+                        <p>Hi {{ successName }},</p>
+                        <div v-split-text="{ splitBy: 'words, char' }" class="mt-[3vw] md:mt-[2vw]">
                             <p>Thanks for reaching out! We'd love to help with your {{ lookingFor }}. I will contact you shortly.</p>
                         </div>
-                        <div class="mt-[3vw] md:mt-[2vw] !inline-flex flex-col">
+                        <div v-split-text="{ splitBy: 'words, char' }" class="mt-[3vw] md:mt-[2vw] !inline-flex flex-col">
                             <p>Best Wishes,</p>
                             <p>Uday</p>
                             <p class="font-bold">ArtWorksIT</p>
@@ -446,6 +464,9 @@
 
     const formSubmitted = ref(false);
 
+    const formLoading = ref(false);
+    const successName = ref("");
+
     const schema = Yup.object().shape({
         name: Yup.string().required("Your name is required"),
         contactType: Yup.string().required("Please select a contact type"),
@@ -466,6 +487,8 @@
             console.log(`No bots allowed`);
             return;
         }
+
+        formLoading.value = true;
 
         const formData = {
             name: name.value,
@@ -488,11 +511,15 @@
         })
             .then((response) => response.json())
             .then((data) => {
+                successName.value = name.value;
                 formSubmitted.value = true;
                 showFromSuccess();
             })
             .catch((error) => {
                 console.error("Error:", error);
+            })
+            .finally(() => {
+                formLoading.value = false;
             });
     };
 
@@ -509,8 +536,6 @@
                     opacity: 1,
                 });
                 const charss = document.querySelectorAll("#success-message .char");
-                console.log("Found characters:", charss.length);
-                console.log(charss); // Look at the actual elements
                 const chars = gsap.utils.toArray("#success-message .char");
                 // Animate each character
                 chars.forEach((char, index) => {
