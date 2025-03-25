@@ -137,7 +137,7 @@
                                 </NuxtLink>
                             </div>
                             <div class="row-start-3">
-                                <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="Whatsapp link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
+                                <NuxtLink to="https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check" target="_blank" aria-label="Whatsapp link" class="group hover:bg-white-color duration-500 border-[.5px] border-[#5C5C5C] md:border md:border-white-color md:w-[7vw] md:h-[7vw] w-[20vw] h-[20vw] flex justify-center items-center relative">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="41.119" height="41.127" class="w-[30%] md:w-[35%] group-hover:text-[#23D366] duration-500" viewBox="0 0 41.119 41.127">
                                         <path
                                             id="d8f677886d275cf001bf618e1fa3bda3"

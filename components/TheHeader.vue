@@ -88,14 +88,14 @@
                         </NuxtLink>
                     </li>
                     <li class="md:hidden">
-                        <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw] text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
+                        <NuxtLink to="https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group flex leading-[24px] md:leading-none md:py-0 py-[2vw] text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
                             <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
                             <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">WhatsApp</span>
                         </NuxtLink>
                     </li>
                 </ul>
 
-                <NuxtLink to="https://wa.me/+918792745204?text=Hi" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group hidden md:flex text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
+                <NuxtLink to="https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check" target="_blank" aria-label="WhatsApp Link" class="relative overflow-hidden group hidden md:flex text24px-desktop text10px-mobile font-bold uppercase text-[#6ADC01] pointer-events-auto">
                     <span class="md:group-hover:-translate-y-full duration-500 leading-[1] font-bold">WhatsApp</span>
                     <span class="absolute top-full flex leading-[1] font-bold not-main-nav-link whitespace-nowrap md:group-hover:-translate-y-full duration-500">WhatsApp</span>
                 </NuxtLink>
