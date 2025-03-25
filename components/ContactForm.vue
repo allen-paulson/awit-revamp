@@ -165,21 +165,25 @@
                 <div class="md:w-[61%] md:pr-[6.5vw] md:border-l md:border-[#FFFFFF]/25 md:pl-[8vw] md:pt-[8vw] md:pb-[10vw]">
                     <!-- Desktop View -->
                     <div v-show="!formSubmitted" id="contact-form" class="relative hidden md:block">
-                        <form @submit.prevent="submitForm" class="flex flex-col gap-[8vw] md:gap-[3.5vw]">
+                        <div class="fixed top-[10%] right-0"></div>
+                        <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }" class="flex flex-col gap-[8vw] md:gap-[3.5vw]">
                             <p class="relative font-inter text26px-desktop font-medium text-white leading-[1.5]">
                                 <span>Hi ArtWorksIT team,</span>
+
+                                <input type="text" class="hidden" name="budget" v-model="budget" />
+                                <input type="text" class="hidden" name="company" v-model="company" />
 
                                 <span class="inline-block mt-[1.75vw]">
                                     I,
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
-                                        {
+                                        <span :class="errors.name ? 'text-red-500' : 'text-white/25'">{</span>
                                         <span class="relative inline-block">
                                             <span ref="nameText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ name }}</span>
 
-                                            <span class="absolute w-full bottom-0 h-px bg-white/25"></span>
-                                            <input :style="{ width: nameWidth + 'px' }" ref="nameWidth" required type="text" name="name" v-model="name" placeholder=" Your name here " autocomplete="false" class="w-full bg-transparent focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[10vw] max-w-[35vw]" />
+                                            <span :class="errors.name ? 'bg-red-500' : 'bg-white/25'" class="absolute w-full bottom-0 h-px"></span>
+                                            <Field :style="{ width: nameWidth + 'px' }" ref="nameWidth" required type="text" name="name" v-model="name" placeholder=" Your name here " autocomplete="false" class="w-full bg-transparent focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[10vw] max-w-[35vw]" />
                                         </span>
-                                        }
+                                        <span :class="errors.name ? 'text-red-500' : 'text-white/25'">}</span>
                                     </span>
 
                                     want help kicking off a project. You can reach me via
@@ -193,10 +197,10 @@
                                         </span>
                                         <span class="inline-block relative">
                                             <span ref="contactTypeText" class="absolute invisible whitespace-nowrap">{{ contactType }}</span>
-                                            <select :style="{ width: contactTypeWidth + 'px' }" @change="updateWidth" v-model="contactType" name="contact-via" id="contact-via" class="bg-transparent border-none ring-0 outline-none appearance-none">
-                                                <option value="Email">Email</option>
+                                            <Field as="select" :style="{ width: contactTypeWidth + 'px' }" @change="contactType" v-model="contactType" name="contactType" id="contact-via" class="bg-transparent border-none ring-0 outline-none appearance-none">
+                                                <option selected value="Email">Email</option>
                                                 <option value="Phone">Phone</option>
-                                            </select>
+                                            </Field>
                                         </span>
                                         }
                                     </span>
@@ -204,15 +208,16 @@
                                     &nbsp; at &nbsp;
 
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
-                                        {
+                                        <span :class="errors.email || errors.phone ? 'text-red-500' : 'text-white/25'">{</span>
+
                                         <span v-if="contactType === 'Email'" class="inline-block">
-                                            <input type="email" required name="name" v-model="email" placeholder=" anedoe@gmail.com " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <Field type="email" required name="email" v-model="email" placeholder=" anedoe@gmail.com " autocomplete="false" :class="errors.email ? 'border-red-500' : '!border-[#FFFFFF]/25'" class="w-full bg-transparent !border-b focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
                                         <span v-else class="inline-block">
-                                            <input type="tel" required name="phone" v-model="phone" placeholder=" 9876543210 " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
+                                            <Field type="tel" required name="phone" v-model="phone" placeholder=" 9876543210 " autocomplete="false" :class="errors.phone ? 'border-red-500' : '!border-[#FFFFFF]/25'" class="w-full bg-transparent !border-b focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[16vw]" />
                                         </span>
 
-                                        }
+                                        <span :class="errors.email || errors.phone ? 'text-red-500' : 'text-white/25'">}</span>
                                     </span>
                                 </span>
 
@@ -221,7 +226,7 @@
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
                                         <span ref="businessText" class="absolute invisible whitespace-nowrap inline-block pointer-events-none">{{ projectName }}</span>
-                                        <input ref="businessWidth" :style="{ width: businessWidth + 'px' }" required type="text" name="name" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[15vw] max-w-[35vw]" />
+                                        <input ref="businessWidth" :style="{ width: businessWidth + 'px' }" required type="text" name="aaaa" placeholder=" Business/project name " v-model="projectName" autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white min-w-[15vw] max-w-[35vw]" />
                                         } </span
                                     >. I’m looking for
 
@@ -268,7 +273,7 @@
 
                                     <span class="inline-flex items-center text-[#FFFFFF]/25 gap-[.1vw] font-light">
                                         {
-                                        <input type="text" required name="name" v-model="message" placeholder=" Anything else " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[39vw]" />
+                                        <Field type="text" required name="message" v-model="message" placeholder=" Anything else " autocomplete="false" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white md:w-[39vw]" />
                                         }.
                                     </span>
                                 </span>
@@ -281,7 +286,7 @@
                                 </span>
                             </p>
                             <div class="flex justify-end mt-[1vw]">
-                                <button aria-label="Send Message button" class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
+                                <button type="submit" aria-label="Send Message button" class="rounded-full bg-white-color text-background-black inline-block py-[2.5vw] md:py-[.7vw] pl-[4vw] md:pl-[1vw] relative group">
                                     <div class="relative w-full pr-[12vw] md:pr-[4vw]">
                                         <p class="text15px-desktop text14px-mobile font-semibold">SEND MESSAGE</p>
                                         <div class="rounded-full bg-background-black aspect-square w-[6.5vw] md:w-[2.05vw] absolute right-[1vw] md:right-[.2vw] flex items-center justify-center top-1/2 -translate-y-1/2 md:scale-[30%] md:group-hover:scale-100 duration-500 will-change-transform">
@@ -292,15 +297,18 @@
                                     </div>
                                 </button>
                             </div>
-                        </form>
+                        </Form>
                     </div>
 
                     <!-- Mobile View -->
                     <div v-show="!formSubmitted" id="contact-form-mobile" class="relative md:hidden">
-                        <form @submit.prevent="submitForm" class="text20px-mobile grid gap-[9vw]">
+                        <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }" class="text20px-mobile grid gap-[9vw]">
+                            <input type="text" class="hidden" name="budget" v-model="budget" />
+                            <input type="text" class="hidden" name="company" v-model="company" />
+
                             <div class="flex flex-col gap-[2vw]">
                                 <p class="font-medium">My name is</p>
-                                <input type="text" class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="name" placeholder=" Your name " autocomplete="false" required />
+                                <Field name="name" type="text" :class="errors.name ? 'border-red-500' : '!border-[#FFFFFF]/25'" class="w-full bg-transparent !border-b focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="name" placeholder=" Your name " autocomplete="false" />
                             </div>
 
                             <div class="flex flex-col gap-[1vw]">
@@ -311,16 +319,20 @@
 
                                 <div class="mt-[3vw]">
                                     <div class="flex items-center gap-[2vw]">
-                                        <button type="button" @click="selectedContactType = 'email'" :class="selectedContactType === 'email' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4.5vw] py-[2.5vw] text18px-mobile">Email</button>
-                                        <button type="button" @click="selectedContactType = 'phone'" :class="selectedContactType === 'phone' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4.5vw] py-[2.5vw] text18px-mobile">Phone</button>
+                                        <Field type="radio" id="contact-email" checked name="contactType" value="Email" v-model="contactType" class="hidden" />
+                                        <Field type="radio" id="contact-phone" name="contactType" value="Phone" v-model="contactType" class="hidden" />
+
+                                        <label for="contact-email" :class="contactType === 'Email' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4.5vw] py-[2.5vw] text18px-mobile cursor-pointer"> Email </label>
+
+                                        <label for="contact-phone" :class="contactType === 'Phone' ? 'border-white bg-background-black' : 'border-[#2C2C2C] bg-[#2C2C2C]'" class="border-[.5px] rounded-full px-[4.5vw] py-[2.5vw] text18px-mobile cursor-pointer"> Phone </label>
                                     </div>
                                 </div>
                                 <div class="mt-[3vw]">
-                                    <div v-if="selectedContactType === 'email'">
-                                        <input type="email" required class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="email" placeholder=" Your email " autocomplete="false" />
+                                    <div v-if="contactType === 'Email'">
+                                        <Field name="email" type="email" required :class="errors.email ? 'border-red-500' : '!border-[#FFFFFF]/25'" class="w-full bg-transparent !border-b focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="email" placeholder=" Your email " autocomplete="false" />
                                     </div>
                                     <div v-else>
-                                        <input type="tel" required class="w-full bg-transparent !border-b !border-[#FFFFFF]/25 focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="phone" placeholder=" Your phone number " autocomplete="false" />
+                                        <Field name="phone" type="tel" required :class="errors.phone ? 'border-red-500' : '!border-[#FFFFFF]/25'" class="w-full bg-transparent !border-b focus:outline-none focus:ring-0 placeholder-[#FFFFFF]/25 text-white" v-model="phone" placeholder=" Your phone number " autocomplete="false" />
                                     </div>
                                 </div>
                             </div>
@@ -367,7 +379,7 @@
                                     </svg>
                                 </button>
                             </div>
-                        </form>
+                        </Form>
                     </div>
 
                     <!-- Success Message -->
@@ -390,6 +402,9 @@
 </template>
 
 <script setup>
+    import { Form, Field } from "vee-validate";
+    import * as Yup from "yup";
+
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
     const { path } = useRoute();
@@ -403,6 +418,9 @@
     const projectName = ref("");
     const timeline = ref("3 weeks");
     const token = ref("");
+
+    const budget = ref("");
+    const company = ref("");
 
     const selectedContactType = ref("email");
 
@@ -428,10 +446,27 @@
 
     const formSubmitted = ref(false);
 
-    // Form submission
-    const FORMSPARK_ACTION_URL = "https://submit-form.com/cxKaSGeC3";
+    const schema = Yup.object().shape({
+        name: Yup.string().required("Your name is required"),
+        contactType: Yup.string().required("Please select a contact type"),
+        email: Yup.string().when("contactType", {
+            is: "Email",
+            then: (schema) => schema.email("Enter a valid email").required("Email is required"),
+            otherwise: (schema) => schema.notRequired(),
+        }),
+        phone: Yup.string().when("contactType", {
+            is: "Phone",
+            then: (schema) => schema.required("Phone is required"),
+            otherwise: (schema) => schema.notRequired(),
+        }),
+    });
 
-    const submitForm = async () => {
+    const onSubmit = async (values) => {
+        if (budget.value || company.value) {
+            console.log(`No bots allowed`);
+            return;
+        }
+
         const formData = {
             name: name.value,
             contactType: contactType.value,
@@ -443,7 +478,7 @@
             timeline: timeline.value,
         };
 
-        await fetch(FORMSPARK_ACTION_URL, {
+        await fetch("api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

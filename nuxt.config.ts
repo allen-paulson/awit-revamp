@@ -3,11 +3,11 @@ export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
     nitro: {
         routeRules: {
-            "/about": {redirect: "/team"},
+            "/about": { redirect: "/team" },
         },
         prerender: {
-            routes: ['/', '/team', '/work', '/contact'],
-        }
+            routes: ["/", "/team", "/work", "/contact"],
+        },
     },
     devtools: {
         enabled: true,
@@ -17,8 +17,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         public: {
-            siteUrl: process.env.SITE_URL || 'https://artworksit.com'
-        }
+            siteUrl: process.env.SITE_URL || "https://artworksit.com",
+        },
     },
     modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/seo", "nuxt-umami"],
     fonts: {
@@ -49,5 +49,8 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         },
+    },
+    hub: {
+        database: true,
     },
 });
