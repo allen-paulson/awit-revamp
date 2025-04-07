@@ -22,7 +22,6 @@
     import { gsap } from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
 
-    
     const lenis = useLenis(({ scroll, velocity, progress, direction }) => {});
 
     const gradientTransitionAnimation = () => {
