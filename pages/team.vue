@@ -355,8 +355,8 @@
 			id: "AWIT069",
 			name: "Ashwin D",
 			image: "/images/about/ashwin.webp",
-			skills: ["MySQL", "PostgreSQL", "Livewire", "Laravel", "Tailwind CSS"],
-			role: "Director of miscellaneous things",
+			skills: ["Finance", "Accounts", "Marketing", "Sales", "Development", "HR"],
+			role: "Director of Miscellaneous Things",
 			className: "md:col-start-1 md:row-start-1",
 		},
 		{
