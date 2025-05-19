@@ -487,47 +487,55 @@
         {
           type: 'application/ld+json',
           children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "ArtWorksIT - Web Design Studio",
-            "url": config.public.siteUrl,
-            "description": "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "ArtWorksIT",
-              "logo": {
-                "@type": "ImageObject",
-                "url": config.public.siteUrl + "/favicon.png"
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "ArtWorksIT",
+                "url": "https://artworksit.com",
+                "description": "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://artworksit.com/favicon.png"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Bangalore",
+                  "addressRegion": "Karnataka",
+                  "addressCountry": "IN"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "contactType": "customer support",
+                  "telephone": "+91-8618543699",
+                  "url": "https://artworksit.com/contact"
+                },
+                "numberOfEmployees": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 10
+                },
+                "sameAs": [
+                  "https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check",
+                  "https://www.linkedin.com/company/artworksit/posts/?feedView=all"
+                ],
+                "department": [
+                  {
+                    "@type": "WebPage",
+                    "name": "Team",
+                    "url": "https://artworksit.com/team"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Work",
+                    "url": "https://artworksit.com/work"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Contact",
+                    "url": "https://artworksit.com/contact"
+                  }
+                ]
               }
-            },
-            // "sameAs": [
-            //   "https://www.facebook.com/yourpage",
-            //   "https://www.instagram.com/yourprofile",
-            //   "https://www.linkedin.com/company/yourcompany"
-            // ],
-            "potentialAction": [
-              {
-                "@type": "ViewAction",
-                "target": config.public.siteUrl + "/team",
-                "name": "View Team Page"
-              },
-              {
-                "@type": "ViewAction",
-                "target": config.public.siteUrl + "/work",
-                "name": "View Work Page"
-              },
-              {
-                "@type": "ViewAction",
-                "target": config.public.siteUrl + "/contact",
-                "name": "View Contact Page"
-              },
-              {
-                "@type": "CommunicateAction",
-                "target": "https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check",
-                "name": "Chat on WhatsApp"
-              }
-            ]
-          })
+          )
         }
       ],
         link: [
