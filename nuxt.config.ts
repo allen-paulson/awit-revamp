@@ -20,7 +20,36 @@ export default defineNuxtConfig({
             siteUrl: process.env.SITE_URL || "https://artworksit.com",
         },
     },
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", "v-gsap-nuxt", "@nuxt/image", "nuxt-split-type", "@nuxthub/core", "nuxt3-lenis", "@nuxtjs/seo", "nuxt-umami", "nuxt-jsonld"],
+    modules: [
+      "@nuxtjs/tailwindcss",
+      "@nuxt/fonts",
+      "v-gsap-nuxt",
+      "@nuxt/image",
+      "nuxt-split-type",
+      "@nuxthub/core",
+      "nuxt3-lenis",
+      "@nuxtjs/seo",
+      "nuxt-umami",
+      "nuxt-jsonld",
+      "@nuxtjs/sitemap"
+    ],
+    sitemap: {
+        siteUrl: 'https://artworksit.com',
+        sitemapsPathPrefix: '/',
+
+        sitemaps: {
+            pages: {
+                urls() {
+                    return [
+                        { url: '/', priority: 1.0 },
+                        { url: '/contact', priority: 0.9 },
+                        { url: '/work', priority: 0.9 },
+                        { url: '/team', priority: 0.8 }
+                    ]
+                }
+            }
+        }
+    },
     fonts: {
         families: [
             {
