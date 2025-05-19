@@ -488,7 +488,7 @@
           type: 'application/ld+json',
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebSite",
+            "@type": "Organization",
             "name": "ArtWorksIT - Web Design Studio",
             "url": config.public.siteUrl,
             "description": "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
