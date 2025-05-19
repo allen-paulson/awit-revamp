@@ -483,6 +483,53 @@
         htmlAttrs: {
             lang: "en",
         },
+      script: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "ArtWorksIT - Web Design Studio",
+            "url": config.public.siteUrl,
+            "description": "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "ArtWorksIT",
+              "logo": {
+                "@type": "ImageObject",
+                "url": config.public.siteUrl + "/favicon.png"
+              }
+            },
+            // "sameAs": [
+            //   "https://www.facebook.com/yourpage",
+            //   "https://www.instagram.com/yourprofile",
+            //   "https://www.linkedin.com/company/yourcompany"
+            // ],
+            "potentialAction": [
+              {
+                "@type": "ViewAction",
+                "target": config.public.siteUrl + "/team",
+                "name": "View Team Page"
+              },
+              {
+                "@type": "ViewAction",
+                "target": config.public.siteUrl + "/work",
+                "name": "View Work Page"
+              },
+              {
+                "@type": "ViewAction",
+                "target": config.public.siteUrl + "/contact",
+                "name": "View Contact Page"
+              },
+              {
+                "@type": "CommunicateAction",
+                "target": "https://wa.me/918618543699?text=Hi%20Team,%20dropping%20in%20from%20the%20website%20to%20check",
+                "name": "Chat on WhatsApp"
+              }
+            ]
+          })
+        }
+      ],
         link: [
             {
                 rel: "icon",
