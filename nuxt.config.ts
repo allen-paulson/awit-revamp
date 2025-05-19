@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
     nitro: {
         routeRules: {
-            "/about": { redirect: "/team" },
+            "/about": {redirect: "/team"},
         },
         prerender: {
             routes: ["/", "/team", "/work", "/contact"],
@@ -21,34 +21,51 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-      "@nuxtjs/tailwindcss",
-      "@nuxt/fonts",
-      "v-gsap-nuxt",
-      "@nuxt/image",
-      "nuxt-split-type",
-      "@nuxthub/core",
-      "nuxt3-lenis",
-      "@nuxtjs/seo",
-      "nuxt-umami",
-      "nuxt-jsonld",
-      "@nuxtjs/sitemap"
+        "@nuxtjs/tailwindcss",
+        "@nuxt/fonts",
+        "v-gsap-nuxt",
+        "@nuxt/image",
+        "nuxt-split-type",
+        "@nuxthub/core",
+        "nuxt3-lenis",
+        "@nuxtjs/seo",
+        "nuxt-umami",
+        "nuxt-jsonld",
+        "@nuxtjs/sitemap"
     ],
     sitemap: {
-        siteUrl: 'https://artworksit.com',
-        sitemapsPathPrefix: '/',
-
-        sitemaps: {
-            pages: {
-                urls() {
-                    return [
-                        { url: '/', priority: 1.0 },
-                        { url: '/contact', priority: 0.9 },
-                        { url: '/work', priority: 0.9 },
-                        { url: '/team', priority: 0.8 }
-                    ]
-                }
-            }
-        }
+        excludeAppSources: true,
+        urls: async () => {
+            return [
+                {url: '/', priority: 1.0},
+                {url: '/contact', priority: 0.9},
+                {url: '/work', priority: 0.9},
+                {url: '/team', priority: 0.8}
+            ]
+        },
+        // urls() {
+        //     return [
+        //         {url: '/', priority: 1.0},
+        //         {url: '/contact', priority: 0.9},
+        //         {url: '/work', priority: 0.9},
+        //         {url: '/team', priority: 0.8}
+        //     ]
+        // }
+        // siteUrl: 'https://artworksit.com',
+        // sitemapsPathPrefix: '/',
+        //
+        // sitemaps: {
+        //     pages: {
+        //         urls() {
+        //             return [
+        //                 { url: '/', priority: 1.0 },
+        //                 { url: '/contact', priority: 0.9 },
+        //                 { url: '/work', priority: 0.9 },
+        //                 { url: '/team', priority: 0.8 }
+        //             ]
+        //         }
+        //     }
+        // }
     },
     fonts: {
         families: [
