@@ -28,6 +28,23 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact - ArtWorksIT",
+        "url": "https://artworksit.com/contact",
+        "mainEntity": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Support",
+          "telephone": "+91-8618543699",
+          "url": "https://artworksit.com/contact"
+        }
+      })
+    }
+  ],
   link: [
     {
       rel: "icon",

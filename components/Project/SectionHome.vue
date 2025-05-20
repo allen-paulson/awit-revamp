@@ -1,5 +1,5 @@
 <template>
-	<section class="relative overflow-hidden md:pb-[6vw]">
+	<section data-nosnippet class="relative overflow-hidden md:pb-[6vw]">
 		<div class="relative z-[2]">
 			<div class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
 				<!-- Desktop View -->

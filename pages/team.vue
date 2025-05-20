@@ -635,6 +635,17 @@
 		htmlAttrs: {
 			lang: "en",
 		},
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Team - ArtWorksIT",
+          "url": "https://artworksit.com/team"
+        })
+      }
+    ],
 		link: [
 			{
 				rel: "icon",

@@ -1,10 +1,10 @@
 <template>
-    <div class="mt-[27vw] md:mt-[10vw]">
+    <div data-nosnippet class="mt-[27vw] md:mt-[10vw]">
         <hover-grid />
 
         <div class="z-[1]">
             <!-- Landing Section Start -->
-            <section id="landing-section" class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end opacity-0 duration-500">
+            <section data-nosnippet  id="landing-section" class="section relative lg:h-[calc(100vh-10vw)] lg:flex lg:flex-col lg:justify-end opacity-0 duration-500">
                 <!-- Desktop View -->
                 <div class="hidden md:flex items-center justify-center pb-[11.5vw] pt-[4vw]">
                     <div class="relative">
@@ -226,7 +226,7 @@
             <!-- Projects Section End -->
 
             <!-- Contact Section Start -->
-            <section class="md:-mt-[2.5vw]">
+            <section data-nosnippet  class="md:-mt-[2.5vw]">
                 <ContactForm />
             </section>
             <!-- Contact Section End -->
@@ -467,19 +467,19 @@
     // SEO Meta Tags
     useSeoMeta({
         title: "ArtWorksIT - Web Design Studio",
-        description: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        description: "ArtWorksIT is a web design studio in Bangalore, we are a team of designers and developers who build websites.",
         ogTitle: "ArtWorksIT - Web Design Studio",
-        ogDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        ogDescription: "ArtWorksIT is a web design studio in Bangalore, we are a team of designers and developers who build websites.",
         ogImage: () => config.public.siteUrl + "/images/meta/home.png",
         ogUrl: () => config.public.siteUrl,
         twitterTitle: "ArtWorksIT - Web Design Studio",
-        twitterDescription: "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+        twitterDescription: "ArtWorksIT is a web design studio in Bangalore, we are a team of designers and developers who build websites.",
         twitterImage: () => config.public.siteUrl + "/images/meta/home.png",
         twitterCard: "ArtWorksIT is a collaborative web design studio in Bangalore crafting unique websites.",
     });
 
     useHead({
-        titleTemplate: (title) => (title ? `${title}` : "ArtWorksIT - Web Design Studio"),
+      titleTemplate: (title) => (title ? `${title} | ArtWorksIT` : "ArtWorksIT - Web Design Studio in Bangalore"),
         htmlAttrs: {
             lang: "en",
         },
@@ -491,7 +491,7 @@
                 "@type": "Organization",
                 "name": "ArtWorksIT",
                 "url": "https://artworksit.com",
-                "description": "ArtWorksIT is a web design studio in Bangalore crafting unique websites.",
+                "description": "ArtWorksIT is a web design studio in Bangalore, we are a team of designers and developers who build websites.",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "https://artworksit.com/favicon.png"

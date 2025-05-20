@@ -42,30 +42,7 @@ export default defineNuxtConfig({
                 {url: '/work', priority: 0.9},
                 {url: '/team', priority: 0.8}
             ]
-        },
-        // urls() {
-        //     return [
-        //         {url: '/', priority: 1.0},
-        //         {url: '/contact', priority: 0.9},
-        //         {url: '/work', priority: 0.9},
-        //         {url: '/team', priority: 0.8}
-        //     ]
-        // }
-        // siteUrl: 'https://artworksit.com',
-        // sitemapsPathPrefix: '/',
-        //
-        // sitemaps: {
-        //     pages: {
-        //         urls() {
-        //             return [
-        //                 { url: '/', priority: 1.0 },
-        //                 { url: '/contact', priority: 0.9 },
-        //                 { url: '/work', priority: 0.9 },
-        //                 { url: '/team', priority: 0.8 }
-        //             ]
-        //         }
-        //     }
-        // }
+        }
     },
     fonts: {
         families: [
