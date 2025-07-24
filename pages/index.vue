@@ -227,7 +227,7 @@
 
             <!-- Contact Section Start -->
             <section data-nosnippet  class="md:-mt-[2.5vw]">
-                <ContactForm />
+                <LazyContactForm />
             </section>
             <!-- Contact Section End -->
         </div>

@@ -338,7 +338,7 @@
 		<!-- Our Gallery Section End -->
 
 		<!-- Contact Section Start -->
-		<ContactForm />
+		<LazyContactForm />
 		<!-- Contact Section End -->
 	</div>
 </template>
