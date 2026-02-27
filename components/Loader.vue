@@ -61,7 +61,7 @@
 
 <style scoped>
   .loader {
-    contain: strict;
+    contain: layout style paint;
     will-change: transform, opacity;
     backface-visibility: hidden;
   }
