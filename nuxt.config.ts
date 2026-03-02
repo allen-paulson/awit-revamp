@@ -27,7 +27,6 @@ export default defineNuxtConfig({
         "v-gsap-nuxt",
         "@nuxt/image",
         "nuxt-split-type",
-        "@nuxthub/core",
         "nuxt3-lenis",
         "@nuxtjs/seo",
         "nuxt-umami",
@@ -73,9 +72,6 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         },
-    },
-    hub: {
-        database: true,
     },
     schemaOrg: {
         enabled: false
