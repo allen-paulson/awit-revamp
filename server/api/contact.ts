@@ -1,52 +1,49 @@
-import { H3Event } from "h3";
+export default defineEventHandler(async (event) => {
+    const config = useRuntimeConfig();
+    const body = JSON.stringify(await readBody(event));
 
-export default defineEventHandler(async (event: H3Event) => {
-    try {
-        const db = hubDatabase();
-        if (!db) {
-            return { success: false, message: "Database connection error" };
+    console.log(body);
+
+    const db = (event.context.cloudflare?.env as any)?.DB;
+    if (db) {
+        try {
+            await db.prepare("INSERT INTO form_submissions (form_id, data, created_at) VALUES (?1, ?2, ?3)")
+                .bind("contact", body, new Date().toISOString())
+                .run();
+        } catch (e) {
+            console.error("D1 insert failed:", e);
         }
-
-        const formId = "0195cbbe-2a48-70e6-afd2-e1a7025c4a91";
-        if (!formId) {
-            return { success: false, message: "An error occurred while submitting the form" };
-        }
-
-        const body = JSON.stringify(await readBody(event));
-        const success = await saveFormSubmission(formId, body);
-
-        await pingWebhook(`https://forms.artworksit.com/form-submission`, { formId: formId });
-
-        return success ? { success: true } : { success: false, message: "Form submission failed" };
-    } catch (error) {
-        return { success: false, message: "An error occurred while submitting the form" };
     }
-});
 
-async function pingWebhook(url: string, data: any): Promise<void> {
+    const url = config.laravelApiBaseUrl + "/api" + path;
+
     try {
         const response = await fetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                Accept: "application/json",
+                apikey: config.backendApiSecret,
             },
-            body: JSON.stringify(data),
+            body: body,
         });
 
+        const data = await response.json();
+
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            const isValidationError = response.status === 422 && data.errors;
+
+            throw createError({
+                statusCode: isValidationError ? 422 : response.status,
+                statusMessage: data.message || "Validation error",
+                data: {
+                    errors: isValidationError ? data.errors : null,
+                },
+            });
         }
-    } catch (error) {}
-}
 
-async function saveFormSubmission(formId: string, body: string): Promise<boolean> {
-    try {
-        const now = new Date().toISOString();
+        return response.success ? { success: true } : { success: false, message: "Form submission failed" };
 
-        const statement = await hubDatabase().prepare("INSERT INTO form_submissions (form_id, data, created_at) VALUES (?1, ?2, ?3)").bind(formId, body, now).run();
-
-        return true;
-    } catch (error) {
-        return false;
+    } catch (err) {
+        throw err;
     }
-}
+});
