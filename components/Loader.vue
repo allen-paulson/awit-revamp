@@ -1,6 +1,6 @@
 <template>
-  <div ref="loader" class="loader fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 origin-center scale-[2.5] md:scale-150 z-[9999] bg-white flex w-screen items-center justify-center rounded-full aspect-square will-change-transform">
-    <div ref="textContainer" class="h-full w-full font-anton text-background-black text44px-desktop relative invisible">
+  <div ref="loader" class="loader fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 origin-center scale-[2.5] md:scale-[1.75] z-[9999] bg-white flex w-screen items-center justify-center rounded-full aspect-square will-change-transform">
+    <div ref="textContainer" class="h-full w-full font-anton text-background-black text44px-desktop relative invisible md:scale-[0.857]">
       <div>
         <div class="overflow-hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <p id="first-text" v-split-text="{ splitBy: 'words, char' }" class="-translate-y-full will-change-transform">WEB DESIGN STUDIO</p>

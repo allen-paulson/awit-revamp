@@ -1,0 +1,271 @@
+[
+  {
+    "type": "member",
+    "name": "Ashwin",
+    "role": "Director of Misc. Things",
+    "link": "https://www.linkedin.com/in/ashwin-d/",
+    "image": "/images/team-members/ashwin.png",
+    "sticker": "dev",
+    "bg_color": "#4F618F",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["tl","tr","bl","br"],
+
+    "row": 1,
+    "col": 2
+  },
+  {
+    "type": "member",
+    "name": "Uday",
+    "role": "Creative Director",
+    "link": "https://www.linkedin.com/in/uday-rathore/",
+    "sticker": "uiux",
+    "image": "/images/team-members/uday.png",
+    "bg_color": "#8583B2",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": false,
+    "right": true
+    },
+
+    "boxes": ["tr","br"],
+
+    "row": 1,
+    "col": 3
+  },
+  {
+    "type": "member",
+    "name": "Vinayak",
+    "role": "Back-end Developer",
+    "link": "https://www.linkedin.com/in/vinayak-dev-515129245/",
+    "sticker": "dev",
+    "image": "/images/team-members/vinayak.png",
+    "bg_color": "#8CBFB6",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["tl","bl","br"],
+
+    "row": 2,
+    "col": 1
+  },
+   {
+    "type": "member",
+    "name": "Geethesh",
+    "role": "Front-end Developer",
+    "link": "https://www.linkedin.com/in/geethesh-g-nair/",
+    "sticker": "dev",
+    "image": "/images/team-members/geethesh.png",
+    "bg_color": "#307570",
+
+    "border": {
+    "top": false,
+    "bottom": true,
+    "left": false,
+    "right": true
+    },
+
+    "boxes": ["br"],
+
+    "row": 2,
+    "col": 2
+  },
+  {
+    "type": "member",
+    "name": "Shikha",
+    "role": "UI UX Designer",
+    "link": "https://www.linkedin.com/in/shikha-padruthiya-b16877210/",
+    "sticker": "uiux",
+    "image": "/images/team-members/shikha.png",
+    "bg_color": "#94A37C",
+
+    "border": {
+    "top": false,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["bl","br"],
+
+    "row": 3,
+    "col": 1
+  },
+  {
+    "type": "member",
+    "name": "Urvi",
+    "role": "UI UX Designer",
+    "link": "https://www.linkedin.com/in/urvipawar1327/",
+    "sticker": "uiux",
+    "image": "/images/team-members/urvi.png",
+    "bg_color": "#E1E5B3",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["bl","br"],
+
+    "row": 3,
+    "col": 3
+  },
+  {
+    "type": "member",
+    "name": "Rhea",
+    "role": "Front-end Developer",
+    "link": "https://www.linkedin.com/in/rheajoshi6/",
+    "sticker": "dev",
+    "image": "/images/team-members/rhea.png",
+    "bg_color": "#74B097",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["bl","br"],
+
+    "row": 4,
+    "col": 2
+  },
+  {
+    "type": "member",
+    "name": "Tanvi",
+    "full-name": "Ashwin D",
+    "role": "Developer Intern",
+    "link": "https://www.linkedin.com/in/tanvi-v-shayana-66b71a229/",
+    "sticker": "dev",
+    "image": "/images/team-members/tanvi.png",
+    "bg_color": "#467EA3",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["tl","bl","br"],
+
+    "row": 5,
+    "col": 1
+  },
+  {
+    "type": "member",
+    "name": "Maira",
+    "role": "UI UX Designer",
+    "link": "https://www.linkedin.com/in/maira-nabi-632ab3207/",
+    "sticker": "uiux",
+    "image": "/images/team-members/maira.png",
+    "bg_color": "#BCDBF6",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["tr","bl","br"],
+
+    "row": 5,
+    "col": 3
+  },
+  {
+    "type": "member",
+    "name": "Koko",
+    "role": "Director of Happiness",
+    "link": "https://www.linkedin.com/company/artworksit/posts/?feedView=all",
+    "sticker": "bone",
+    "image": "/images/team-members/koko.png",
+    "bg_color": "#D7DECE",
+
+    "border": {
+    "top": true,
+    "bottom": true,
+    "left": true,
+    "right": true
+    },
+
+    "boxes": ["bl","br"],
+
+    "row": 6,
+    "col": 2
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/cup.png",
+    "size": "16vw",
+    "row": 1,
+    "col": 1
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/target.png",
+    "size": "12vw",
+    "row": 2,
+    "col": 3
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/traffic-lights.png",
+    "size": "15vw",
+    "row": 3,
+    "col": 2
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/dino.png",
+    "size": "10vw",
+    "row": 4,
+    "col": 1
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/filter-coffee.png",
+    "size": "15vw",
+    "row": 4,
+    "col": 3
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/computer.png",
+    "size": "14vw",
+    "row": 5,
+    "col": 2
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/heart.png",
+    "size": "15vw",
+    "row": 6,
+    "col": 3
+  },
+  {
+    "type": "sticker",
+    "image": "/images/stickers/uwu-face.png",
+    "size": "10vw",
+    "row": 6,
+    "col": 1
+  }
+  
+  
+]
