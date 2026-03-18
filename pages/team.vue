@@ -46,173 +46,7 @@
 		</div>
 		<!-- Border Section End -->
 
-		<!-- Our Clients Section Start -->
-		<section class="relative pt-[20vw] md:pt-[6vw] md:pb-0 pb-[20vw]">
-			<div class="section-heading px-[5vw] md:px-[3vw]">
-				<!-- Desktop View -->
-				<div class="hidden md:block">
-					<div class="oveflow-hidden">
-						<the-breadcrumbs number="01" title="OUR ESTEEMED CLIENTS" />
-					</div>
-					<div class="md:pl-[1vw] pt-[2vw] relative w-max">
-						<NuxtImg width="400" height="400"
-							class="heading-img absolute w-[9vw] bottom-0 left-[46%] z-[1] translate-y-[20%]"
-							src="/images/about/saturn.webp" alt="Saturn image" />
-						<h2 v-split-text="{ splitBy: 'words, char' }"
-							class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
-							<span class="overflow-hidden">BRANDS THAT HAVE</span>
-							<span class="overflow-hidden">SUCCESSFULLY</span>
-							<span class="overflow-hidden">GONE LIVE <span
-									class="heading-space w-[6.5vw] !inline-block"></span> WITH US</span>
-						</h2>
-					</div>
-				</div>
-
-				<!-- Mobile View -->
-				<div class="md:hidden">
-					<div class="overflow-hidden pl-[10vw]">
-						<the-breadcrumbs number="01" title="OUR ESTEEMED CLIENTS" />
-					</div>
-					<div class="pt-[4vw] md:pt-[2vw] relative w-max">
-						<NuxtImg width="218" height="200" format="webp"
-							class="heading-img-mobile absolute w-[25vw] md:w-[16vw] right-0 bottom-0 md:bottom-0 -translate-y-1/2 md:translate-y-[20%] md:right-[15%] md:-translate-x-full z-[1]"
-							src="/images/about/saturn.webp" alt="Saturn Image" />
-						<h2 v-split-text="{ splitBy: 'words, char' }"
-							class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
-							<span class="overflow-hidden">BRANDS THAT HAVE</span>
-							<span class="overflow-hidden">SUCCESSFULLY</span>
-							<span class="overflow-hidden">GONE LIVE <span class="w-[7vw] hidden md:inline-block"></span>
-								WITH US</span>
-						</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="mt-[15vw] md:mt-[4vw] md:px-0 px-[4vw]">
-				<div class="grid grid-cols-3 md:grid-cols-6">
-					<div
-						class="aspect-square border border-l md:border-l-0 md:border-b-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-						</div>
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="278" height="92" src="/images/about/rotten.webp" class="w-[55%] relative z-[2]"
-							alt="Rotten Grapes Logo" />
-					</div>
-					<div
-						class="aspect-square border border-l-0 md:border-b-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="232" height="154" src="/images/about/aaiwini.webp"
-							class="w-[50%] relative z-[2]" alt="Aaiwini Logo" />
-					</div>
-					<div
-						class="aspect-square border border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="268" height="146" src="/images/about/hunan.webp" class="w-[55%] relative z-[2]"
-							alt="Hunan Square Logo" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-						</div>
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="332" height="84" src="/images/about/strands.webp" class="w-[60%] relative z-[2]"
-							alt="Strand Life Sciences Logo" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="194" height="220" src="/images/about/mumbai.webp" class="w-[40%] relative z-[2]"
-							alt="Mumbai Prost House Image" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-t border-l-0 md:border-x-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-							<small-boxes direction="tr" />
-						</div>
-						<NuxtImg width="208" height="166" src="/images/about/vrieves.webp"
-							class="w-[42%] relative z-[2]" alt="Vrieves Image" />
-
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-					</div>
-
-					<div
-						class="aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<small-boxes direction="br" />
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-						</div>
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="186" height="188" src="/images/about/voc.webp" class="w-[45%] relative z-[2]"
-							alt="VOC Image" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="374" height="274" src="/images/about/federate.webp"
-							class="w-[55%] relative z-[2]" alt="Federate one Image" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<small-boxes direction="br" />
-						<small-boxes direction="bl" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="122" height="51" src="/images/about/acme.svg" class="w-[45%] relative z-[2]"
-							alt="Acme Image" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<small-boxes direction="br" />
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-							<small-boxes direction="bl" />
-						</div>
-						<NuxtImg width="374" height="86" src="/images/about/ryze.webp" class="w-[60%] relative z-[2]"
-							alt="Ryze chemie Image" />
-
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-					</div>
-					<div
-						class="aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="204" height="204" src="/images/about/banani.webp" class="w-[45%] relative z-[2]"
-							alt="Banani Vista Image" />
-					</div>
-					<div
-						class="aspect-square border border-t-0 md:border-t border-l-0 md:border-x-0 border-[#5C5C5C] flex items-center justify-center relative">
-						<small-boxes direction="tr" />
-						<small-boxes direction="br" />
-						<div class="md:hidden">
-							<small-boxes direction="tl" />
-							<small-boxes direction="bl" />
-						</div>
-
-						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
-						<NuxtImg width="432" height="92" src="/images/about/open.webp" class="w-[55%] relative z-[2]"
-							alt="Openstreet Image" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Our Clients Section End -->
-
-		<!-- Border Section Start -->
-		<div class="px-[2.5vw] md:px-[1.5vw] md:hidden">
-			<div class="border-t-[.5px] border-[#FFFFFF]"></div>
-		</div>
-		<!-- Border Section End -->
+		
 
 		<!-- Our Team Section Start -->
 		<section class="relative overflow-hidden pb-[20vw] md:pb-[3vw]">
@@ -220,7 +54,7 @@
 				<div class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]">
 					<!-- Desktop View -->
 					<div class="hidden md:block">
-						<the-breadcrumbs number="02" title="A LI'L About US" />
+						<the-breadcrumbs number="01" title="A LI'L About US" />
 						<div class="flex justify-center items-end gap-[3vw]">
 							<div class="pt-[2vw] relative w-max">
 								<NuxtImg width="518" height="518" src="/images/about/rocket.webp"
@@ -240,7 +74,7 @@
 					<div class="md:hidden flex flex-col">
 						<div>
 							<div class="overflow-hidden pl-[10vw]">
-								<the-breadcrumbs number="02" title=" A LI'L ABOUT US" />
+								<the-breadcrumbs number="01" title=" A LI'L ABOUT US" />
 							</div>
 							<div class="pt-[4vw] md:pt-[2vw] relative">
 								<NuxtImg
@@ -310,7 +144,7 @@
 						<!-- IMAGE -->
 						<div class="  w-[25.34vw] h-[24.65vw] rounded-[1.5vw] overflow-hidden flex items-end justify-center"
 							:style="{ backgroundColor: item.bg_color }">
-							<img :src="item.image" class="w-full h-full object-cover scale-[1] object-[center_-25%]" />
+							<img :src="item.image" :class="[ 'w-full h-full object-cover', item.name === 'Koko' ? 'object-top' : 'object-[center_-20%]' ]" />
 						</div>
 						<!-- TEXT BLOCK -->
 						<div class=" flex flex-col gap-[1.4vw] flex-1">
@@ -388,12 +222,12 @@
 
 				<div class="gallery-content-section mt-[8vw] md:mt-0">
 					<div class="px-[5vw] md:px-[4vw] py-[5vw]">
-						<div class="grid grid-cols-2 md:grid-cols-3 text-white gap-[1.5vw] md:gap-[.75vw]">
+						<div class="grid grid-cols-3 md:grid-cols-4 text-white gap-[1.5vw] md:gap-[.75vw]">
 							<div class="image-container aspect-square">
 								<NuxtImg width="1050" height="1050" src="/images/about/team-3.webp" loading="lazy"
 									alt="Team Image" class="w-full h-auto" />
 							</div>
-							<div class="icon-container aspect-square flex items-center justify-center">
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
 								<div class="w-[30%]">
 									<NuxtImg width="130" height="130" src="/images/about/awit.svg" loading="lazy"
 										alt="AWIT" class="w-full h-auto" />
@@ -403,35 +237,50 @@
 								<NuxtImg width="1050" height="1050" src="/images/about/team-6.webp" loading="lazy"
 									alt="Team Image" class="w-full h-auto" />
 							</div>
-
-							<div class="image-container aspect-square">
-								<NuxtImg width="1050" height="1050" src="/images/about/team-4.webp" loading="lazy"
-									alt="Team Image" class="w-full h-auto" />
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
+								<div class="w-[25.5%]">
+									<NuxtImg width="238" height="292" src="/images/about/thumb.webp" loading="lazy" alt="AWIT" class="w-full h-auto" />
+								</div>
 							</div>
-							<div class="image-container aspect-square">
-								<NuxtImg width="1050" height="1050" src="/images/about/team-1.webp" loading="lazy"
-									alt="Team Image" class="w-full h-auto" />
-							</div>
-							<div class="icon-container aspect-square flex items-center justify-center">
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
 								<div class="w-[25%]">
 									<NuxtImg width="326" height="300" src="/images/about/pencil.webp" loading="lazy"
 										alt="AWIT" class="w-full h-auto" />
 								</div>
 							</div>
-
-							<div class="icon-container aspect-square flex items-center justify-center">
+							<div class="image-container aspect-square">
+								<NuxtImg width="1050" height="1050" src="/images/about/team-4.webp" loading="lazy"
+									alt="Team Image" class="w-full h-auto" />
+							</div>
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
 								<div class="w-[35%]">
 									<NuxtImg width="481" height="366" src="/images/about/laptop.webp" loading="lazy"
 										alt="AWIT" class="w-full h-auto" />
 								</div>
 							</div>
 							<div class="image-container aspect-square">
+								<NuxtImg width="1050" height="1050" src="/images/about/team-1.webp" loading="lazy"
+									alt="Team Image" class="w-full h-auto" />
+							</div>
+							<div class="image-container aspect-square">
 								<NuxtImg width="1050" height="1050" src="/images/about/team-5.webp" loading="lazy"
 									alt="Team Image" class="w-full h-auto" />
+							</div>
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
+								<div class="w-[35%]">
+									<NuxtImg width="400" src="/images/about/dino.png" loading="lazy"
+										alt="AWIT" class="w-full h-full" />
+								</div>
 							</div>
 							<div class="image-container aspect-square">
 								<NuxtImg width="1050" height="1050" src="/images/about/team-2.webp" loading="lazy"
 									alt="Team Image" class="w-full h-auto" />
+							</div>
+							<div class="hidden md:flex icon-container aspect-square items-center justify-center">
+								<div class="w-[35%]">
+									<NuxtImg width="481" height="366" src="/images/about/cup.png" loading="lazy"
+										alt="AWIT" class="w-full h-auto" />
+								</div>
 							</div>
 
 							<!-- <div class="image-container aspect-square">
