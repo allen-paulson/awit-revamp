@@ -1,0 +1,494 @@
+[
+    {
+        "order": 1,
+        "title": "HUNAN SQUARE",
+        "year": "2024",
+        "tags": [
+            "#Food & Beverage",
+            "#Hospitality",
+            "#Restaurant"
+        ],
+        "description": "Modern Asian dining experience",
+        "bg_color": "#C73834",
+        "text_color": "#FFFFFF",
+        "image": {
+            "desktop": "/images/projects/hunan.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://hunansquare.com/",
+        "filters": [
+            "restaurant",
+            "dining",
+            "asian-cuisine"
+        ]
+    },
+    {
+        "order": 2,
+        "title": "FEDERATE ONE",
+        "year": "2023",
+        "tags": [
+            "#Corporate",
+            "#Enterprise",
+            "#Cybersecurity"
+        ],
+        "description": "IoT cybersecurity solutions",
+        "bg_color": "#F5BD5F",
+        "text_color": "#151515",
+        "image": {
+            "desktop": "/images/projects/federate.webp",
+            "mobile": "/images/work/federate.webp"
+        },
+        "link": "https://federate.one/",
+        "filters": [
+            "technology",
+            "security",
+            "iot"
+        ]
+    },
+    {
+        "order": 3,
+        "title": "AZURE",
+        "year": "2024",
+        "tags": [
+            "#Apartments",
+            "#Realestate"
+        ],
+        "description": "Luxury urban living spaces",
+        "bg_color": "#F4F4F4",
+        "text_color": "#151515",
+        "image": {
+            "desktop": "/images/projects/azure.webp",
+            "mobile": "/images/work/azure.webp"
+        },
+        "link": "https://azure-nuxt.pages.dev",
+        "filters": [
+            "real-estate",
+            "luxury",
+            "residential"
+        ]
+    },
+    {
+        "order": 4,
+        "title": "VAILANKANNI",
+        "year": "2021",
+        "tags": [
+            "#Car Rental",
+            "#Travel & Tourism"
+        ],
+        "description": "Reliable car rentals in Goa",
+        "bg_color": "#FFE8D8",
+        "text_color": "#663300",
+        "image": {
+            "desktop": "/images/projects/goa.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://goacars.in/",
+        "filters": [
+            "automotive",
+            "rental",
+            "transportation"
+        ]
+    },
+    {
+        "order": 5,
+        "title": "ACME DESIGNERS",
+        "year": "2024",
+        "tags": [
+            "#Architecture",
+            "#Interior Design",
+            "#Commercial Spaces"
+        ],
+        "description": "Innovative architecture & design",
+        "bg_color": "#F0F0F0",
+        "text_color": "#333333",
+        "image": {
+            "desktop": "/images/projects/acme-d.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://acmeinteriordesigners.com/",
+        "filters": [
+            "design",
+            "architecture",
+            "interior"
+        ]
+    },
+    {
+        "order": 6,
+        "title": "VOC AUTOMOTIVE",
+        "year": "2024",
+        "tags": [
+            "#Automotive",
+            "#Two-Wheeler Maintenance"
+        ],
+        "description": "Expert motorcycle maintenance",
+        "bg_color": "#FFE6E6",
+        "text_color": "#660000",
+        "image": {
+            "desktop": "/images/projects/voc.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://vocautomotive.com/",
+        "filters": [
+            "automotive",
+            "maintenance",
+            "motorcycle"
+        ]
+    },
+    {
+        "order": 7,
+        "title": "VRIEVES",
+        "year": "2023",
+        "tags": [
+            "#E-commerce",
+            "#Tea",
+            "#Health & Wellness"
+        ],
+        "description": "Premium tea blends",
+        "bg_color": "#E6FFE6",
+        "text_color": "#006600",
+        "image": {
+            "desktop": "/images/projects/vrieves.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://shop.vrieves.com/",
+        "filters": [
+            "beverages",
+            "nutrition",
+            "retail"
+        ]
+    },
+    {
+        "order": 8,
+        "title": "MUMBAI POST HOUSE",
+        "year": "2034",
+        "tags": [
+            "#Post-Production Studio",
+            "#Video Editing",
+            "#Sound Mixing"
+        ],
+        "description": "Creative post-production studio",
+        "bg_color": "#F8E6FF",
+        "text_color": "#330066",
+        "image": {
+            "desktop": "/images/projects/mph.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://mumbaiposthouse.com/",
+        "filters": [
+            "media",
+            "post-production",
+            "entertainment"
+        ]
+    },
+    {
+        "order": 9,
+        "title": "ROTTEN GRAPES",
+        "year": "2023",
+        "tags": [
+            "#Corporate",
+            "#Geospatial Technology",
+            "#GIS Solutions"
+        ],
+        "description": "Geospatial analytics platform",
+        "bg_color": "#FFE6F0",
+        "text_color": "#660033",
+        "image": {
+            "desktop": "/images/projects/rotten.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://rottengrapes.tech/",
+        "filters": [
+            "technology",
+            "analytics",
+            "saas"
+        ]
+    },
+    {
+        "order": 10,
+        "title": "BANANI VISTA",
+        "year": "2034",
+        "tags": [
+            "#Coaching",
+            "#Holistic Healing",
+            "#Mindfulness Courses"
+        ],
+        "description": "Holistic wellness and healing",
+        "bg_color": "#F0E6FF",
+        "text_color": "#330066",
+        "image": {
+            "desktop": "/images/projects/banani.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://bananivista.com/",
+        "filters": [
+            "wellness",
+            "health",
+            "spiritual"
+        ]
+    },
+    {
+        "order": 11,
+        "title": "OPENSTREET PHOTOGRAPHY",
+        "year": "2022",
+        "tags": [
+            "#Portfolio",
+            "#Wedding Photography",
+            "#Videography",
+            "#Event Photography"
+        ],
+        "description": "Timeless photography & videography",
+        "bg_color": "#F5F5F5",
+        "text_color": "#1A1A1A",
+        "image": {
+            "desktop": "/images/projects/openstreet.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://evermortalesco.com",
+        "filters": [
+            "photography",
+            "events",
+            "creative"
+        ]
+    },
+    {
+        "order": 12,
+        "title": "RYZE CHEMIE",
+        "year": "2024",
+        "tags": [
+            "#Corporate",
+            "#Industry",
+            "#Manufacturing",
+            "#Industrial Chemicals"
+        ],
+        "description": "Industrial chemical solutions",
+        "bg_color": "#E6F0FF",
+        "text_color": "#003366",
+        "image": {
+            "desktop": "/images/projects/ryze.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://ryzechemie.com/",
+        "filters": [
+            "industrial",
+            "chemical",
+            "manufacturing"
+        ]
+    },
+    {
+        "order": 13,
+        "title": "STRAND LIFE SCIENCES",
+        "year": "2023",
+        "tags": [
+            "#Corporate",
+            "#Genomics",
+            "#Research"
+        ],
+        "description": "Genomics research innovation",
+        "bg_color": "#E6FFE6",
+        "text_color": "#006600",
+        "image": {
+            "desktop": "/images/projects/strands.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://us.strandls.com/",
+        "filters": [
+            "science",
+            "research",
+            "biotech"
+        ]
+    },
+    {
+        "order": 14,
+        "title": "AAIWINI",
+        "year": "2023",
+        "tags": [
+            "#Agriculture",
+            "#Supply Chain",
+            "#Sustainable Farming"
+        ],
+        "description": "Sustainable farming solutions",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://www.aaiwini.com/",
+        "filters": [
+            "agriculture",
+            "sustainability",
+            "farming"
+        ]
+    },
+    {
+        "order": 15,
+        "title": "AXCEND",
+        "year": "2023",
+        "tags": [
+            "#Corporate",
+            "#Manufacturing",
+            "#Industrial Technology"
+        ],
+        "description": "IT-OT solutions for manufacturing",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://axcend.com/",
+        "filters": [
+            "manufacturing",
+            "industrial",
+            "enterprise",
+            "technology"
+        ]
+    },
+    {
+        "order": 16,
+        "title": "UNLOCKHQ",
+        "year": "2023",
+        "tags": [
+            "#Fitness",
+            "#Online Coaching",
+            "#Strength Training"
+        ],
+        "description": "Structured online strength coaching",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://unlockhq.in/",
+        "filters": [
+            "fitness",
+            "coaching",
+            "wellness",
+            "online-training"
+
+        ]
+    },
+    {
+        "order": 17,
+        "title": "POLLENDOTS",
+        "year": "2023",
+        "tags": [
+            "#Travel",
+            "#Cultural Tourism",
+            "#Community"
+
+        ],
+        "description": "Mindful cultural journeys across India",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://pollendots.com/",
+        "filters": [
+            "travel",
+            "culture",
+            "experiential",
+            "india"
+        ]
+    },
+    {
+        "order": 18,
+        "title": "BOOMLET",
+        "year": "2023",
+        "tags": [
+            "#Influencer Marketing",
+            "#Strategic Communication",
+            "#Brand Advocacy"
+        ],
+        "description": "Integrated influencer marketing solutions",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://boomlet.co/",
+        "filters": [
+            "marketing",
+            "influencer",
+            "branding",
+            "digital"
+        ]
+    },
+    {
+        "order": 19,
+        "title": "ULTRAMOTIV",
+        "year": "2023",
+        "tags": [
+            "#HealthTech",
+            "#Rehabilitation",
+            "#Medical Technology"
+        ],
+        "description": "Neuro-driven rehabilitation technology",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://ultramotiv.com/",
+        "filters": [
+            "healthcare",
+            "medical",
+            "rehabilitation",
+            "technology"
+        ]
+    },
+    {
+        "order": 20,
+        "title": "MONIKA ALCOBEV",
+        "year": "2023",
+        "tags": [
+            "#Alcobev",
+            "#Distribution",
+            "#Premium Brands"
+
+        ],
+        "description": "Premium alcobev import and distribution",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://monikaalcobev.com/",
+        "filters": [
+            "beverages",
+            "distribution",
+            "import",
+            "retail"
+        ]
+    },
+    {
+        "order": 21,
+        "title": "CONSCIENCE",
+        "year": "2023",
+        "tags": [
+            "#Wealth Management",
+            "#Family Office",
+            "#Financial Advisory"
+        ],
+        "description": "Multi-family wealth advisory services",
+        "bg_color": "#F0FFE6",
+        "text_color": "#336600",
+        "image": {
+            "desktop": "/images/projects/aaiwini.webp",
+            "mobile": "/images/projects/voc.webp"
+        },
+        "link": "https://consciencemfo.com/",
+        "filters": [
+            "finance",
+            "wealth",
+            "investment",
+            "advisory"
+        ]
+    }
+]

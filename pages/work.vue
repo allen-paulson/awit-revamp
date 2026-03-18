@@ -41,10 +41,76 @@
       <section class="mt-[15vw] md:mt-[0vw] pb-[5vw] md:pb-[8vw]">
         <div class="px-[6vw] md:px-[5vw]">
           <div class="relative">
+
+           <!-- TAG FILTER BAR -->
+
+            <!-- PRIMARY TAGS -->
+
+            <div class="flex flex-wrap gap-[.5vw] mb-[1vw] text-white">
+
+              <button
+                v-for="tag in primaryTags"
+                :key="tag"
+                @click="toggleTag(tag)"
+                :class="[
+                  'rounded-full border-[.5px] px-[.75vw] py-[.5vw] font-inter text14px-desktop transition-all duration-300',
+                  activeTags.includes(tag)
+                    ? 'bg-white text-black border-white'
+                    : 'border-white text-white hover:bg-white hover:text-black'
+                ]"
+              >
+                {{ tag }}
+              </button>
+
+            </div>
+
+
+            <!-- FILTER CONTROLS -->
+
+            <div class="flex items-center gap-[1.5vw] mb-[2vw]">
+
+              <button
+                @click="showMoreTags = !showMoreTags"
+                class="font-inter text14px-desktop underline underline-offset-[0.05em] decoration-[0.5px] opacity-70 hover:opacity-100 transition"
+              >
+                {{ showMoreTags ? 'Less Filters' : 'More Filters' }}
+              </button>
+
+              <button
+                @click="activeTags = []"
+                class="font-inter text14px-desktop underline underline-offset-[0.05em] decoration-[0.5px] opacity-70 hover:opacity-100 transition"
+              >
+                Clear All
+              </button>
+
+            </div>
+
+            <!-- EXPANDABLE TAGS -->
+
+            <div
+              v-if="showMoreTags"
+              class="flex flex-wrap gap-[.5vw] mb-[3vw] text-white"
+            >
+
+              <button
+                v-for="tag in secondaryTags"
+                :key="tag"
+                @click="toggleTag(tag)"
+                :class="[
+                  'rounded-full border-[.5px] px-[.75vw] py-[.5vw] font-inter text14px-desktop transition-all duration-300',
+                  activeTags.includes(tag)
+                    ? 'bg-white text-black border-white'
+                    : 'border-white text-white hover:bg-white hover:text-black'
+                ]"
+              >
+                {{ tag }}
+              </button>
+
+            </div>
             <!-- Desktop View -->
             <div class="relative text-[#FFFFFF] bg-[#151515] hidden md:block work-projects-container">
               <NuxtLink target="_blank" :to="project.link" :aria-label="project.title + 'link'"
-                        v-for="(project, index) in projects" :key="index"
+                        v-for="(project, index) in filteredProjects"
                         class="flex justify-between gap-[5vw] relative work-item hover:bg-[#1C1C1C] duration-[.3s] ease-[cubic-bezier(0.8,0,0.2,1)]">
                 <div
                     class="relative z-0 flex-1 pt-[1.75vw] pb-[3.5vw] px-[3vw] last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3]">
@@ -55,8 +121,17 @@
                     <div>
                       <p class="font-anton text40px-desktop">{{ project.title }}</p>
                       <div class="flex gap-[.5vw] mt-[1vw]">
-                        <div v-for="tag in project.tags"
-                             class="rounded-full border-[.5px] tracking-tight border-white px-[.75vw] py-[.5vw] font-inter text14px-desktop">
+                        <div
+                          v-for="tag in project.tags"
+                          :key="tag"
+                          :class="[
+                            'rounded-full border-[.5px] tracking-tight px-[.75vw] py-[.5vw] font-inter text14px-desktop transition-all duration-300',
+
+                            activeTags.includes(tag)
+                              ? 'bg-white text-black border-white'
+                              : 'border-white text-white'
+                          ]"
+                        >
                           {{ tag }}
                         </div>
                       </div>
@@ -119,6 +194,174 @@
       <div class="md:px-[5vw] md:mt-0 mt-[20vw]">
         <div class="border-b-[.5px] md:border-b border-[#464646] md:border-[#f1f1f1]"></div>
       </div>
+
+      <!-- Our Clients Section Start -->
+		<section class="relative pt-[20vw] md:pt-[6vw] md:pb-0 pb-[20vw] mb-[15vw]">
+			<div class="section-heading px-[5vw] md:px-[3vw]">
+				<!-- Desktop View -->
+				<div class="hidden md:block">
+					<div class="oveflow-hidden">
+						<the-breadcrumbs number="02" title="OUR ESTEEMED CLIENTS" />
+					</div>
+					<div class="md:pl-[1vw] pt-[2vw] relative w-max">
+						<NuxtImg width="400" height="400"
+							class="heading-img absolute w-[9vw] bottom-0 left-[46%] z-[1] translate-y-[20%]"
+							src="/images/about/saturn.webp" alt="Saturn image" />
+						<h2 v-split-text="{ splitBy: 'words, char' }"
+							class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-[0] overflow-hidden">
+							<span class="overflow-hidden">BRANDS THAT HAVE</span>
+							<span class="overflow-hidden">SUCCESSFULLY</span>
+							<span class="overflow-hidden">GONE LIVE <span
+									class="heading-space w-[6.5vw] !inline-block"></span> WITH US</span>
+						</h2>
+					</div>
+				</div>
+
+				<!-- Mobile View -->
+				<div class="md:hidden">
+					<div class="overflow-hidden pl-[10vw]">
+						<the-breadcrumbs number="01" title="OUR ESTEEMED CLIENTS" />
+					</div>
+					<div class="pt-[4vw] md:pt-[2vw] relative w-max">
+						<NuxtImg width="218" height="200" format="webp"
+							class="heading-img-mobile absolute w-[25vw] md:w-[16vw] right-0 bottom-0 md:bottom-0 -translate-y-1/2 md:translate-y-[20%] md:right-[15%] md:-translate-x-full z-[1]"
+							src="/images/about/saturn.webp" alt="Saturn Image" />
+						<h2 v-split-text="{ splitBy: 'words, char' }"
+							class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-[0vw] relative z-[0] overflow-hidden">
+							<span class="overflow-hidden">BRANDS THAT HAVE</span>
+							<span class="overflow-hidden">SUCCESSFULLY</span>
+							<span class="overflow-hidden">GONE LIVE <span class="w-[7vw] hidden md:inline-block"></span>
+								WITH US</span>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-[15vw] md:mt-[4vw] md:px-0 px-[4vw]">
+				<div class="grid grid-cols-3 md:grid-cols-6">
+					<div
+						class="aspect-square border border-l md:border-l-0 md:border-b-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+						</div>
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="278" height="92" src="/images/about/rotten.webp" class="w-[55%] relative z-[2]"
+							alt="Rotten Grapes Logo" />
+					</div>
+					<div
+						class="aspect-square border border-l-0 md:border-b-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="232" height="154" src="/images/about/aaiwini.webp"
+							class="w-[50%] relative z-[2]" alt="Aaiwini Logo" />
+					</div>
+					<div
+						class="aspect-square border border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="268" height="146" src="/images/about/hunan.webp" class="w-[55%] relative z-[2]"
+							alt="Hunan Square Logo" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+						</div>
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="332" height="84" src="/images/about/strands.webp" class="w-[60%] relative z-[2]"
+							alt="Strand Life Sciences Logo" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="194" height="220" src="/images/about/mumbai.webp" class="w-[40%] relative z-[2]"
+							alt="Mumbai Prost House Image" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-t border-l-0 md:border-x-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+							<small-boxes direction="tr" />
+						</div>
+						<NuxtImg width="208" height="166" src="/images/about/vrieves.webp"
+							class="w-[42%] relative z-[2]" alt="Vrieves Image" />
+
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+					</div>
+
+					<div
+						class="aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<small-boxes direction="br" />
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+						</div>
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="186" height="188" src="/images/about/voc.webp" class="w-[45%] relative z-[2]"
+							alt="VOC Image" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="374" height="274" src="/images/about/federate.webp"
+							class="w-[55%] relative z-[2]" alt="Federate one Image" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<small-boxes direction="br" />
+						<small-boxes direction="bl" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="122" height="51" src="/images/about/acme.svg" class="w-[45%] relative z-[2]"
+							alt="Acme Image" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<small-boxes direction="br" />
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+							<small-boxes direction="bl" />
+						</div>
+						<NuxtImg width="374" height="86" src="/images/about/ryze.webp" class="w-[60%] relative z-[2]"
+							alt="Ryze chemie Image" />
+
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+					</div>
+					<div
+						class="aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="204" height="204" src="/images/about/banani.webp" class="w-[45%] relative z-[2]"
+							alt="Banani Vista Image" />
+					</div>
+					<div
+						class="aspect-square border border-t-0 md:border-t border-l-0 md:border-x-0 border-[#5C5C5C] flex items-center justify-center relative">
+						<small-boxes direction="tr" />
+						<small-boxes direction="br" />
+						<div class="md:hidden">
+							<small-boxes direction="tl" />
+							<small-boxes direction="bl" />
+						</div>
+
+						<div class="absolute inset-0 z-0 bg-[#151515]"></div>
+						<NuxtImg width="432" height="92" src="/images/about/open.webp" class="w-[55%] relative z-[2]"
+							alt="Openstreet Image" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Our Clients Section End -->
+
+		<!-- Border Section Start -->
+	<!-- 	<div class="px-[2.5vw] md:px-[1.5vw] md:hidden">
+			<div class="border-t-[.5px] border-[#FFFFFF]"></div>
+		</div> -->
+		<!-- Border Section End -->
 
       <!-- Contact Section Start -->
       <ContactForm/>
@@ -235,6 +478,67 @@ useHead({
     },
   ],
 });
+
+/* tanvi */
+const sortedTags = computed(() => {
+  const tagCounts = {}
+
+  projects.value.forEach(project => {
+    project.tags.forEach(tag => {
+      if (!tagCounts[tag]) {
+        tagCounts[tag] = 0
+      }
+      tagCounts[tag]++
+    })
+  })
+
+  return Object.entries(tagCounts)
+    .sort((a, b) => {
+      if (b[1] !== a[1]) {
+        return b[1] - a[1]
+      }
+      return a[0].localeCompare(b[0])
+    })
+    .map(entry => entry[0])
+})
+
+/* split tags into primary + secondary */
+const primaryTags = computed(() => {
+  return sortedTags.value.slice(0, 8)
+})
+
+const secondaryTags = computed(() => {
+  return sortedTags.value.slice(8)
+})
+
+/* active tag state */
+const activeTags = ref([])
+
+/* expandable menu state */
+const showMoreTags = ref(false)
+
+/* toggle tag */
+const toggleTag = (tag) => {
+  if (activeTags.value.includes(tag)) {
+    activeTags.value = activeTags.value.filter(t => t !== tag)
+  } else {
+    activeTags.value.push(tag)
+  }
+}
+
+/* filtered project list */
+const filteredProjects = computed(() => {
+
+  if (activeTags.value.length === 0) {
+    return projects.value
+  }
+
+  return projects.value.filter(project =>
+    project.tags.some(tag => activeTags.value.includes(tag))
+  )
+
+})
+
 </script>
 
 <style scoped>

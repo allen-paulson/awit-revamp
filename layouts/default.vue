@@ -11,7 +11,7 @@
 				<slot />
 			</main>
 
-			<div id="bottom-gradient" class="fixed bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-background-black to-transparent z-[5] pointer-events-none"></div>
+			<div id="bottom-gradient" class="hidden md:block fixed bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-background-black to-transparent z-[5] pointer-events-none"></div>
 
 			<the-footer />
 		</div>
