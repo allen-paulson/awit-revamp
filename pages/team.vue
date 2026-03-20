@@ -354,7 +354,6 @@
                     </div>
                 </div>
             </div>
-        </section>
         <!-- Our Team Section End -->
 
         <!-- Border Section Start -->
