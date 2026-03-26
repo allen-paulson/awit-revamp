@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config "../../../tailwind.config.js";
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #151515 inset !important;
@@ -29,7 +29,7 @@ option {
 
 @layer base {
     html {
-        @apply leading-[1];
+        @apply leading-none;
     }
 }
 

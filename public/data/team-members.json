@@ -2,20 +2,20 @@
   {
     "type": "member",
     "name": "Ashwin",
-    "role": "Director of Misc. Things",
+    "role": "I'm the Janitor",
     "link": "https://www.linkedin.com/in/ashwin-d/",
     "image": "/images/team-members/ashwin.png",
     "sticker": "dev",
     "bg_color": "#4F618F",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["tl","tr","bl","br"],
+    "boxes": ["tl", "tr", "bl", "br"],
 
     "row": 1,
     "col": 2
@@ -23,20 +23,20 @@
   {
     "type": "member",
     "name": "Uday",
-    "role": "Creative Director",
+    "role": "Creates the mess",
     "link": "https://www.linkedin.com/in/uday-rathore/",
     "sticker": "uiux",
     "image": "/images/team-members/uday.png",
     "bg_color": "#8583B2",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": false,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": false,
+      "right": true
     },
 
-    "boxes": ["tr","br"],
+    "boxes": ["tr", "br"],
 
     "row": 1,
     "col": 3
@@ -51,18 +51,18 @@
     "bg_color": "#8CBFB6",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["tl","bl","br"],
+    "boxes": ["tl", "bl", "br"],
 
     "row": 2,
     "col": 1
   },
-   {
+  {
     "type": "member",
     "name": "Geethesh",
     "role": "Front-end Developer",
@@ -72,10 +72,10 @@
     "bg_color": "#307570",
 
     "border": {
-    "top": false,
-    "bottom": true,
-    "left": false,
-    "right": true
+      "top": false,
+      "bottom": true,
+      "left": false,
+      "right": true
     },
 
     "boxes": ["br"],
@@ -93,13 +93,13 @@
     "bg_color": "#94A37C",
 
     "border": {
-    "top": false,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": false,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["bl","br"],
+    "boxes": ["bl", "br"],
 
     "row": 3,
     "col": 1
@@ -114,13 +114,13 @@
     "bg_color": "#E1E5B3",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["bl","br"],
+    "boxes": ["bl", "br"],
 
     "row": 3,
     "col": 3
@@ -135,13 +135,13 @@
     "bg_color": "#74B097",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["bl","br"],
+    "boxes": ["bl", "br"],
 
     "row": 4,
     "col": 2
@@ -157,13 +157,13 @@
     "bg_color": "#467EA3",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["tl","bl","br"],
+    "boxes": ["tl", "bl", "br"],
 
     "row": 5,
     "col": 1
@@ -178,13 +178,13 @@
     "bg_color": "#BCDBF6",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["tr","bl","br"],
+    "boxes": ["tr", "bl", "br"],
 
     "row": 5,
     "col": 3
@@ -199,13 +199,13 @@
     "bg_color": "#D7DECE",
 
     "border": {
-    "top": true,
-    "bottom": true,
-    "left": true,
-    "right": true
+      "top": true,
+      "bottom": true,
+      "left": true,
+      "right": true
     },
 
-    "boxes": ["bl","br"],
+    "boxes": ["bl", "br"],
 
     "row": 6,
     "col": 2
@@ -266,6 +266,4 @@
     "row": 6,
     "col": 1
   }
-  
-  
 ]

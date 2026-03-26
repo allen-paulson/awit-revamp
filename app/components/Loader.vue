@@ -23,7 +23,6 @@ const textContainer = ref(null);
 const emit = defineEmits(["animation-end"]);
 const waitForFonts = async () => {
   await document.fonts.ready;
-  console.log('font loadedd')
 };
 
 onMounted(async () => {

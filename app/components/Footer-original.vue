@@ -1,6 +1,6 @@
 <template>
     <!-- Footer Section Start -->
-    <footer class="relative z-[1]">
+    <footer class="relative z-1">
         <!-- <div class="px-[4vw]">
             <div class="px-[2vw] pb-[3vw] pt-[1.85vw] border-t border-[#F1F1F1]">
                 <div class="flex justify-between text15px-desktop font-medium leading-[2]">
@@ -23,7 +23,14 @@
         </div> -->
 
         <div class="mt-[4vw]">
-            <NuxtImg width="3456" height="720" format="webp" class="w-full" src="/images/footer/awit.webp" alt="ArtworksIT Image" />
+            <NuxtImg
+                width="3456"
+                height="720"
+                format="webp"
+                class="w-full"
+                src="/images/footer/awit.webp"
+                alt="ArtworksIT Image"
+            />
         </div>
     </footer>
     <!-- Footer Section End -->

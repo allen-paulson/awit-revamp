@@ -4,5 +4,5 @@ pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "artworksit-submissions"
-database_id = "a55b0258-09d8-48a0-8a27-14f7fc89fabf"
+database_name = "ca51b0a1-fe6d-4974-97b8-2d08608a6705"
+database_id = "ca51b0a1-fe6d-4974-97b8-2d08608a6705"

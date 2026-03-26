@@ -1,8 +1,15 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
     nitro: {
         preset: "cloudflare-pages",
+        devStorage: {
+            cache: {
+                driver: "memory",
+            },
+        },
         routeRules: {
             "/about": {redirect: "/team"},
         },
@@ -16,31 +23,33 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
+    site: {
+        name: "ArtWorksIT",
+        url: process.env.SITE_URL || "https://artworksit.com",
+    },
     runtimeConfig: {
+        laravelApiBaseUrl: process.env.LARAVEL_API_BASE_URL || "",
+        backendApiSecret: process.env.BACKEND_API_SECRET || "",
         public: {
             siteUrl: process.env.SITE_URL || "https://artworksit.com",
         },
     },
     modules: [
-        "@nuxtjs/tailwindcss",
         "@nuxt/fonts",
         "v-gsap-nuxt",
         "@nuxt/image",
-        "nuxt-split-type",
-        "nuxt3-lenis",
         "@nuxtjs/seo",
         "nuxt-umami",
-        "nuxt-jsonld",
-        "@nuxtjs/sitemap"
+        "nuxt-jsonld"
     ],
     sitemap: {
         excludeAppSources: true,
         urls: async () => {
             return [
-                {url: '/', priority: 1.0},
-                {url: '/contact', priority: 0.9},
-                {url: '/work', priority: 0.9},
-                {url: '/team', priority: 0.8}
+                {loc: '/', priority: 1.0},
+                {loc: '/contact', priority: 0.9},
+                {loc: '/work', priority: 0.9},
+                {loc: '/team', priority: 0.8}
             ]
         }
     },
@@ -67,11 +76,8 @@ export default defineNuxtConfig({
         ignoreLocalhost: true,
     },
     css: ["~/assets/css/main.css"],
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
+    vite: {
+        plugins: [tailwindcss()],
     },
     schemaOrg: {
         enabled: false
