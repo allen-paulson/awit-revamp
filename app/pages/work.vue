@@ -72,12 +72,21 @@
                         <div
                             class="relative text-[#FFFFFF] bg-[#151515] hidden md:block work-projects-container"
                         >
-                            <NuxtLink
-                                target="_blank"
-                                :to="project.link"
-                                :aria-label="project.title + 'link'"
+                            <component
+                                :is="project.link ? ProjectLink : 'div'"
+                                v-bind="
+                                    project.link
+                                        ? {
+                                              to: project.link,
+                                              target: '_blank',
+                                              'aria-label':
+                                                  project.title + 'link',
+                                          }
+                                        : {}
+                                "
                                 v-for="(project, index) in projects"
                                 class="flex justify-between gap-[5vw] relative work-item hover:bg-[#1C1C1C] duration-300 ease-[cubic-bezier(0.8,0,0.2,1)]"
+                                :class="project.link ? '' : 'cursor-default'"
                             >
                                 <div
                                     class="relative z-0 flex-1 pt-[1.75vw] pb-[3.5vw] px-[3vw] last:border-b border-[#454545] border-t hover:border-t-[#A3A3A3]"
@@ -135,7 +144,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </NuxtLink>
+                            </component>
                         </div>
 
                         <!-- Mobile View -->
@@ -148,11 +157,22 @@
                                 <div class="p-[3vw] pb-[4vw]">
                                     <div class="flex flex-col">
                                         <div class="flex justify-between">
-                                            <NuxtLink
-                                                target="_blank"
-                                                :to="project.link"
-                                                :aria-label="
-                                                    project.title + 'link'
+                                            <component
+                                                :is="
+                                                    project.link
+                                                        ? ProjectLink
+                                                        : 'div'
+                                                "
+                                                v-bind="
+                                                    project.link
+                                                        ? {
+                                                              to: project.link,
+                                                              target: '_blank',
+                                                              'aria-label':
+                                                                  project.title +
+                                                                  'link',
+                                                          }
+                                                        : {}
                                                 "
                                                 class="w-[60%] inline-block"
                                             >
@@ -164,8 +184,9 @@
                                                     :src="project.image.desktop"
                                                     alt="Project Image"
                                                 />
-                                            </NuxtLink>
+                                            </component>
                                             <NuxtLink
+                                                v-if="project.link"
                                                 target="_blank"
                                                 :to="project.link"
                                                 :aria-label="
@@ -183,11 +204,22 @@
                                             </NuxtLink>
                                         </div>
                                         <div class="mt-[30vw]">
-                                            <NuxtLink
-                                                target="_blank"
-                                                :to="project.link"
-                                                :aria-label="
-                                                    project.title + 'link'
+                                            <component
+                                                :is="
+                                                    project.link
+                                                        ? ProjectLink
+                                                        : 'span'
+                                                "
+                                                v-bind="
+                                                    project.link
+                                                        ? {
+                                                              to: project.link,
+                                                              target: '_blank',
+                                                              'aria-label':
+                                                                  project.title +
+                                                                  'link',
+                                                          }
+                                                        : {}
                                                 "
                                                 class="font-anton text40px-mobile text-white"
                                                 >{{
@@ -195,7 +227,7 @@
                                                         project.title,
                                                     )
                                                 }}
-                                            </NuxtLink>
+                                            </component>
                                             <p
                                                 class="mt-[4vw] font-inter text16px-desktop leading-[1.2]"
                                             >
@@ -538,10 +570,12 @@
 </template>
 
 <script setup>
+import { resolveComponent } from "vue";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const config = useRuntimeConfig();
+const ProjectLink = resolveComponent("NuxtLink");
 
 const projects = ref([]);
 

@@ -36,15 +36,11 @@
                             v-split-text="{ splitBy: 'words, char' }"
                             class="main-heading flex flex-col font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] relative z-0"
                         >
+                            <span class="overflow-hidden">WE MAKE</span>
                             <span class="overflow-hidden"
-                                >WE ARE A TEAM OF
-                            </span>
-                            <span class="overflow-hidden"
-                                >DESIGNERS AND DEVELOPERS</span
+                                >CORPORATE WEBSITES</span
                             >
-                            <span class="overflow-hidden"
-                                >WHO BUILD WEBSITES</span
-                            >
+                            <span class="overflow-hidden">LESS BORING</span>
                         </h1>
 
                         <div class="button absolute bottom-[1vw] right-0">
@@ -63,25 +59,19 @@
                                 height="275"
                                 format="webp"
                                 src="/images/home/laptop.webp"
-                                class="laptop-mobile absolute left-0 bottom-0 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-1"
+                                class="laptop-mobile absolute right-0 bottom-10 w-[25vw] -translate-x-[25%] -translate-y-[5%] z-1"
                                 alt="Laptop Image"
                             />
                             <h1
                                 v-split-text="{ splitBy: 'words, char' }"
                                 class="main-heading-mobile flex flex-col gap-[1vw] font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1]"
                             >
-                                <span class="overflow-hidden">WE ARE A</span>
-                                <span class="overflow-hidden">TEAM OF</span>
+                                <span class="overflow-hidden">WE MAKE</span>
                                 <span class="overflow-hidden pl-[10vw]"
-                                    >DESIGNERS</span
+                                    >CORPORATE</span
                                 >
-                                <span class="overflow-hidden"
-                                    >AND DEVELOPERS</span
-                                >
-                                <span class="overflow-hidden">WHO BUILD</span>
-                                <span class="pl-[15vw] overflow-hidden"
-                                    >WEBSITES</span
-                                >
+                                <span class="overflow-hidden">WEBSITES</span>
+                                <span class="overflow-hidden">LESS BORING</span>
                             </h1>
                         </div>
 
