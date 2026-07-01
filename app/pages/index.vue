@@ -541,9 +541,9 @@
                                     width="134"
                                     height="136"
                                     format="webp"
-                                    src="/images/home/xd.webp"
+                                    src="/images/home/claude.webp"
                                     class="w-[35%] relative z-2"
-                                    alt="Xd Image"
+                                    alt="Claude Image"
                                 />
                             </div>
                             <div
@@ -551,6 +551,25 @@
                             >
                                 <small-boxes direction="tl" />
                                 <small-boxes direction="tr" />
+                                <div
+                                    class="absolute inset-0 z-0 bg-[#151515]"
+                                ></div>
+                                <NuxtImg
+                                    width="134"
+                                    height="134"
+                                    format="webp"
+                                    src="/images/home/codex.webp"
+                                    class="w-[35%] relative z-2"
+                                    alt="Codex Image"
+                                />
+                            </div>
+                            <div
+                                class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                            >
+                                <small-boxes direction="tr" />
+                                <div class="md:hidden">
+                                    <small-boxes direction="tl" />
+                                </div>
                                 <div
                                     class="absolute inset-0 z-0 bg-[#151515]"
                                 ></div>
@@ -583,7 +602,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <div
@@ -599,7 +618,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-2 aspect-square border border-t-0 md:border-t md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <div class="md:hidden">
@@ -636,7 +655,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-2 aspect-square border border-t-0 md:border-t border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-3 aspect-square border border-t-0 border-l-0 md:border-l border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <div
@@ -652,12 +671,10 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-3 aspect-square border border-t-0 border-l-0 md:border-l border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-3 aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
                             >
-                                <small-boxes direction="tl" />
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
-                                <small-boxes direction="bl" />
                                 <div
                                     class="absolute inset-0 z-0 bg-[#151515]"
                                 ></div>
@@ -709,7 +726,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-3 aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-3 aspect-square border border-t-0 md:border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
@@ -748,7 +765,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-3 aspect-square border border-t-0 border-l-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-4 aspect-square border border-t-0 border-l-0 md:border-l border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
@@ -765,7 +782,7 @@
                                 />
                             </div>
                             <div
-                                class="md:row-start-4 aspect-square border md:border-l border-l-0 border-t-0 border-[#5C5C5C] flex items-center justify-center relative"
+                                class="md:row-start-4 aspect-square border md:border-l-0 border-t-0 border-[#5C5C5C] flex items-center justify-center relative"
                             >
                                 <small-boxes direction="tr" />
                                 <small-boxes direction="br" />
