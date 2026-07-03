@@ -283,7 +283,7 @@
                     </div>
                 </div>
 
-                <Slider class="pt-[4vw] md:pt-[6vw]" />
+                <Slider class="pt-[15vw] md:pt-[6vw]" />
             </section>
             <!-- Our Work Section End -->
 

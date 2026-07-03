@@ -414,7 +414,9 @@ onBeforeUnmount(() => {
 
 .cascading-slider__list {
     width: 100%;
-    height: calc(var(--slider-width) * var(--active-slide-ratio) / var(--slide-aspect));
+    height: calc(
+        var(--slider-width) * var(--active-slide-ratio) / var(--slide-aspect)
+    );
     position: relative;
     overflow: hidden;
 }
@@ -467,7 +469,7 @@ onBeforeUnmount(() => {
 }
 
 .cascading-slider__img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -557,7 +559,10 @@ onBeforeUnmount(() => {
     }
 
     .cascading-slider__list {
-        height: calc(var(--slider-width) * var(--active-slide-ratio) / var(--slide-aspect));
+        height: calc(
+            var(--slider-width) * var(--active-slide-ratio) /
+                var(--slide-aspect)
+        );
     }
 
     .cascading-slider__nav {
