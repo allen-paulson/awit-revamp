@@ -93,13 +93,13 @@ import { gsap } from "gsap";
 const sliderRef = ref(null);
 
 const projects = [
-    { src: "/images/home/work-slider/aaiwini.webp", title: "Aaiwini" },
-    { src: "/images/home/work-slider/acme.webp", title: "Acme" },
+    { src: "/images/home/work-slider/herba.webp", title: "Aaiwini" },
+    { src: "/images/home/work-slider/calcium.webp", title: "Acme" },
     { src: "/images/home/work-slider/axcend.webp", title: "Axcend" },
     { src: "/images/home/work-slider/axis.webp", title: "Axis" },
-    { src: "/images/home/work-slider/calcium.webp", title: "Calcium" },
+    { src: "/images/home/work-slider/acme.webp", title: "Calcium" },
     { src: "/images/home/work-slider/goacars.webp", title: "Goacars" },
-    { src: "/images/home/work-slider/herba.webp", title: "Herba" },
+    { src: "/images/home/work-slider/aaiwini.webp", title: "Herba" },
     {
         src: "/images/home/work-slider/rottengrapes.webp",
         title: "Rottengrapes",
