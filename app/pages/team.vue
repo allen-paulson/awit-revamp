@@ -310,6 +310,88 @@
             </div>
         </section>
         <!-- Our Team Section End -->
+
+        <!-- Our Clients Section Start -->
+        <section
+            class="relative pt-[20vw] md:pt-[6vw] md:pb-0 pb-[20vw] mb-[5vw]"
+        >
+            <div class="section-heading px-[5vw] md:px-[3vw]">
+                <!-- Desktop View -->
+                <div class="hidden md:block">
+                    <div class="oveflow-hidden">
+                        <the-breadcrumbs
+                            number="02"
+                            title="OUR ESTEEMED CLIENTS"
+                        />
+                    </div>
+                    <div class="md:pl-[1vw] pt-[2vw] relative w-max">
+                        <NuxtImg
+                            width="400"
+                            height="400"
+                            class="heading-img absolute w-[9vw] bottom-0 left-[46%] z-1 translate-y-[20%]"
+                            src="/images/about/saturn.webp"
+                            alt="Saturn image"
+                        />
+                        <h2
+                            v-split-text="{ splitBy: 'words, char' }"
+                            class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-0 overflow-hidden"
+                        >
+                            <span class="overflow-hidden"
+                                >BRANDS THAT HAVE</span
+                            >
+                            <span class="overflow-hidden">SUCCESSFULLY</span>
+                            <span class="overflow-hidden"
+                                >GONE LIVE
+                                <span
+                                    class="heading-space w-[6.5vw] inline-block!"
+                                ></span>
+                                WITH US</span
+                            >
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Mobile View -->
+                <div class="md:hidden">
+                    <div class="overflow-hidden pl-[10vw]">
+                        <the-breadcrumbs
+                            number="02"
+                            title="OUR ESTEEMED CLIENTS"
+                        />
+                    </div>
+                    <div class="pt-[4vw] md:pt-[2vw] relative w-max">
+                        <NuxtImg
+                            width="218"
+                            height="200"
+                            format="webp"
+                            class="heading-img-mobile absolute w-[25vw] md:w-[16vw] right-0 bottom-0 md:bottom-0 -translate-y-1/2 md:translate-y-[20%] md:right-[15%] md:-translate-x-full z-1"
+                            src="/images/about/saturn.webp"
+                            alt="Saturn Image"
+                        />
+                        <h2
+                            v-split-text="{ splitBy: 'words, char' }"
+                            class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden"
+                        >
+                            <span class="overflow-hidden"
+                                >BRANDS THAT HAVE</span
+                            >
+                            <span class="overflow-hidden">SUCCESSFULLY</span>
+                            <span class="overflow-hidden"
+                                >GONE LIVE
+                                <span
+                                    class="w-[7vw] hidden md:inline-block"
+                                ></span>
+                                WITH US</span
+                            >
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <ClientLogoGrid />
+        </section>
+        <!-- Our Clients Section End -->
+
         <!-- Border Section Start -->
         <div class="px-[5vw] md:px-[1.5vw]">
             <div class="border-t-[.5px] border-[#FFFFFF]"></div>
@@ -323,9 +405,9 @@
                     class="section-heading-work px-[5vw] md:px-[4vw] pt-[25vw] md:pt-[8vw] pb-[5vw]"
                 >
                     <!-- Desktop View -->
-                    <div class="hidden md:block">
-                        <the-breadcrumbs
-                            number="02"
+                        <div class="hidden md:block">
+                            <the-breadcrumbs
+                            number="03"
                             title="BEHIND THE SCENES OF WORK"
                         />
                         <div class="flex justify-center items-end gap-[3vw]">
@@ -359,7 +441,7 @@
                         <div>
                             <div class="overflow-hidden pl-[10vw]">
                                 <the-breadcrumbs
-                                    number="02"
+                                    number="03"
                                     title=" BEHIND THE SCENES OF WORK"
                                 />
                             </div>
@@ -555,7 +637,7 @@
         <!-- Our Gallery Section End -->
 
         <!-- Contact Section Start -->
-        <LazyContactForm />
+        <LazyContactForm section-number="04" />
         <!-- Contact Section End -->
     </div>
 </template>

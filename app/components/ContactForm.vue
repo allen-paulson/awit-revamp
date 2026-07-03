@@ -66,7 +66,7 @@
                         <div v-if="path != '/contact'">
                             <div class="pl-[8vw] md:pl-0">
                                 <the-breadcrumbs
-                                    number="03"
+                                    :number="props.sectionNumber"
                                     title="LET’S COLLABORATE"
                                 />
                             </div>
@@ -88,7 +88,7 @@
                     <div class="md:hidden">
                         <div class="pl-[8vw] md:pl-0">
                             <the-breadcrumbs
-                                number="03"
+                                :number="props.sectionNumber"
                                 title="LET’S COLLABORATE"
                             />
                         </div>
@@ -1110,6 +1110,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const { path } = useRoute();
 let animationContext = null;
+
+const props = defineProps({
+    sectionNumber: {
+        type: String,
+        default: "03",
+    },
+});
 
 const name = ref("");
 const contactType = ref("Phone");
