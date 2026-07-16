@@ -438,7 +438,8 @@
                                                 @change="contactType"
                                                 v-model="contactType"
                                                 name="contactType"
-                                                id="contact-via"
+                                                id="contact-type"
+                                                aria-label="Preferred contact method"
                                                 class="bg-transparent border-none ring-0 outline-hidden appearance-none"
                                             >
                                                 <option selected value="Email">
@@ -572,9 +573,10 @@
                                                     width:
                                                         lookingForWidth + 'px',
                                                 }"
-                                                name="contact-via"
-                                                id="contact-via"
+                                                name="lookingFor"
+                                                id="looking-for"
                                                 v-model="lookingFor"
+                                                aria-label="Project type"
                                                 class="bg-transparent border-none ring-0 outline-hidden appearance-none md:w-[9vw]"
                                             >
                                                 <option value="Website">
@@ -623,8 +625,9 @@
                                                 :style="{
                                                     width: timelineWidth + 'px',
                                                 }"
-                                                name="contact-via"
-                                                id="contact-via"
+                                                name="timeline"
+                                                id="launch-timeline"
+                                                aria-label="Launch timeline"
                                                 v-model="timeline"
                                                 class="bg-transparent border-none ring-0 outline-hidden appearance-none md:w-[9vw]"
                                             >

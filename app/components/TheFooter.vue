@@ -5,42 +5,52 @@
             <NuxtImg
                 src="/images/footer/a.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/r.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/t.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/w.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/o.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/r2.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/k.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/s.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/i.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
             <NuxtImg
                 src="/images/footer/t2.png"
                 class="flex-1 object-contain origin-bottom will-change-transform footer-letter"
+                alt="Footer Single Image"
             />
         </div>
 
@@ -52,6 +62,7 @@
                 height="720"
                 class="w-full"
                 format="webp"
+                alt="Footer Logo"
             />
         </div>
     </footer>

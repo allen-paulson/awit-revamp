@@ -23,7 +23,9 @@
                                 :alt="project.title"
                                 :loading="index === 0 ? 'eager' : 'lazy'"
                                 draggable="false"
-                                class="cascading-slider__img"
+                                class="cascading-slider__img aspect-[1.52/1]"
+                                width="0"
+                                height="0"
                             />
                         </div>
                     </div>
