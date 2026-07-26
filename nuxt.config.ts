@@ -30,6 +30,11 @@ export default defineNuxtConfig({
     runtimeConfig: {
         laravelApiBaseUrl: process.env.LARAVEL_API_BASE_URL || "",
         backendApiSecret: process.env.BACKEND_API_SECRET || "",
+        zeptoMailApiKey: process.env.ZEPTOMAIL_API_KEY || "",
+        zeptoMailFromAddress: process.env.ZEPTOMAIL_FROM_ADDRESS || "",
+        zeptoMailApiUrl:
+            process.env.ZEPTOMAIL_API_URL ||
+            "https://api.zeptomail.com/v1.1/email",
         public: {
             siteUrl: process.env.SITE_URL || "https://artworksit.com",
         },
@@ -39,7 +44,7 @@ export default defineNuxtConfig({
         "v-gsap-nuxt",
         "@nuxt/image",
         "@nuxtjs/seo",
-        "nuxt-umami",
+        "@nuxt/scripts",
         "nuxt-jsonld"
     ],
     sitemap: {
@@ -69,11 +74,17 @@ export default defineNuxtConfig({
     // turnstile: {
     //     siteKey: "0x4AAAAAAA_aGj2KM0xzaZVe", // Replace with your actual site key before deployment
     // },
-    umami: {
-        id: "d3a19892-3db8-46ea-8b02-49b5a514dec7",
-        host: "https://analytics.artworksit.com",
-        autoTrack: true,
-        ignoreLocalhost: true,
+    scripts: {
+        registry: {
+            googleAnalytics: {
+                id: "G-DEHKDSZPS5",
+                trigger: "onNuxtReady",
+            },
+            metaPixel: {
+                id: "371216460476692",
+                trigger: "onNuxtReady",
+            },
+        },
     },
     css: ["~/assets/css/main.css"],
     vite: {
