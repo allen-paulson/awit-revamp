@@ -44,7 +44,6 @@ export default defineNuxtConfig({
         "v-gsap-nuxt",
         "@nuxt/image",
         "@nuxtjs/seo",
-        "@nuxt/scripts",
         "nuxt-jsonld"
     ],
     sitemap: {
@@ -74,16 +73,15 @@ export default defineNuxtConfig({
     // turnstile: {
     //     siteKey: "0x4AAAAAAA_aGj2KM0xzaZVe", // Replace with your actual site key before deployment
     // },
-    scripts: {
-        registry: {
-            googleAnalytics: {
-                id: "G-DEHKDSZPS5",
-                trigger: "onNuxtReady",
-            },
-            metaPixel: {
-                id: "371216460476692",
-                trigger: "onNuxtReady",
-            },
+    app: {
+        head: {
+            script: [
+                {
+                    defer: true,
+                    src: "https://analytics.artworksit.com/script.js",
+                    "data-website-id": "d3a19892-3db8-46ea-8b02-49b5a514dec7",
+                },
+            ],
         },
     },
     css: ["~/assets/css/main.css"],

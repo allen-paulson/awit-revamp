@@ -300,29 +300,6 @@
     ]
   },
   {
-    "order": 14,
-    "title": "OPENSTREET PHOTOGRAPHY",
-    "year": "2022",
-    "tags": [
-      "#Creative",
-      "#Photography",
-      "#Videography"
-    ],
-    "description": "Timeless photography & videography",
-    "bg_color": "#F5F5F5",
-    "text_color": "#1A1A1A",
-    "image": {
-      "desktop": "/images/projects/openstreet.webp",
-      "mobile": "/images/projects/openstreet.webp"
-    },
-    "link": "https://evermortalesco.com",
-    "filters": [
-      "photography",
-      "events",
-      "creative"
-    ]
-  },
-  {
     "order": 15,
     "title": "MUMBAI POST HOUSE",
     "year": "2034",

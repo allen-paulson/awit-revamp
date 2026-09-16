@@ -1112,7 +1112,6 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const { path } = useRoute();
-const { proxy: metaPixel } = useScriptMetaPixel();
 let animationContext = null;
 
 const props = defineProps({
@@ -1200,10 +1199,6 @@ const onSubmit = async (values) => {
         await $fetch("/api/contact", {
             method: "POST",
             body: formData,
-        });
-
-        metaPixel.fbq("track", "Lead", {
-            content_name: "Contact Form",
         });
 
         successName.value = name.value;
