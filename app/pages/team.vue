@@ -1,6 +1,5 @@
 <template>
     <div class="mt-[27vw] md:mt-[8vw]">
-        <hover-grid />
         <!-- Team Section Start -->
         <section class="relative text-[#F1F1F1]">
             <div
@@ -8,7 +7,7 @@
             >
                 <!-- Desktop View -->
                 <h1
-                    v-split-text="{ splitBy: 'words, char' }"
+                    v-split-text="{ splitBy: 'lines, words, char' }"
                     class="main-heading text262px-desktop font-anton -tracking-[.01vw] leading-[1.12] -space-y-[2.25vw] hidden md:flex flex-col justify-center"
                 >
                     <span class="overflow-hidden">A DESIGN AGENCY</span>
@@ -20,7 +19,7 @@
 
                 <!-- Mobile View -->
                 <h1
-                    v-split-text="{ splitBy: 'words, char' }"
+                    v-split-text="{ splitBy: 'lines, words, char' }"
                     class="main-heading-mobile text76px-mobile font-anton -tracking-[.01vw] leading-[1.12] -space-y-[2.25vw] md:hidden flex flex-col justify-center"
                 >
                     <span class="overflow-hidden">A DESIGN</span>
@@ -79,7 +78,7 @@
                         <the-breadcrumbs number="01" title="A LI'L About US" />
                         <div class="flex justify-center items-end gap-[3vw]">
                             <div class="pt-[2vw] relative w-max">
-                                <NuxtImg
+                                <NuxtImg v-sticker
                                     width="518"
                                     height="518"
                                     src="/images/about/rocket.webp"
@@ -87,7 +86,7 @@
                                     class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[50%] -translate-y-[40%] z-1"
                                 />
                                 <h1
-                                    v-split-text="{ splitBy: 'words, char' }"
+                                    v-split-text="{ splitBy: 'lines, words, char' }"
                                     class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-0"
                                 >
                                     <span class="overflow-hidden"
@@ -113,7 +112,7 @@
                                 />
                             </div>
                             <div class="pt-[4vw] md:pt-[2vw] relative">
-                                <NuxtImg
+                                <NuxtImg v-sticker
                                     class="work-heading-img-mobile absolute w-[28vw] md:w-[6.5vw] right-0 bottom-0 z-1"
                                     width="518"
                                     height="518"
@@ -121,7 +120,7 @@
                                     alt="Team Rocket Image"
                                 />
                                 <h2
-                                    v-split-text="{ splitBy: 'words, char' }"
+                                    v-split-text="{ splitBy: 'lines, words, char' }"
                                     class="work-heading-mobile font-anton text-[19vw] -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden w-full"
                                 >
                                     <span class="overflow-hidden"
@@ -235,9 +234,11 @@
                                 class="flex items-center justify-center h-full"
                             >
                                 <img
+                                    v-sticker
                                     :src="item.image"
                                     :style="{ width: item.size || '6vw' }"
                                     class="object-contain"
+                                    draggable="false"
                                 />
                             </div>
                         </div>
@@ -325,7 +326,7 @@
                         />
                     </div>
                     <div class="md:pl-[1vw] pt-[2vw] relative w-max">
-                        <NuxtImg
+                        <NuxtImg v-sticker
                             width="400"
                             height="400"
                             class="heading-img absolute w-[9vw] bottom-0 left-[46%] z-1 translate-y-[20%]"
@@ -333,7 +334,7 @@
                             alt="Saturn image"
                         />
                         <h2
-                            v-split-text="{ splitBy: 'words, char' }"
+                            v-split-text="{ splitBy: 'lines, words, char' }"
                             class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-0 overflow-hidden"
                         >
                             <span class="overflow-hidden"
@@ -360,7 +361,7 @@
                         />
                     </div>
                     <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                        <NuxtImg
+                        <NuxtImg v-sticker
                             width="218"
                             height="200"
                             format="webp"
@@ -369,7 +370,7 @@
                             alt="Saturn Image"
                         />
                         <h2
-                            v-split-text="{ splitBy: 'words, char' }"
+                            v-split-text="{ splitBy: 'lines, words, char' }"
                             class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden"
                         >
                             <span class="overflow-hidden"
@@ -420,7 +421,7 @@
                                     class="work-heading-img absolute left-[53.5%] top-1/2 w-[9vw] translate-x-full -translate-y-[45%] z-1"
                                 />
                                 <h1
-                                    v-split-text="{ splitBy: 'words, char' }"
+                                    v-split-text="{ splitBy: 'lines, words, char' }"
                                     class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-0"
                                 >
                                     <span class="overflow-hidden"
@@ -454,7 +455,7 @@
                                     alt="Camera Image"
                                 />
                                 <h2
-                                    v-split-text="{ splitBy: 'words, char' }"
+                                    v-split-text="{ splitBy: 'lines, words, char' }"
                                     class="work-heading-mobile font-anton text-[19vw] -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden w-full"
                                 >
                                     <span class="overflow-hidden"
@@ -526,7 +527,7 @@
                                 class="hidden md:flex icon-container aspect-square items-center justify-center"
                             >
                                 <div class="w-[25%]">
-                                    <NuxtImg
+                                    <NuxtImg v-sticker
                                         width="326"
                                         height="300"
                                         src="/images/about/pencil.webp"
@@ -550,7 +551,7 @@
                                 class="hidden md:flex icon-container aspect-square items-center justify-center"
                             >
                                 <div class="w-[35%]">
-                                    <NuxtImg
+                                    <NuxtImg v-sticker
                                         width="481"
                                         height="366"
                                         src="/images/about/laptop.webp"
@@ -681,6 +682,8 @@ const refreshScrollTrigger = () => {
     ScrollTrigger.refresh();
 };
 
+const { introReveal, scrollReveal } = useCharReveal();
+
 const animations = () => {
     animationContext?.revert();
 
@@ -688,26 +691,10 @@ const animations = () => {
         const tl = gsap.timeline();
         const isMobile = window.innerWidth < 768;
 
-        const headingWords = document.querySelectorAll(
-            isMobile ? ".main-heading-mobile .char" : ".main-heading .char",
-        );
         const subtitle = document.querySelector(".subtitle");
         const image = document.querySelector(".main-image");
 
-        tl.fromTo(
-            headingWords,
-            {
-                y: "100%",
-                opacity: 0,
-            },
-            {
-                y: "0%",
-                opacity: 1,
-                stagger: 0.05,
-                duration: 0.3,
-                ease: "power1.inout",
-            },
-        );
+        introReveal(tl, [".main-heading .char", ".main-heading-mobile .char"]);
 
         tl.fromTo(
             subtitle,
@@ -721,7 +708,6 @@ const animations = () => {
                 duration: 0.3,
                 ease: "power2.out",
             },
-            "-=0.2",
         );
 
         tl.fromTo(
@@ -741,15 +727,20 @@ const animations = () => {
 
         document.querySelectorAll(".section-heading").forEach((section) => {
             const breadcrumbs = section.querySelector(".breadcrumbs");
-            const headings = section.querySelectorAll(".heading");
             const images = section.querySelectorAll(".heading-img");
-            const headingsMobile = section.querySelectorAll(".heading-mobile");
             const imagesMobile = section.querySelectorAll(
                 ".heading-img-mobile",
             );
 
             // Common ScrollTrigger start values
             const startPosition = "top 90%";
+
+            scrollReveal(
+                section.querySelectorAll(
+                    isMobile ? ".heading-mobile .char" : ".heading .char",
+                ),
+                { trigger: section, id: `chars-${section.id || Math.random()}` },
+            );
 
             // Desktop Animation
             if (!isMobile) {
@@ -772,23 +763,6 @@ const animations = () => {
                         ease: "power2.out",
                     });
                 }
-
-                headings.forEach((heading) => {
-                    const chars = heading.querySelectorAll(".char");
-                    if (chars.length) {
-                        tlDesktop.from(
-                            chars,
-                            {
-                                y: "100%",
-                                opacity: 0,
-                                stagger: 0.05,
-                                duration: 0.3,
-                                ease: "power2.inout",
-                            },
-                            "-=0.3",
-                        );
-                    }
-                });
 
                 images.forEach((image) => {
                     tlDesktop.from(
@@ -817,19 +791,6 @@ const animations = () => {
                     },
                 });
 
-                headingsMobile.forEach((heading) => {
-                    const chars = heading.querySelectorAll(".char");
-                    if (chars.length) {
-                        tlMobile.from(chars, {
-                            y: "100%",
-                            opacity: 0,
-                            stagger: 0.05,
-                            duration: 0.3,
-                            ease: "power2.inout",
-                        });
-                    }
-                });
-
                 imagesMobile.forEach((image) => {
                     tlMobile.from(
                         image,
@@ -848,15 +809,11 @@ const animations = () => {
         document
             .querySelectorAll(".section-heading-work")
             .forEach((section, i) => {
-                // Set initial state
-                gsap.set(
+                scrollReveal(
                     section.querySelectorAll(
                         ".work-heading .char, .work-heading-mobile .char",
                     ),
-                    {
-                        opacity: 0,
-                        y: "100%",
-                    },
+                    { trigger: section, id: `work-chars-${i}` },
                 );
 
                 const tl = gsap.timeline({
@@ -869,29 +826,10 @@ const animations = () => {
                     },
                 });
 
-                tl.to(
-                    section.querySelectorAll(
-                        ".work-heading .char, .work-heading-mobile .char",
-                    ),
-                    {
-                        opacity: 1,
-                        y: "0%",
-                        duration: 0.3,
-                        ease: "power1.inout",
-                        stagger: {
-                            amount: 1,
-                            from: "start",
-                        },
-                    },
-                )
-                    .from(
-                        section.querySelector("#heading-space"),
-                        {
-                            width: "2vw",
-                            duration: 0.5,
-                        },
-                        "-=0.5",
-                    )
+                tl.from(section.querySelector("#heading-space"), {
+                    width: "2vw",
+                    duration: 0.5,
+                })
                     .from(
                         section.querySelectorAll(
                             ".work-heading-img, .work-heading-img-mobile",

@@ -1,6 +1,5 @@
 <template>
     <div class="mt-[27vw] md:mt-[10vw]">
-        <hover-grid />
 
         <div class="relative z-1">
             <!-- Heading Section Start -->
@@ -11,7 +10,7 @@
                     <div class="relative text-[#F1F1F1]">
                         <!-- Desktop View -->
                         <div class="relative md:w-full hidden md:block">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="309"
                                 height="315"
                                 format="webp"
@@ -20,7 +19,7 @@
                                 alt="Ship Image"
                             />
                             <h1
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-0 w-full"
                             >
                                 <span class="overflow-hidden"
@@ -38,7 +37,7 @@
 
                         <!-- Mobile View -->
                         <div class="pt-[2vw] relative md:w-[60%] md:hidden">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="309"
                                 height="315"
                                 format="webp"
@@ -47,7 +46,7 @@
                                 alt="Ship Image"
                             />
                             <h1
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col"
                             >
                                 <span
@@ -273,7 +272,7 @@
                             />
                         </div>
                         <div class="md:pl-[1vw] pt-[2vw] relative w-max">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="400"
                                 height="400"
                                 class="heading-img absolute w-[9vw] bottom-0 left-[46%] z-1 translate-y-[20%]"
@@ -281,7 +280,7 @@
                                 alt="Saturn image"
                             />
                             <h2
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="heading font-anton text105px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col relative z-0 overflow-hidden"
                             >
                                 <span class="overflow-hidden"
@@ -310,7 +309,7 @@
                             />
                         </div>
                         <div class="pt-[4vw] md:pt-[2vw] relative w-max">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="218"
                                 height="200"
                                 format="webp"
@@ -319,7 +318,7 @@
                                 alt="Saturn Image"
                             />
                             <h2
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="heading-mobile font-anton text56px-mobile -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden"
                             >
                                 <span class="overflow-hidden"
@@ -381,36 +380,29 @@ gsap.config({
     force3D: true,
 });
 
+const { introReveal, scrollReveal } = useCharReveal();
+
 const animation = () => {
     gsap.registerPlugin(ScrollTrigger);
 
+    document.querySelectorAll(".section-heading").forEach((section, i) => {
+        scrollReveal(
+            section.querySelectorAll(".heading .char, .heading-mobile .char"),
+            { trigger: section, id: `chars-${i}` },
+        );
+    });
+
     const tl = gsap.timeline();
 
-    tl.set([".main-heading .char", ".main-heading-mobile .char"], {
-        opacity: 0,
-        y: "100%",
-    })
-        .set(".heading-img", { scale: 0 })
-        .set(".heading-img-mobile", { scale: 0 });
+    introReveal(tl, [".main-heading .char", ".main-heading-mobile .char"]);
 
-    tl.to([".main-heading .char", ".main-heading-mobile .char"], {
-        opacity: 1,
-        y: "0%",
-        duration: 0.3,
-        ease: "power1.inout",
-        stagger: {
-            amount: 1,
-            from: "start",
-        },
-    }).from(
-        [".heading-img", ".heading-img-mobile"],
-        {
+    tl.set(".heading-img", { scale: 0 })
+        .set(".heading-img-mobile", { scale: 0 })
+        .from([".heading-img", ".heading-img-mobile"], {
             scale: 0,
             duration: 1.2,
             ease: "elastic.out(1, 0.6)",
-        },
-        "-=.04",
-    );
+        });
 };
 
 onMounted(async () => {

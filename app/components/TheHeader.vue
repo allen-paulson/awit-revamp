@@ -1,21 +1,24 @@
 <template>
     <header
-        class="text16px-desktop fixed w-full top-0 left-0 z-10 pointer-events-none"
+        class="text16px-desktop fixed w-full top-0 left-0 z-[9999] mix-blend-difference pointer-events-none"
     >
         <div
             class="flex items-start justify-between px-[5vw] md:px-[3vw] py-[5vw] md:pb-[2.5vw] md:pt-[1vw]"
         >
+            <div ref="logo" class="relative pointer-events-auto">
             <NuxtLink
                 to="/"
-                class="pointer-events-auto"
+                class="block"
                 aria-label="Homepage link"
             >
                 <svg
+                    ref="logoSvg"
                     xmlns=" http://www.w3.org/2000/svg"
                     width="244"
                     height="52"
-                    class="w-[30vw] h-auto md:w-[14vw]"
+                    class="block w-[30vw] h-auto md:w-[14vw]"
                     viewBox="0 0 244 52"
+                    preserveAspectRatio="none"
                 >
                     <g
                         id="Group_36402"
@@ -58,168 +61,7 @@
                                         width="239.5"
                                         height="47.5"
                                         fill="none"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_86"
-                                    data-name="Rectangle 86"
-                                    transform="translate(242 50)"
-                                    fill="#f1f1f1"
-                                    stroke="#f1f1f1"
-                                    stroke-width="2"
-                                >
-                                    <rect width="2" height="2" stroke="none" />
-                                    <rect x="1" y="1" fill="none" />
-                                </g>
-                                <g
-                                    id="Rectangle_89"
-                                    data-name="Rectangle 89"
-                                    transform="translate(242)"
-                                    fill="#f1f1f1"
-                                    stroke="#f1f1f1"
-                                    stroke-width="2"
-                                >
-                                    <rect width="2" height="4" stroke="none" />
-                                    <rect x="1" y="1" height="2" fill="none" />
-                                </g>
-                                <g
-                                    id="Rectangle_90"
-                                    data-name="Rectangle 90"
-                                    transform="translate(122)"
-                                    fill="#f1f1f1"
-                                    stroke="#f1f1f1"
-                                    stroke-width="2"
-                                >
-                                    <rect width="3" height="4" stroke="none" />
-                                    <rect
-                                        x="1"
-                                        y="1"
-                                        width="1"
-                                        height="2"
-                                        fill="none"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_91"
-                                    data-name="Rectangle 91"
-                                    transform="translate(122 50)"
-                                    fill="#f1f1f1"
-                                    stroke="#f1f1f1"
-                                    stroke-width="2"
-                                >
-                                    <rect width="3" height="2" stroke="none" />
-                                    <rect x="1" y="1" width="1" fill="none" />
-                                </g>
-                                <g
-                                    id="Rectangle_87"
-                                    data-name="Rectangle 87"
-                                    transform="translate(0 50)"
-                                    fill="#f1f1f1"
-                                    stroke="#f1f1f1"
-                                    stroke-width="2"
-                                >
-                                    <rect width="4" height="2" stroke="none" />
-                                    <rect x="1" y="1" width="2" fill="none" />
-                                </g>
-                                <g
-                                    id="Rectangle_88"
-                                    data-name="Rectangle 88"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_5495"
-                                    data-name="Rectangle 5495"
-                                    transform="translate(120)"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_5497"
-                                    data-name="Rectangle 5497"
-                                    transform="translate(238)"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_5493"
-                                    data-name="Rectangle 5493"
-                                    transform="translate(0 46)"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_5494"
-                                    data-name="Rectangle 5494"
-                                    transform="translate(120 46)"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
-                                    />
-                                </g>
-                                <g
-                                    id="Rectangle_5496"
-                                    data-name="Rectangle 5496"
-                                    transform="translate(238 46)"
-                                    fill="#f1f1f1"
-                                    stroke="#ffffff"
-                                    stroke-width="0.5"
-                                >
-                                    <rect width="6" height="6" stroke="none" />
-                                    <rect
-                                        x="0.25"
-                                        y="0.25"
-                                        width="5.5"
-                                        height="5.5"
-                                        fill="#000000"
+                                        vector-effect="non-scaling-stroke"
                                     />
                                 </g>
                             </g>
@@ -227,6 +69,18 @@
                     </g>
                 </svg>
             </NuxtLink>
+            <span
+                v-for="h in handles"
+                :key="h.id"
+                class="absolute flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center touch-none"
+                :style="{
+                    left: h.x,
+                    top: h.y,
+                    cursor: h.cursor,
+                }"
+                @pointerdown.stop.prevent="startResize($event, h)"
+            ><span class="block size-[6px] border border-white bg-black"></span></span>
+            </div>
 
             <nav class="flex flex-col md:flex-row items-center gap-[1vw]">
                 <ul
@@ -341,5 +195,119 @@
 </template>
 
 <script setup>
+import { gsap } from "gsap";
+import Draggable from "gsap/Draggable";
+
+gsap.registerPlugin(Draggable);
+
 const route = useRoute();
+const logo = ref(null);
+const logoSvg = ref(null);
+let draggable;
+
+const MAX_SCALE = 3; // max size = MAX_SCALE x the initial (minimum) size
+let minWidth = 0;
+let minHeight = 0;
+
+// sx: -1 = left handles (anchor right edge), 1 = right/middle handles (anchor left edge)
+// sy: -1 = top corners (anchor bottom edge), 1 = bottom/middle handles (anchor top edge)
+// free: corners resize width and height independently; middle handles keep the current ratio
+const handles = [
+    { id: "tl", x: "0.82%", y: "3.85%", sx: -1, sy: -1, free: true, cursor: "nwse-resize" },
+    { id: "tm", x: "50%", y: "3.85%", sx: 1, sy: 1, cursor: "ew-resize" },
+    { id: "tr", x: "99.18%", y: "3.85%", sx: 1, sy: -1, free: true, cursor: "nesw-resize" },
+    { id: "bl", x: "0.82%", y: "96.15%", sx: -1, sy: 1, free: true, cursor: "nesw-resize" },
+    { id: "bm", x: "50%", y: "96.15%", sx: 1, sy: 1, cursor: "ew-resize" },
+    { id: "br", x: "99.18%", y: "96.15%", sx: 1, sy: 1, free: true, cursor: "nwse-resize" },
+];
+
+function startResize(e, handle) {
+    const svg = logoSvg.value;
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const rect = svg.getBoundingClientRect();
+    const startW = rect.width;
+    const startH = rect.height;
+    const startPosX = gsap.getProperty(logo.value, "x");
+    const startPosY = gsap.getProperty(logo.value, "y");
+    const maxW = Math.min(minWidth * MAX_SCALE, window.innerWidth);
+    const maxH = Math.min(minHeight * MAX_SCALE, window.innerHeight);
+
+    draggable?.disable();
+
+    const onMove = (ev) => {
+        const dx = (ev.clientX - startX) * handle.sx;
+        const dy = (ev.clientY - startY) * handle.sy;
+        let w, h;
+        if (handle.free) {
+            w = gsap.utils.clamp(minWidth, maxW, startW + dx);
+            h = gsap.utils.clamp(minHeight, maxH, startH + dy);
+        } else {
+            const scale = gsap.utils.clamp(
+                Math.max(minWidth / startW, minHeight / startH),
+                Math.min(maxW / startW, maxH / startH),
+                (startW + dx) / startW
+            );
+            w = startW * scale;
+            h = startH * scale;
+        }
+        svg.style.width = `${w}px`;
+        svg.style.height = `${h}px`;
+        gsap.set(logo.value, {
+            x: handle.sx === -1 ? startPosX - (w - startW) : startPosX,
+            y: handle.sy === -1 ? startPosY - (h - startH) : startPosY,
+        });
+    };
+    const onUp = () => {
+        window.removeEventListener("pointermove", onMove);
+        window.removeEventListener("pointerup", onUp);
+        draggable?.enable().update();
+    };
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+}
+
+onMounted(() => {
+    const el = logo.value;
+    if (!el) return;
+    const { width, height } = logoSvg.value.getBoundingClientRect();
+    minWidth = width;
+    minHeight = height;
+
+    [draggable] = Draggable.create(el, {
+        dragResistance: 0.1,
+        // The header is position: fixed, so `bounds: window` (document coordinates,
+        // offset by scrollY) would shift the logo by the scroll amount. Use viewport bounds.
+        onPressInit() {
+            const r = this.target.getBoundingClientRect();
+            const x = gsap.getProperty(this.target, "x");
+            const y = gsap.getProperty(this.target, "y");
+            this.applyBounds({
+                minX: x - r.left,
+                maxX: x + (window.innerWidth - r.right),
+                minY: y - r.top,
+                maxY: y + (window.innerHeight - r.bottom),
+            });
+        },
+        onPress() {
+            gsap.to(this.target, {
+                scale: 1.2,
+                rotation: gsap.utils.random(-30, 30),
+                filter: "drop-shadow(0px 10px 8px rgba(0,0,0,0.3))",
+                duration: 0.1,
+            });
+        },
+        onRelease() {
+            gsap.to(this.target, {
+                scale: 1,
+                rotation: 0,
+                ease: "back.out(3)",
+                filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))",
+                duration: 0.2,
+            });
+        },
+    });
+});
+
+onBeforeUnmount(() => draggable?.kill());
 </script>

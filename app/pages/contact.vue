@@ -1,6 +1,5 @@
 <template>
     <div data-nosnippet class="mt-[20vw] md:mt-[7.5vw]">
-        <hover-grid />
         <!-- Contact Section Start -->
         <ContactForm />
         <!-- Contact Section End -->

@@ -18,7 +18,7 @@
                         alt="phone Image"
                     />
                     <h1
-                        v-split-text="{ splitBy: 'words, char' }"
+                        v-split-text="{ splitBy: 'lines, words, char' }"
                         class="main-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex flex-col justify-center z-0 w-full"
                     >
                         <span class="overflow-hidden">LET’S WORK </span>
@@ -37,7 +37,7 @@
                         alt="phone Image"
                     />
                     <h1
-                        v-split-text="{ splitBy: 'words, char' }"
+                        v-split-text="{ splitBy: 'lines, words, char' }"
                         class="main-heading-mobile font-anton -tracking-[.1vw] leading-[1.12] flex flex-col"
                     >
                         <span
@@ -75,7 +75,7 @@
                             class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative"
                         >
                             <h2
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="heading overflow-hidden font-anton text105px-desktop text56px-mobile -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] flex flex-col"
                             >
                                 <span>LET’S GET</span>
@@ -96,7 +96,7 @@
                             class="md:pl-[4.75vw] pt-[4vw] md:pt-[2vw] relative"
                         >
                             <h2
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="heading overflow-hidden font-anton text-[20vw] -tracking-[.1vw] leading-[1.12] text-[#F1F1F1] flex flex-col w-full"
                             >
                                 <span>LET’S GET</span>
@@ -1102,6 +1102,8 @@
         </div>
     </section>
     <!-- Form Section End -->
+
+    <ContactFormB />
 </template>
 
 <script setup>
@@ -1184,22 +1186,9 @@ const onSubmit = async (values) => {
 
     formLoading.value = true;
 
-    const formData = {
-        name: name.value,
-        contactType: contactType.value,
-        email: email.value,
-        phone: phone.value,
-        message: message.value,
-        looking: lookingFor.value,
-        projectName: projectName.value,
-        timeline: timeline.value,
-    };
-
     try {
-        await $fetch("/api/contact", {
-            method: "POST",
-            body: formData,
-        });
+        // Display-only form: no backend call, just show the success state.
+        await new Promise((resolve) => setTimeout(resolve, 600));
 
         successName.value = name.value;
         formSubmitted.value = true;
@@ -1269,36 +1258,22 @@ const formAnimation = () => {
     );
 };
 
+const { introReveal } = useCharReveal();
+
 const headinganimation = () => {
     const contactHeading = document.querySelector("#contact-heading");
     if (contactHeading) {
         const tl = gsap.timeline();
 
-        tl.set([".main-heading .char", ".main-heading-mobile .char"], {
-            opacity: 0,
-            y: "100%",
-        })
-            .set(".heading-img", { scale: 0 })
-            .set(".heading-img-mobile", { scale: 0 });
+        introReveal(tl, [".main-heading .char", ".main-heading-mobile .char"]);
 
-        tl.to([".main-heading .char", ".main-heading-mobile .char"], {
-            opacity: 1,
-            y: "0%",
-            duration: 0.3,
-            ease: "power1.inout",
-            stagger: {
-                amount: 1,
-                from: "start",
-            },
-        }).from(
-            [".heading-img", ".heading-img-mobile"],
-            {
+        tl.set(".heading-img", { scale: 0 })
+            .set(".heading-img-mobile", { scale: 0 })
+            .from([".heading-img", ".heading-img-mobile"], {
                 scale: 0,
                 duration: 1.2,
                 ease: "elastic.out(1, 0.6)",
-            },
-            "-=.04",
-        );
+            });
     }
 };
 

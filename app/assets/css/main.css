@@ -182,3 +182,50 @@ option {
         @apply text-[29vw];
     }
 }
+
+/* Split headings: stop the inline-block baseline strut adding height to .line */
+.main-heading .line,
+.main-heading-mobile .line,
+.heading .line,
+.heading-mobile .line {
+    display: flex !important;
+}
+
+/* Stickers: hover tilt + scale, press squish. !important is needed because GSAP writes inline
+   `scale: none` / `rotate: none` on elements it animates. Uses the individual `scale` /
+   `rotate` properties so they compose with GSAP's `transform` and Tailwind's
+   `translate` instead of fighting them. */
+.sticker {
+    cursor: pointer;
+    pointer-events: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        scale 220ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        rotate 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .sticker:hover {
+        scale: 0.92 !important;
+        rotate: 6deg !important;
+        transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }
+}
+
+.sticker:active {
+    scale: 0.84 !important;
+    rotate: 2deg !important;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sticker,
+    .sticker:hover,
+    .sticker:active {
+        rotate: 0deg !important;
+        transition: scale 120ms ease-out;
+    }
+}

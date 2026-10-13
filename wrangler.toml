@@ -1,8 +1,0 @@
-name = "awit-nuxt"
-compatibility_date = "2024-11-01"
-pages_build_output_dir = "dist"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "ca51b0a1-fe6d-4974-97b8-2d08608a6705"
-database_id = "ca51b0a1-fe6d-4974-97b8-2d08608a6705"

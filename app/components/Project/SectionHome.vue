@@ -9,7 +9,7 @@
                     <the-breadcrumbs number="02" title="WHY YOU NEED US" />
                     <div class="flex justify-center items-end gap-[3vw]">
                         <div class="pt-[2vw] relative w-max">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="430"
                                 height="474"
                                 format="webp"
@@ -18,7 +18,7 @@
                                 class="work-heading-img absolute left-1/2 top-1/2 w-[13vw] translate-x-[65%] -translate-y-[40%] z-1"
                             />
                             <h1
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="work-heading font-anton text262px-desktop -tracking-[.1vw] leading-[1.12] flex justify-center z-0"
                             >
                                 <span class="overflow-hidden">IT'S STORY </span>
@@ -42,7 +42,7 @@
                             />
                         </div>
                         <div class="pt-[4vw] md:pt-[2vw] relative">
-                            <NuxtImg
+                            <NuxtImg v-sticker
                                 width="430"
                                 height="474"
                                 format="webp"
@@ -51,7 +51,7 @@
                                 alt="Eye Image"
                             />
                             <h2
-                                v-split-text="{ splitBy: 'words, char' }"
+                                v-split-text="{ splitBy: 'lines, words, char' }"
                                 class="work-heading-mobile font-anton text-[19vw] -tracking-[.1vw] leading-[1.12] flex flex-col gap-0 relative z-0 overflow-hidden w-full"
                             >
                                 <span class="overflow-hidden">IT'S STORY </span>
@@ -403,6 +403,8 @@ const projects = [
 
 const containerRef = ref(null);
 
+const { scrollReveal } = useCharReveal();
+
 onMounted(async () => {
     // Dynamically import gsap and ScrollTrigger to ensure they load only on the client side
     const gsapModule = await import("gsap");
@@ -417,10 +419,10 @@ onMounted(async () => {
 
         const cards = gsap.utils.toArray(".desktop-project__item");
 
-        gsap.set([".work-heading .char", ".work-heading-mobile .char"], {
-            opacity: 0,
-            y: "100%",
-        });
+        scrollReveal(
+            [".work-heading .char", ".work-heading-mobile .char"],
+            { trigger: ".section-heading-work" },
+        );
 
         const headingTl = gsap.timeline({
             scrollTrigger: {
@@ -432,16 +434,6 @@ onMounted(async () => {
         });
 
         headingTl
-            .to([".work-heading .char", ".work-heading-mobile .char"], {
-                opacity: 1,
-                y: "0%",
-                duration: 0.3,
-                ease: "power1.inout",
-                stagger: {
-                    amount: 1,
-                    from: "start",
-                },
-            })
             .from("#heading-space", {
                 width: "2vw",
                 duration: 0.5,
