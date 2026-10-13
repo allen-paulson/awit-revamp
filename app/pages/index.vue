@@ -255,7 +255,7 @@
           </div>
         </div>
 
-        <Slider class="pt-[15vw] md:pt-[6vw]" />
+        <ProjectCube class="mt-[10vw] md:mt-[2vw]" />
       </section>
       <!-- Our Work Section End -->
 
