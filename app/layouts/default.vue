@@ -9,7 +9,7 @@
     <!-- Loader End -->
 
     <FoldGradient />
-    <!-- <CursorTrail /> -->
+    <CursorTrail />
 
     <StickerRain />
 
